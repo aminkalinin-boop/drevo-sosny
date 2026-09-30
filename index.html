@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Древо сосны</title>
+<meta name="author" content="Минигулов Александр Рафаильевич">
+<meta name="theme-color" content="#1f4a2c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Layout: вкладки-схемы; в каждой — древо сверху вниз (ствол-линия, ветви), справа карточка (на узком экране снизу) */
+:root{
+  --bg:#edf0ea; --panel:#fbfcf9; --fg:#1d2820; --muted:#5b695e; --line:#c5cfc6; --trunk:#8a6a4f;
+  --live:#2f6b3f; --live-bg:#dcebdf;
+  --part:#7b3f24; --part-bg:#f1ddd0;
+  --proc:#46525c; --proc-bg:#e2e7ea;
+  --prod:#865608; --prod-bg:#f5e5c2;
+  --final:#23507a; --final-bg:#dbe7f3;
+  --waste:#6e4a36; --waste-bg:#e8dcd2;
+  --place:#5b3f86; --place-bg:#e7dff3;
+  --doc:#6b5a1e; --doc-bg:#efe9cf;
+  --game:#1f6a66; --game-bg:#d7ecea;
+  --tool:#3d4a57; --tool-bg:#e9edf1;
+  --accent:#b8740f; --hl:#fff1b8;
+  --f-disp:"Alegreya",Georgia,serif; --f-body:"Alegreya Sans","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131915; --panel:#1b231e; --fg:#e3eae4; --muted:#9aa89d; --line:#34433a; --trunk:#b08b6b;
+  --live:#8fcf9d; --live-bg:#1e3326; --part:#eba98a; --part-bg:#3a2419; --proc:#b8c3cc; --proc-bg:#262d33;
+  --prod:#f0c270; --prod-bg:#382c15; --final:#9cc6f0; --final-bg:#1a2c40; --waste:#dcb49c; --waste-bg:#352820;
+  --place:#c8b2f0; --place-bg:#2c2240; --doc:#e3d08a; --doc-bg:#332d14; --game:#7fd3cc; --game-bg:#16332f;
+  --tool:#c5d0db; --tool-bg:#252d35; --accent:#e9a73b; --hl:#5a4a12; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131915; --panel:#1b231e; --fg:#e3eae4; --muted:#9aa89d; --line:#34433a; --trunk:#b08b6b;
+  --live:#8fcf9d; --live-bg:#1e3326; --part:#eba98a; --part-bg:#3a2419; --proc:#b8c3cc; --proc-bg:#262d33;
+  --prod:#f0c270; --prod-bg:#382c15; --final:#9cc6f0; --final-bg:#1a2c40; --waste:#dcb49c; --waste-bg:#352820;
+  --place:#c8b2f0; --place-bg:#2c2240; --doc:#e3d08a; --doc-bg:#332d14; --game:#7fd3cc; --game-bg:#16332f;
+  --tool:#c5d0db; --tool-bg:#252d35; --accent:#e9a73b; --hl:#5a4a12; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 var(--f-body);padding-inline:16px;padding-block:20px 60px}
+.wrap{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 410px;gap:24px;align-items:start}
+main{min-width:0}
+h1{font:700 2.1rem/1.1 var(--f-disp);margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 14px;max-width:70ch}
+.tabs{display:flex;gap:2px;overflow-x:auto;margin-bottom:14px;border-bottom:1px solid var(--line);scrollbar-width:thin}
+.tabs button{font:inherit;font-weight:500;background:none;border:none;border-bottom:3px solid transparent;color:var(--muted);padding:6px 11px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--fg);border-color:var(--accent)}
+.lead-s{color:var(--muted);margin:0 0 12px;max-width:75ch}
+.photo{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.photo img{display:block;width:100%;height:auto}
+.hs{position:absolute;border:2px dashed transparent;border-radius:10px;background:transparent;cursor:pointer;padding:0}
+.hs:hover,.hs:focus-visible{border-color:#b8740f;background:rgba(184,116,15,.12);outline:none}
+.photo-note{font-size:.88rem;color:var(--muted);margin:0 0 6px}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 16px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.tools input{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--fg);min-width:0;flex:1 1 220px}
+.tools button,.btn{font:inherit;font-size:.9rem;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--fg);cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.85rem;color:var(--muted);margin-bottom:12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border-radius:3px;display:inline-block;border:1.5px solid}
+.tree{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 12px 12px 8px;overflow-x:auto}
+.r{display:flex;align-items:stretch;min-height:36px}
+.r.dim{opacity:.35}
+.g,.el{width:22px;flex:none;position:relative}
+.g.v::before,.el::before{content:"";position:absolute;left:10px;top:0;bottom:0;border-left:2px solid var(--trunk)}
+.el.l::before{bottom:auto;height:18px}
+.el::after{content:"";position:absolute;left:10px;top:18px;width:12px;border-top:2px solid var(--trunk)}
+.body{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;padding-block:3px;min-width:0;flex:1}
+.car{font:inherit;width:22px;height:22px;border:none;background:none;color:var(--trunk);cursor:pointer;padding:0;font-size:.8rem;flex:none}
+.car.none{visibility:hidden}
+.edge{font-style:italic;font-size:.85rem;color:var(--muted)}
+.hint{font-size:.88rem;color:var(--muted);min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+button.n{font:inherit;font-size:.95rem;font-weight:500;cursor:pointer;border-radius:8px;padding:4px 10px;border:1.5px solid transparent;line-height:1.25;text-align:left}
+button.n.big{font-weight:700;font-size:1.05rem;padding:6px 12px}
+.forest{background:var(--live-bg);color:var(--live);border-color:var(--live)!important;border-width:2px!important}
+.live{background:var(--live-bg);color:var(--live);border-color:var(--live)!important}
+.part{background:var(--part-bg);color:var(--part);border-color:var(--part)!important}
+.proc{background:var(--proc-bg);color:var(--proc);border-style:dashed!important;border-color:var(--proc)!important}
+.prod{background:var(--prod-bg);color:var(--prod)}
+.final{background:var(--final-bg);color:var(--final)}
+.waste{background:var(--waste-bg);color:var(--waste)}
+.place{background:var(--place-bg);color:var(--place)}
+.doc{background:var(--doc-bg);color:var(--doc)}
+.game{background:var(--game-bg);color:var(--game)}
+.info{background:transparent;color:var(--fg);border-color:var(--line)!important}
+button.tl{font:inherit;font-size:.78rem;cursor:pointer;border-radius:5px;padding:1px 7px;border:1px solid var(--line);background:var(--tool-bg);color:var(--tool);white-space:nowrap}
+button.lk{font:inherit;font-size:.78rem;cursor:pointer;border-radius:999px;padding:1px 9px;border:1px dashed var(--game);background:transparent;color:var(--game);white-space:nowrap}
+button.n.on,button.tl.on{box-shadow:0 0 0 3px var(--accent)}
+.r.hit button.n{background-image:linear-gradient(var(--hl),var(--hl));color:var(--fg)}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.card{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);max-height:calc(100vh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+.card h2{font:700 1.5rem/1.15 var(--f-disp);margin:2px 0 4px;text-wrap:balance}
+.kind{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lead{color:var(--muted);margin:0 0 10px}
+.names{font-size:.92rem;background:var(--bg);border-radius:8px;padding:8px 10px;margin:8px 0 10px}
+.card p{margin:0 0 10px}
+.card h3{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:14px 0 6px}
+.card ul,.card ol{margin:0;padding-left:20px}
+.card li{margin-bottom:5px}
+.how{border-left:3px solid var(--accent);padding-left:10px}
+.gamebox{background:var(--game-bg);border-radius:8px;padding:8px 10px;font-size:.93rem}
+.from{font-size:.9rem;color:var(--muted);margin-bottom:6px}
+.close{display:none;float:right;font:inherit;background:none;border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:2px 10px;cursor:pointer}
+button.term{font:inherit;background:none;border:none;padding:0;color:inherit;cursor:help;border-bottom:1.5px dotted var(--accent);text-align:inherit}
+button.nlink{font:inherit;background:none;border:none;padding:0;color:var(--game);cursor:pointer;text-decoration:underline;text-align:inherit}
+.pop{position:fixed;z-index:50;max-width:340px;background:var(--panel);color:var(--fg);border:1px solid var(--accent);border-radius:10px;padding:10px 12px;box-shadow:0 8px 28px rgba(0,0,0,.2);font-size:.93rem}
+.pop b{display:block;font-family:var(--f-disp);font-size:1.05rem;margin-bottom:2px}
+.cat{columns:2 340px;column-gap:24px}
+.cat section{break-inside:avoid;margin-bottom:16px}
+.cat h2{font:700 1.15rem/1.2 var(--f-disp);margin:0 0 6px}
+.cat .chips{gap:6px}
+.gl{columns:2 320px;column-gap:28px}
+.gl div{break-inside:avoid;margin-bottom:10px}
+.gl b{font-family:var(--f-disp)}
+.author{font-size:.9rem;color:var(--muted);margin:0 0 6px;font-weight:500}
+.foot{margin-top:28px;padding-top:12px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.quiz-box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;max-width:760px}
+.qh{font:700 1.2rem/1.2 var(--f-disp);margin:0 0 10px}
+.qscope{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-bottom:16px}
+.qchk,.qradio{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;background:var(--bg)}
+.qchk small{flex-basis:100%;color:var(--muted);margin-left:26px}
+.qchk input,.qradio input{width:18px;height:18px;accent-color:var(--accent)}
+.qcount{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.qact{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.qbtn{font:inherit;font-weight:500;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}
+.qbtn.primary{background:var(--live);border-color:var(--live);color:var(--panel)}
+.qprog{display:flex;justify-content:space-between;gap:8px;font-size:.88rem;color:var(--muted);flex-wrap:wrap}
+.qbar{height:6px;background:var(--bg);border-radius:3px;margin:6px 0 14px;overflow:hidden}.qbar i{display:block;height:100%;background:var(--accent)}
+.qprompt{font-size:1.1rem;margin:0 0 14px}.qprompt q{display:block;margin-top:8px;padding:10px 12px;background:var(--bg);border-radius:8px;quotes:none;font-size:1rem}
+.qopts{display:flex;flex-direction:column;gap:8px}
+.qopt{font:inherit;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer;min-height:48px}
+.qopt.right{border-color:var(--live);background:var(--live-bg);color:var(--live);font-weight:500}
+.qopt.wrong{border-color:var(--part);background:var(--part-bg);color:var(--part)}
+.qopt:disabled{cursor:default}
+.qfb{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}.okm{color:var(--live);font-weight:700}.errm{color:var(--part);font-weight:700}
+.qwrong li{margin-bottom:6px}
+@media (max-width:1100px){
+  .wrap{grid-template-columns:1fr}
+  .card{position:fixed;left:0;right:0;bottom:0;top:auto;max-height:72vh;border-radius:14px 14px 0 0;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 28px rgba(0,0,0,.2);z-index:40}
+  .close{display:block}
+}
+@media (max-width:560px){.g,.el{width:16px}.g.v::before,.el::before,.el::after{left:7px}.el::after{width:9px}}
+@media (prefers-reduced-motion:no-preference){button.n,button.tl{transition:box-shadow .15s}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<main>
+  <h1>Древо сосны</h1>
+  <p class="author">Автор: Минигулов Александр Рафаильевич</p>
+  <p class="sub">Справочник по лесу и лесной экономике простыми словами. Каждая вкладка — отдельная схема сверху вниз. Нажимай на узлы, серые плашки оборудования и подчёркнутые слова. Пунктирные бирюзовые ссылки ведут в другие схемы.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div id="panes"></div>
+  <footer class="foot">© 2026 Минигулов Александр Рафаильевич. Справочник по лесу и лесной экономике. Цифры ориентировочные, нормативы сверяйте с действующими документами.</footer>
+</main>
+<aside class="card" id="card" aria-live="polite"></aside>
+</div>
+<div class="pop" id="pop" hidden></div>
+
+<script charset="utf-8" src="glossary.js"></script>
+<script>window.N={};</script>
+<script charset="utf-8" src="pine.js"></script>
+<script charset="utf-8" src="schemes1.js"></script>
+<script charset="utf-8" src="schemes2.js"></script>
+<script charset="utf-8" src="tools.js"></script>
+<script>
+const K={forest:"Лес",live:"Живое / целое",part:"Часть дерева",proc:"Процесс",prod:"Сырьё, полуфабрикат",final:"Готовая продукция",waste:"Остатки, побочное, риски",place:"Место, объект",doc:"Документы, право",info:"Справка",game:"Игра"};
+const SCH=[
+ {id:"pine",t:"Древо сосны",root:"pine",lead:"Из чего состоит сосна и что из каждой её части получают — от хвои до бумаги."},
+ {id:"forest",t:"Лес",root:"f_root",lead:"Лес в целом: как его делят, описывают, чем он болеет и кто за него отвечает."},
+ {id:"otvod",t:"Отвод делянки",root:"o_root",lead:"Всё, что происходит до рубки: право, разметка, перечёт, документы, дороги и лагерь."},
+ {id:"zag",t:"Лесозаготовка",root:"z_root",lead:"От стоящего дерева до штабеля на складе: операции, технологии, машины, люди."},
+ {id:"derevo",t:"Деревообработка",root:"d_root",lead:"Что делают из деловой и дровяной древесины и как устроен лесопильный завод."},
+ {id:"real",t:"Реализация",root:"r_root",lead:"Как древесина законно продаётся в России: права, плата, учёт, покупатели, экспорт."},
+ {id:"vost",t:"Лесовосстановление",root:"v_root",lead:"Как на вырубке снова вырастает лес: от шишки до молодого бора."},
+ {id:"game",t:"Для игры",root:"g_root",lead:"Как превратить все схемы в текстовую игру: сущности, действия, риски, экономика, план разработки."}
+];
+const PH={pine:"sosna.webp",forest:"forest.webp",otvod:"otvod.webp",zag:"zag.webp",derevo:"derevo.webp",real:"real.webp",vost:"vost.webp"};
+const HSX={
+forest:[["pine",66.5,13.4,5.6,3],["pine",54,5,8,60],["f_podr",47.8,68,7,3],["f_pokr",58.5,86.4,13,3],["needles",88.7,27.5,10.4,16.4],["cones",88.7,46,10.4,16.5],["bark_outer",88.7,64.6,10.4,16.5],["f_types",75.2,2.7,23.8,18.5]],
+otvod:[["o3",9.1,19.5,10.5,5],["t_taheo",8,28,11,34],["o5",31.9,19.5,11.9,4.5],["o4",49.6,19.3,11.6,4.6],["o10",61.7,38.3,8.9,4.7],["o9",72.4,2.1,26.7,34],["o3",0,64,20.5,36],["o5",20.5,64,20.5,36],["o4",41,64,20.5,36],["o10",61.5,64,20.5,36],["o10",82,64,18,36]],
+zag:[["z_fell",4.6,38.9,11.4,3],["t_chainsaw",4,55,13,25],["z_delimb",29.8,17.9,11.9,5.1],["t_harvester",22,24,22,36],["z_s_fw",62.4,16.4,15.6,3],["t_forwarder",46,22,30,38],["z_haul",83.5,22.8,12.8,3],["t_truck",82,33,17,17],["pilovoch",73.4,69.1,11.7,5.6],["z_fell",0,82,27,18],["z_delimb",27,82,24,18],["z_s_fw",51,82,26,18],["z_haul",77,82,23,18]],
+derevo:[["m1",10.9,24,10,2.9],["t_loader",2,34,18,16],["m5",39,20.3,12.7,2.8],["m7",66.5,20.6,13,2.9],["t_kiln",58,14,22,20],["d_products",85,38,13.2,2.9],["lumber",18.8,57.5,20.2,19],["m9",39.8,57.5,18.6,19],["d_plates",59.3,57.5,16.2,19],["d_products",76,57.5,20,19],["m1",0,80,26,20],["m5",26,80,27,20],["m7",53,80,23,20],["d_products",76,80,24,20]],
+real:[["z_yard",4.6,20.5,11.5,5],["z_haul",27.9,19,12,4.5],["r_docs",47.2,18.6,12,4.9],["t_scales",42,27,17,27],["r_deal",66.1,18.8,7.5,4.7],["r_path",67.7,50.6,17.6,4.9],["r_buyers",78.3,1.5,20.8,33.7],["z_yard",0,62,21,30],["z_haul",21,62,21,30],["r_docs",42,62,20,30],["r_deal",62,62,20,30],["r_price",82,62,18,30],["r_legal",35,92,28,8]],
+vost:[["v_plant",11.8,23.4,12.4,4.9],["v_care",31.1,19.1,18.7,4.9],["v_nursery",56.4,12.7,14.9,4.4],["seedl",59.8,43.9,13.5,21.5],["t_kolesov",76.8,54.7,5.2,12.7],["v_plant",84.2,57.8,10.3,4.9],["f_nontimber",78,2.4,21,31],["v_prep",0,70,21,30],["v_nursery",21,70,21,30],["v_plant",42,70,20,30],["v_care",62,70,20,30],["v_transfer",82,70,18,30]]};
+const HS=[["crown",2,2,39,52],["trunk",19.5,54,6.5,22],["komel",18.5,76,8.5,9],["roots",10,85,25,5],["wood",47,23,30,52],["serdc",60.5,48,3.2,5],["bark_outer",78.5,10,14,7],["lub",78.5,19,18,8.5],["kambiy",83,29.5,13,8],["wood",84,43,16,10.5],["serdc",83.5,59.5,13,8.5]];
+const P={};Object.keys(N).forEach(id=>(N[id].c||[]).forEach(c=>{if(!P[c])P[c]=id}));
+const ROOTTAB={};SCH.forEach(s=>ROOTTAB[s.root]=s.id);
+function tabOf(id){let x=id;while(P[x])x=P[x];return ROOTTAB[x]}
+const USED={};Object.keys(N).forEach(id=>(N[id].tl||[]).forEach(t=>(USED[t]=USED[t]||[]).push(id)));
+const cap=s=>s[0].toUpperCase()+s.slice(1);
+function rich(s){if(!s)return"";
+ return s.replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g,(m,k,d)=>G[k]?`<button type="button" class="term" data-t="${k}">${d||k}</button>`:(d||k))
+  .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,(m,id,d)=>N[id]?`<button type="button" class="nlink" data-go="${id}">${d||plain(N[id].t)}</button>`:T[id]?`<button type="button" class="nlink" data-tool="${id}">${d||T[id].t}</button>`:(d||id))}
+function plain(s){return (s||"").replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g,(m,k,d)=>d||k).replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,(m,k,d)=>d||k).replace(/<[^>]+>/g,"")}
+const nb=(id,extra="")=>`<button type="button" class="n ${N[id].k}${extra}" data-go="${id}">${plain(N[id].t)}</button>`;
+const tb=id=>`<button type="button" class="tl" data-tool="${id}">${T[id].t}</button>`;
+const lb=id=>`<button type="button" class="lk" data-go="${id}">→ ${SCH.find(s=>s.id===tabOf(id)).t}: ${plain(N[id].t)}</button>`;
+const collapsed=new Set(),Q={};let sel=null,cur="pine";
+function hay(n){return (plain(n.t)+" "+plain(n.s)+" "+plain(n.n)+" "+plain(n.w)+" "+(n.f||[]).map(plain).join(" ")).toLowerCase()}
+function row(id,d,gs,last,q){const n=N[id],kids=n.c||[],m=q&&hay(n).includes(q),open=!collapsed.has(id)||q;
+ const sub=x=>hay(N[x]).includes(q)||(N[x].c||[]).some(sub);
+ let h=`<div class="r${q&&!m?" dim":""}${m?" hit":""}" data-row="${id}">`;
+ gs.forEach(v=>h+=`<i class="g${v?" v":""}"></i>`);
+ if(d>0)h+=`<i class="el${last?" l":""}"></i>`;
+ h+=`<div class="body"><button type="button" class="car${kids.length?"":" none"}" data-tog="${id}" aria-label="${open?"Свернуть":"Развернуть"}" aria-expanded="${!!open}">${kids.length?(open?"▾":"▸"):""}</button>`;
+ if(n.e)h+=`<span class="edge">${n.e}</span>`;
+ h+=nb(id,(d<1||n.k==="proc"&&d<2?" big":"")+(sel===id?" on":""));
+ if(n.s)h+=`<span class="hint">${n.s}</span>`;
+ if(n.tl||n.ln)h+=`<span class="chips">${(n.tl||[]).map(tb).join("")}${(n.ln||[]).filter(x=>N[x]).map(lb).join("")}</span>`;
+ h+=`</div></div>`;
+ if(open){const vis=q?kids.filter(sub):kids;vis.forEach((c,i)=>h+=row(c,d+1,d===0?[]:[...gs,!last],i===vis.length-1,q))}
+ return h}
+function renderTree(sid){const s=SCH.find(x=>x.id===sid),el=document.getElementById("tree-"+sid);if(!el)return;el.innerHTML=row(s.root,0,[],true,Q[sid]||"");}
+/* панели */
+const tabs=document.getElementById("tabs"),panes=document.getElementById("panes");
+const extra=[{id:"quiz",t:"Тест"},{id:"tools",t:"Оборудование"},{id:"gloss",t:"Словарь"}];
+tabs.innerHTML=[...SCH,...extra].map(s=>`<button role="tab" data-tab="${s.id}" aria-selected="${s.id==="pine"}">${s.t}</button>`).join("");
+const legend=`<div class="legend">${Object.entries(K).map(([k,v])=>`<span><i class="${k}"></i>${v}</span>`).join("")}<span><i class="tl" style="background:var(--tool-bg);border-color:var(--line)"></i>оборудование</span></div>`;
+panes.innerHTML=SCH.map(s=>`<section id="pane-${s.id}" ${s.id==="pine"?"":"hidden"}>
+ <p class="lead-s">${s.lead}</p>
+ ${PH[s.id]?`<p class="photo-note">Нажимай на подписи и предметы на картинке — откроется карточка.</p><div class="photo"><img src="${PH[s.id]}" alt="Иллюстрация к схеме «${s.t}»" width="1536" height="1024" loading="${s.id==="pine"?"eager":"lazy"}">${(s.id==="pine"?HS:HSX[s.id]).map(([id,x,y,w,h])=>`<button type="button" class="hs" ${id.startsWith("t_")?`data-tool="${id}"`:`data-go="${id}"`} style="left:${x}%;top:${y}%;width:${w}%;height:${h}%" aria-label="${id.startsWith("t_")?T[id].t:plain(N[id].t)}"></button>`).join("")}</div>`:""}
+ ${s.id==="pine"?`<div class="pills">${["crown","needles","cones","trunk","bark_outer","lub","kambiy","zabolon","yadro","serdc","resin_ducts","roots","species"].map(i=>nb(i)).join("")}</div>`:""}
+ <div class="tools"><input type="search" data-q="${s.id}" placeholder="Найти в схеме" aria-label="Поиск по схеме «${s.t}»"><button type="button" data-open="${s.id}">Развернуть всё</button><button type="button" data-shut="${s.id}">Свернуть</button></div>
+ ${legend}<div class="tree" id="tree-${s.id}"></div></section>`).join("")+
+ `<section id="pane-quiz" hidden></section><section id="pane-tools" hidden><p class="lead-s">Весь инструмент и техника из схем. Нажми, чтобы увидеть, что это и где применяется.</p><div class="cat" id="cat"></div></section>
+ <section id="pane-gloss" hidden><p class="lead-s">Все термины простыми словами.</p><div class="tools"><input id="gq" type="search" placeholder="Найти термин" aria-label="Поиск по словарю"></div><div class="gl" id="gl"></div></section>`;
+SCH.forEach(s=>renderTree(s.id));
+/* каталог оборудования */
+const groups={};Object.entries(T).forEach(([id,x])=>(groups[x.g]=groups[x.g]||[]).push(id));
+document.getElementById("cat").innerHTML=Object.entries(groups).map(([g,ids])=>`<section><h2>${g}</h2><div class="chips">${ids.map(tb).join("")}</div></section>`).join("");
+/* словарь */
+const GL=Object.keys(G).sort((a,b)=>a.localeCompare(b,"ru"));const gl=document.getElementById("gl");
+function renderGl(f){gl.innerHTML=GL.filter(k=>!f||k.includes(f)||G[k].toLowerCase().includes(f)).map(k=>`<div><b>${cap(k)}</b> — ${G[k]}</div>`).join("")||"<p>Ничего не нашлось. Попробуй часть слова.</p>"}
+renderGl("");document.getElementById("gq").addEventListener("input",e=>renderGl(e.target.value.trim().toLowerCase()));
+/* карточки */
+const card=document.getElementById("card");const isNarrow=()=>matchMedia("(max-width:1100px)").matches;
+function show(id){sel=id;const n=N[id];let h=`<button class="close" type="button" aria-label="Закрыть">✕</button><div class="kind">${K[n.k]}</div><h2>${rich(n.t)}</h2>`;
+ if(n.s)h+=`<p class="lead">${n.s}</p>`;
+ if(P[id])h+=`<div class="from">Откуда: ${nb(P[id])}</div>`;
+ if(n.n)h+=`<div class="names"><b>Как называют.</b> ${rich(n.n)}</div>`;
+ if(n.w)h+=`<h3>Что это</h3><p>${rich(n.w)}</p>`;
+ if(n.h)h+=`<h3>Как получают / как делают</h3><p class="how">${rich(n.h)}</p>`;
+ if(n.f)h+=`<h3>Подробности</h3><ul>${n.f.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
+ if(n.c&&n.c.length)h+=`<h3>${n.k==="proc"||n.k==="game"||n.k==="info"||n.k==="doc"?"Дальше по схеме":"Что из этого получаем"}</h3><div class="chips">${n.c.map(c=>nb(c)).join("")}</div>`;
+ if(n.y)h+=`<h3>${n.c?"Ещё":"Что из этого получаем"}</h3><ul>${n.y.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
+ if(n.tl)h+=`<h3>Инструменты и оборудование</h3><div class="chips">${n.tl.map(tb).join("")}</div>`;
+ if(n.ln)h+=`<h3>Связано в других схемах</h3><div class="chips">${n.ln.filter(x=>N[x]).map(lb).join("")}</div>`;
+ if(n.g)h+=`<h3>Для игры</h3><div class="gamebox">${rich(n.g)}</div>`;
+ card.innerHTML=h;card.hidden=false;card.scrollTop=0;mark()}
+function showTool(id){sel=id;const x=T[id];card.innerHTML=`<button class="close" type="button" aria-label="Закрыть">✕</button><div class="kind">Оборудование · ${x.g}</div><h2>${x.t}</h2><p>${rich(x.w)}</p>${x.f?`<h3>Подробности</h3><ul>${x.f.map(i=>`<li>${rich(i)}</li>`).join("")}</ul>`:""}${USED[id]?`<h3>Где применяется</h3><div class="chips">${USED[id].map(u=>nb(u)).join("")}</div>`:""}`;card.hidden=false;card.scrollTop=0;mark()}
+function mark(){document.querySelectorAll(".tree button.n,.tree button.tl").forEach(b=>b.classList.toggle("on",(b.dataset.go||b.dataset.tool)===sel))}
+function openTab(t){cur=t;document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));[...SCH,...extra].forEach(s=>document.getElementById("pane-"+s.id).hidden=s.id!==t)}
+function go(id,fromTree){show(id);const t=tabOf(id);if(!t)return;if(t!==cur)openTab(t);if(fromTree&&t===cur)return;let p=P[id];while(p){collapsed.delete(p);p=P[p]}renderTree(t);mark();const r=document.querySelector(`#tree-${t} [data-row="${id}"]`);if(r)r.scrollIntoView({block:"center",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})}
+/* события */
+const pop=document.getElementById("pop");
+document.addEventListener("click",e=>{
+ const t=e.target.closest("button.term");
+ if(t){e.stopPropagation();const k=t.dataset.t;pop.innerHTML=`<b>${cap(k)}</b>${G[k]}`;pop.hidden=false;const r=t.getBoundingClientRect(),pw=Math.min(340,innerWidth-24);pop.style.width=pw+"px";pop.style.left=Math.min(Math.max(12,r.left),innerWidth-pw-12)+"px";const ph=pop.offsetHeight;pop.style.top=(r.bottom+8+ph>innerHeight?Math.max(8,r.top-ph-8):r.bottom+8)+"px";return}
+ if(!e.target.closest("#pop"))pop.hidden=true;
+ const tab=e.target.closest("#tabs button");if(tab){openTab(tab.dataset.tab);return}
+ const tg=e.target.closest("[data-tog]");if(tg){const id=tg.dataset.tog;collapsed.has(id)?collapsed.delete(id):collapsed.add(id);renderTree(cur);mark();return}
+ const o=e.target.closest("[data-open]");if(o){Object.keys(N).forEach(i=>{if(tabOf(i)===o.dataset.open)collapsed.delete(i)});renderTree(o.dataset.open);return}
+ const sh=e.target.closest("[data-shut]");if(sh){const s=SCH.find(x=>x.id===sh.dataset.shut);(N[s.root].c||[]).forEach(c=>{if(N[c].c)collapsed.add(c)});renderTree(s.id);return}
+ const tl=e.target.closest("[data-tool]");if(tl){showTool(tl.dataset.tool);return}
+ const g=e.target.closest("[data-go]");if(g){go(g.dataset.go,!!e.target.closest(".tree")&&!g.classList.contains("lk"));return}
+ if(e.target.closest(".close"))card.hidden=true;
+});
+document.addEventListener("input",e=>{const s=e.target.dataset.q;if(!s)return;Q[s]=e.target.value.trim().toLowerCase();renderTree(s);mark();const h=document.querySelector(`#tree-${s} .hit`);if(h)h.scrollIntoView({block:"nearest"})});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){pop.hidden=true;if(isNarrow())card.hidden=true}});
+addEventListener("scroll",()=>{pop.hidden=true},{passive:true});
+show("pine");if(isNarrow())card.hidden=true;
+if("serviceWorker" in navigator&&location.protocol==="https:"&&!/claude\.ai|claudeusercontent/.test(location.host)){navigator.serviceWorker.register("sw.js").catch(()=>{})}
+</script>
+<script charset="utf-8" src="quiz.js"></script>
+
+</body>
+</html>
