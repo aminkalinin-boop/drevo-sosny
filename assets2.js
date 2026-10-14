@@ -47,10 +47,12 @@ const uchet=["o10","z_root","r_deal","r_legal","z_haul","r_docs","r_price"].map(
 addPic(["r_path","r_legal"],pic("p_uchet.webp",uchet));
 addPic(["tg_chem","rosin"],pic("p_chem.webp",[["resin",3,26.5,8,4.5],["t_resinplant",34,19,14,4.5],["g:конденсатор",52,17.5,11,4.5],["rosin",32,64,10,4.5],["turp",59,44,10,4.5],["osmol",69.5,15.5,11,6.5],["smola",85.5,70,9,4.5]]));
 addPic(["u_cycle"],pic("p_cycle.webp",[["u_land",6,21.5,17,5.5],["z_root",34,20.5,17,5],["z_low",62,21,20,5.5],["d_mill",76,39,18,5],["m7",77,61.5,15,5],["d_root",42,73,21,5.5],["u_prod",15,70,18,5],["u_sales",1.5,49,18,5.5],["t_boiler",55,91,15,5]]));
+/* технологии заготовки */
+addPic(["z_tech"],pic("g_tech3.webp",[["z_t1",1,1,33.5,7.5],["t_harvester",1,8.5,33.5,39.5],["t_forwarder",1,49,33.5,48],["z_t2",35.5,1,30,7.5],["t_chainsaw",35.5,8.5,30,28],["t_skidder",35.5,37,30,28.5],["t_processor",35.5,66,30,31],["z_t3",67,1,32.5,7.5],["t_vpm",67,8.5,32.5,32.5],["t_skidder",67,42,32.5,25],["t_chipper",67,68,32.5,29]]));
 /* сетки, сделанные раньше, переводим в общий формат */
 Object.values(N).forEach(n=>{if(n.grid){(n.pics=n.pics||[]).unshift(n.grid);delete n.grid}});
 /* картинки к отдельным пунктам */
-["fg_sosn","fg_okaim","in_lub","in_shelk","in_usach","fg_seryanka","en_plants","fg_opyonok","o_mag","o_us","o_zim","o_lezh","z_s_ch","z_s_bch","z_s_fw","z_s_cab","pl_dsp","pl_mdf","pl_osp","m10"].forEach(id=>{if(N[id])N[id].im="a_"+id+".webp"});
+["fg_sosn","fg_okaim","in_lub","in_shelk","in_usach","fg_seryanka","en_plants","fg_opyonok","o_mag","o_us","o_zim","o_lezh","z_s_ch","z_s_bch","z_s_fw","z_s_cab","pl_dsp","pl_mdf","pl_osp","m10","z_t1","z_t2","z_t3"].forEach(id=>{if(N[id])N[id].im="a_"+id+".webp"});
 /* картинки к оборудованию */
 const tim={t_bandsaw_h:"a_t_bandsaw_h.webp",t_frame:"a_t_frame.webp",t_multisaw:"a_t_multisaw.webp",t_edger:"a_t_edger.webp",t_planer:"a_t_planer.webp",t_jointer:"a_t_jointer.webp",t_thicknesser:"a_t_jointer.webp",t_cnc:"a_t_cnc.webp",t_kiln:"a_t_kiln.webp",t_vilka:"a_t_vilka.webp",t_vysotomer:"a_t_vysotomer.webp",t_burav:"a_t_burav.webp",t_skidder:"a_z_s_ch.webp",t_skidder_g:"a_z_s_bch.webp",t_forwarder:"a_z_s_fw.webp",t_cable:"a_z_s_cab.webp"};
 Object.entries(tim).forEach(([k,v])=>{if(T[k])T[k].im=v});

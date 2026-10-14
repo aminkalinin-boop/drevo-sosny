@@ -9,7 +9,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
 /* Layout: шапка с поиском и вкладками; экран одного уровня (путь сверху, карточки детей), справа на широком экране — дерево раздела */
 :root{
@@ -18,7 +18,7 @@
   --prod:#865608; --prod-bg:#f5e5c2; --final:#23507a; --final-bg:#dbe7f3; --waste:#6e4a36; --waste-bg:#e8dcd2;
   --place:#5b3f86; --place-bg:#e7dff3; --doc:#6b5a1e; --doc-bg:#efe9cf; --tech:#1f5f6a; --tech-bg:#d8eaee;
   --tool:#3d4a57; --tool-bg:#e9edf1; --accent:#b8740f; --hl:#fff1b8; --head:#1f4a2c; --head-fg:#eef4ef;
-  --f-disp:"Alegreya",Georgia,serif; --f-body:"Alegreya Sans","Segoe UI",Arial,sans-serif;
+  --f-disp:"PT Serif",Georgia,"Times New Roman",serif; --f-body:"PT Sans","Segoe UI",Roboto,Arial,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#131915; --panel:#1b231e; --fg:#e3eae4; --muted:#9aa89d; --line:#34433a; --trunk:#b08b6b;
@@ -49,7 +49,7 @@ h1{font:700 1.7rem/1.1 var(--f-disp);margin:0}
 .results small{color:var(--muted)}
 .tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-top:6px}
 .tabs::-webkit-scrollbar{display:none}
-.tabs button{font:inherit;font-weight:500;background:none;border:none;border-bottom:3px solid transparent;color:var(--head-fg);opacity:.75;padding:8px 11px;cursor:pointer;white-space:nowrap}
+.tabs button{font:inherit;font-weight:700;background:none;border:none;border-bottom:3px solid transparent;color:var(--head-fg);opacity:.75;padding:8px 11px;cursor:pointer;white-space:nowrap}
 .tabs button[aria-selected="true"]{opacity:1;border-color:var(--accent)}
 .navbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding:8px 16px;display:flex;align-items:center;gap:8px}
 .back{font:inherit;font-size:1.3rem;line-height:1;width:40px;height:40px;flex:none;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}
@@ -77,7 +77,9 @@ h1{font:700 1.7rem/1.1 var(--f-disp);margin:0}
 .hs{position:absolute;border:2px dashed transparent;border-radius:10px;background:transparent;cursor:pointer;padding:0}
 .hs.term{border-bottom:2px dashed transparent}
 .hs:hover,.hs:focus-visible{border-color:#b8740f;background:rgba(184,116,15,.12);outline:none}
-.cimg{display:block;width:100%;max-width:340px;height:auto;border-radius:12px;border:1px solid var(--line);margin:6px 0 12px}
+.cimg.wide{max-width:100%}
+.tn.tt{color:var(--tool);font-size:.84rem}
+.cimg{display:block;width:100%;max-width:420px;height:auto;border-radius:12px;border:1px solid var(--line);margin:6px 0 12px}
 .note{font-size:.88rem;color:var(--muted);margin:0 0 6px}
 .items{display:flex;flex-direction:column;gap:8px}
 .item{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--line);border-radius:12px;padding:11px 12px;cursor:pointer;min-height:56px}
@@ -120,14 +122,14 @@ button.nlink{font:inherit;background:none;border:none;padding:0;color:var(--tech
 .qchk input,.qradio input{width:18px;height:18px;accent-color:var(--accent)}
 .qcount{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .qact{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.qbtn{font:inherit;font-weight:500;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}
+.qbtn{font:inherit;font-weight:700;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}
 .qbtn.primary{background:var(--live);border-color:var(--live);color:var(--panel)}
 .qprog{display:flex;justify-content:space-between;gap:8px;font-size:.88rem;color:var(--muted);flex-wrap:wrap}
 .qbar{height:6px;background:var(--bg);border-radius:3px;margin:6px 0 14px;overflow:hidden}.qbar i{display:block;height:100%;background:var(--accent)}
 .qprompt{font-size:1.1rem;margin:0 0 14px}.qprompt q{display:block;margin-top:8px;padding:10px 12px;background:var(--bg);border-radius:8px;quotes:none;font-size:1rem}
 .qopts{display:flex;flex-direction:column;gap:8px}
 .qopt{font:inherit;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer;min-height:48px}
-.qopt.right{border-color:var(--live);background:var(--live-bg);color:var(--live);font-weight:500}
+.qopt.right{border-color:var(--live);background:var(--live-bg);color:var(--live);font-weight:700}
 .qopt.wrong{border-color:var(--part);background:var(--part-bg);color:var(--part)}
 .qopt:disabled{cursor:default}
 .qfb{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}.okm{color:var(--live);font-weight:700}.errm{color:var(--part);font-weight:700}
@@ -147,7 +149,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <body>
 
 <header class="top"><div class="wrap">
-  <div class="brand"><h1>Древо сосны</h1><span class="author">Автор: Минигулов Александр Рафаильевич</span></div>
+  <div class="brand"><h1>Древо сосны</h1></div>
   <div class="search"><input id="q" type="search" placeholder="Поиск по всему справочнику: канифоль, харвестер, ОИУ…" aria-label="Поиск по справочнику" autocomplete="off"><div class="results" id="res" hidden></div></div>
   <nav class="tabs" role="tablist" id="tabs"></nav>
 </div></header>
@@ -220,7 +222,7 @@ function nodeScreen(id,tab){const n=N[id];let h="";
  if(isRoot&&PH[tab]){h+=photoHtml(PH[tab],HSX[tab],"Иллюстрация к разделу")+`<p class="note">Нажимай на подписи и предметы на картинке.</p>`}
  h+=`<div class="kind">${K[n.k]||""}</div><h2>${rich(n.t)}</h2>`;
  if(n.s)h+=`<p class="lead">${n.s}</p>`;
- if(n.im)h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}">`;
+ if(n.im)h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`;
  if(n.pics&&n.pics.length){const any=n.pics.some(p=>p.hs&&p.hs.length);h+=n.pics.map(p=>photoHtml(p.src,p.hs,plain(n.t))).join("");if(any)h+=`<p class="note">На картинке можно нажимать на подписи и плитки.</p>`}
  if(n.n)h+=`<div class="names"><b>Как называют.</b> ${rich(n.n)}</div>`;
  if(n.w)h+=`<p>${rich(n.w)}</p>`;
@@ -232,7 +234,7 @@ function nodeScreen(id,tab){const n=N[id];let h="";
  if(n.ln){const l=n.ln.filter(x=>N[x]);if(l.length)h+=`<h3 class="sec">Связано в других разделах</h3><div class="items">${l.map(lnItem).join("")}</div>`}
  if(isRoot)h+=`<div class="legend">${Object.entries(K).map(([k,v])=>`<span><i style="background:var(--${k==="info"?"line":k==="forest"?"live":k})"></i>${v}</span>`).join("")}</div>`;
  return h}
-function toolScreen(t){const x=T[t];let h=`<div class="kind">Оборудование · ${x.g}</div><h2>${x.t}</h2>${x.im?`<img class="cimg" src="${x.im}" alt="${x.t}">`:""}<p>${rich(x.w)}</p>`;
+function toolScreen(t){const x=T[t];let h=`<div class="kind">Оборудование · ${x.g}</div><h2>${x.t}</h2>${x.im?`<img class="cimg" src="${x.im}" alt="${x.t}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`:""}<p>${rich(x.w)}</p>`;
  if(x.how)h+=`<h3 class="sec">Как устроено и работает</h3><p class="how">${rich(x.how)}</p>`;
  if(x.use)h+=`<h3 class="sec">Для чего</h3><p>${rich(x.use)}</p>`;
  if(x.perf)h+=`<h3 class="sec">Производительность и цифры</h3><p>${rich(x.perf)}</p>`;
@@ -249,9 +251,13 @@ function render(tab,scroll=true){const st=ST[tab],top=st[st.length-1];
  if(scroll){const nb=document.querySelector(`#pane-${tab} .navbar`);const y=nb.getBoundingClientRect().top+scrollY-0;if(scrollY>y)scrollTo({top:y,behavior:"auto"})}}
 /* дерево обзора */
 function renderTree(tab,sel){const s=SCH.find(x=>x.id===tab),open=treeOpen[tab],path=new Set(pathOf(sel));
- const row=(id,d,gs,last)=>{const kids=N[id].c||[],o=open.has(id);let h=`<div class="r">`;gs.forEach(v=>h+=`<i class="g${v?" v":""}"></i>`);if(d>0)h+=`<i class="el${last?" l":""}"></i>`;
-  h+=`<div class="rb"><button type="button" class="car${kids.length?"":" none"}" data-tt="${id}" aria-label="${o?"Свернуть":"Развернуть"}">${kids.length?(o?"▾":"▸"):""}</button><button type="button" class="tn${id===sel?" on":path.has(id)?" path":""}" data-go="${id}">${plain(N[id].t)}</button></div></div>`;
-  if(o)kids.forEach((c,i)=>h+=row(c,d+1,d===0?[]:[...gs,!last],i===kids.length-1));return h};
+ const st=ST[tab],top=st[st.length-1],selTool=top.startsWith("t:")?top.slice(2):null;
+ const ents=id=>[...(N[id].c||[]).map(c=>["n",c]),...(N[id].k==="tech"?(N[id].tl||[]).map(t=>["t",t]):[])];
+ const lines=(d,gs,last)=>{let h="";gs.forEach(v=>h+=`<i class="g${v?" v":""}"></i>`);if(d>0)h+=`<i class="el${last?" l":""}"></i>`;return h};
+ const row=(id,d,gs,last)=>{const kids=ents(id),o=open.has(id);let h=`<div class="r">`+lines(d,gs,last);
+  h+=`<div class="rb"><button type="button" class="car${kids.length?"":" none"}" data-tt="${id}" aria-label="${o?"Свернуть":"Развернуть"}">${kids.length?(o?"▾":"▸"):""}</button><button type="button" class="tn${id===sel&&!selTool?" on":path.has(id)?" path":""}" data-go="${id}">${plain(N[id].t)}</button></div></div>`;
+  if(o){const g2=d===0?[]:[...gs,!last];kids.forEach(([k,c],i)=>{const l=i===kids.length-1;h+=k==="n"?row(c,d+1,g2,l):`<div class="r">${lines(d+1,g2,l)}<div class="rb"><span class="car none"></span><button type="button" class="tn tt${c===selTool&&id===sel?" on":""}" data-tool="${c}" data-grp="${id}">${T[c].t}</button></div></div>`})}
+  return h};
  document.getElementById("tr-"+tab).innerHTML=row(s.root,0,[],true)}
 /* навигация */
 function snapshot(){return {tab:cur,st:ST[cur]?ST[cur].slice():null}}
@@ -296,7 +302,7 @@ document.addEventListener("click",e=>{
  const tb=e.target.closest("[data-tree]");if(tb){document.getElementById("sd-"+tb.dataset.tree).classList.toggle("open");return}
  const tt=e.target.closest("[data-tt]");if(tt){const o=treeOpen[cur],id=tt.dataset.tt;o.has(id)?o.delete(id):o.add(id);const st=ST[cur];renderTree(cur,[...st].reverse().find(x=>!x.startsWith("t:")));return}
  const nv=e.target.closest("[data-nav]");if(nv){nav(nv.dataset.nav);return}
- const tl=e.target.closest("[data-tool]");if(tl){openTool(tl.dataset.tool);return}
+ const tl=e.target.closest("[data-tool]");if(tl){if(tl.dataset.grp){ST[cur]=pathOf(tl.dataset.grp).concat("t:"+tl.dataset.tool);render(cur);pushHist();if(innerWidth<=1000)document.getElementById("sd-"+cur).classList.remove("open")}else openTool(tl.dataset.tool);return}
  const g=e.target.closest("[data-go]");if(g){go(g.dataset.go);if(e.target.closest(".side")&&innerWidth<=1000)document.getElementById("sd-"+cur).classList.remove("open");return}
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){pop.hidden=true;res.hidden=true}});
