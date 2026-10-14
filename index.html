@@ -51,6 +51,8 @@ h1{font:700 2.1rem/1.1 var(--f-disp);margin:0 0 4px;text-wrap:balance}
 .lead-s{color:var(--muted);margin:0 0 12px;max-width:75ch}
 .photo{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:8px}
 .photo img{display:block;width:100%;height:auto}
+.cimg{display:block;width:100%;max-width:320px;height:auto;border-radius:10px;border:1px solid var(--line);margin:4px 0 12px}
+.card .photo{margin:4px 0 12px}
 .hs{position:absolute;border:2px dashed transparent;border-radius:10px;background:transparent;cursor:pointer;padding:0}
 .hs:hover,.hs:focus-visible{border-color:#b8740f;background:rgba(184,116,15,.12);outline:none}
 .photo-note{font-size:.88rem;color:var(--muted);margin:0 0 6px}
@@ -168,6 +170,7 @@ button.nlink{font:inherit;background:none;border:none;padding:0;color:var(--game
 <script charset="utf-8" src="schemes1.js"></script>
 <script charset="utf-8" src="schemes2.js"></script>
 <script charset="utf-8" src="tools.js"></script>
+<script charset="utf-8" src="pine2.js"></script>
 <script>
 const K={forest:"Лес",live:"Живое / целое",part:"Часть дерева",proc:"Процесс",prod:"Сырьё, полуфабрикат",final:"Готовая продукция",waste:"Остатки, побочное, риски",place:"Место, объект",doc:"Документы, право",info:"Справка",game:"Игра"};
 const SCH=[
@@ -202,6 +205,7 @@ const nb=(id,extra="")=>`<button type="button" class="n ${N[id].k}${extra}" data
 const tb=id=>`<button type="button" class="tl" data-tool="${id}">${T[id].t}</button>`;
 const lb=id=>`<button type="button" class="lk" data-go="${id}">→ ${SCH.find(s=>s.id===tabOf(id)).t}: ${plain(N[id].t)}</button>`;
 const collapsed=new Set(),Q={};let sel=null,cur="pine";
+Object.keys(N).forEach(id=>{if((N[id].c||[]).length&&!ROOTTAB[id])collapsed.add(id)});
 function hay(n){return (plain(n.t)+" "+plain(n.s)+" "+plain(n.n)+" "+plain(n.w)+" "+(n.f||[]).map(plain).join(" ")).toLowerCase()}
 function row(id,d,gs,last,q){const n=N[id],kids=n.c||[],m=q&&hay(n).includes(q),open=!collapsed.has(id)||q;
  const sub=x=>hay(N[x]).includes(q)||(N[x].c||[]).some(sub);
@@ -225,7 +229,7 @@ const legend=`<div class="legend">${Object.entries(K).map(([k,v])=>`<span><i cla
 panes.innerHTML=SCH.map(s=>`<section id="pane-${s.id}" ${s.id==="pine"?"":"hidden"}>
  <p class="lead-s">${s.lead}</p>
  ${PH[s.id]?`<p class="photo-note">Нажимай на подписи и предметы на картинке — откроется карточка.</p><div class="photo"><img src="${PH[s.id]}" alt="Иллюстрация к схеме «${s.t}»" width="1536" height="1024" loading="${s.id==="pine"?"eager":"lazy"}">${(s.id==="pine"?HS:HSX[s.id]).map(([id,x,y,w,h])=>`<button type="button" class="hs" ${id.startsWith("t_")?`data-tool="${id}"`:`data-go="${id}"`} style="left:${x}%;top:${y}%;width:${w}%;height:${h}%" aria-label="${id.startsWith("t_")?T[id].t:plain(N[id].t)}"></button>`).join("")}</div>`:""}
- ${s.id==="pine"?`<div class="pills">${["crown","needles","cones","trunk","bark_outer","lub","kambiy","zabolon","yadro","serdc","resin_ducts","roots","species"].map(i=>nb(i)).join("")}</div>`:""}
+ ${s.id==="pine"?`<div class="pills">${["crown","needles","cones","trunk","bark_outer","lub","kambiy","zabolon","yadro","serdc","resin_ducts","roots","species","enemies"].map(i=>nb(i)).join("")}</div>`:""}
  <div class="tools"><input type="search" data-q="${s.id}" placeholder="Найти в схеме" aria-label="Поиск по схеме «${s.t}»"><button type="button" data-open="${s.id}">Развернуть всё</button><button type="button" data-shut="${s.id}">Свернуть</button></div>
  ${legend}<div class="tree" id="tree-${s.id}"></div></section>`).join("")+
  `<section id="pane-quiz" hidden></section><section id="pane-tools" hidden><p class="lead-s">Весь инструмент и техника из схем. Нажми, чтобы увидеть, что это и где применяется.</p><div class="cat" id="cat"></div></section>
@@ -242,6 +246,8 @@ renderGl("");document.getElementById("gq").addEventListener("input",e=>renderGl(
 const card=document.getElementById("card");const isNarrow=()=>matchMedia("(max-width:1100px)").matches;
 function show(id){sel=id;const n=N[id];let h=`<button class="close" type="button" aria-label="Закрыть">✕</button><div class="kind">${K[n.k]}</div><h2>${rich(n.t)}</h2>`;
  if(n.s)h+=`<p class="lead">${n.s}</p>`;
+ if(n.im)h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}" loading="lazy">`;
+ if(n.grid)h+=`<p class="photo-note">Нажми на карточку на картинке.</p><div class="photo">${`<img src="${n.grid.src}" alt="${plain(n.t)}" width="1536" height="1024" loading="lazy">`}${n.grid.hs.map(([id,x,y,w,hh])=>`<button type="button" class="hs" data-go="${id}" style="left:${x}%;top:${y}%;width:${w}%;height:${hh}%" aria-label="${plain(N[id].t)}"></button>`).join("")}</div>`;
  if(P[id])h+=`<div class="from">Откуда: ${nb(P[id])}</div>`;
  if(n.n)h+=`<div class="names"><b>Как называют.</b> ${rich(n.n)}</div>`;
  if(n.w)h+=`<h3>Что это</h3><p>${rich(n.w)}</p>`;
