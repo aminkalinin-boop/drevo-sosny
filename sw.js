@@ -1,6 +1,6 @@
-/* Офлайн-режим: все файлы справочника кешируются при первом открытии */
-const CACHE="drevo-sosny-v3";
-const FILES=["./", "index.html", "manifest.webmanifest", "a_balans.webp", "a_fuelchip.webp", "a_kryazh.webp", "a_pilovoch.webp", "a_pine.webp", "a_plywood.webp", "a_podtov.webp", "a_rud.webp", "a_shpal.webp", "a_shpon.webp", "a_sp_gor.webp", "a_sp_ked.webp", "a_sp_kor.webp", "a_sp_krym.webp", "a_sp_pic.webp", "a_sp_stl.webp", "a_stolb.webp", "a_stroy.webp", "a_whip.webp", "derevo.webp", "forest.webp", "glossary.js", "icon-192.png", "icon-512.png", "manifest.webmanifest", "otvod.webp", "photos.js", "pine.js", "pine2.js", "quiz.js", "real.webp", "schemes1.js", "schemes2.js", "sortiments.webp", "sosna.webp", "species.webp", "tech.js", "tools.js", "uis.js", "vost.webp", "zag.webp"];
+/* Офлайн-режим: код кешируется при установке, картинки — при первом просмотре */
+const CACHE="drevo-sosny-v4";
+const FILES=["./", "index.html", "manifest.webmanifest", "assets2.js", "glossary.js", "icon-192.png", "icon-512.png", "photos.js", "pine.js", "pine2.js", "quiz.js", "schemes1.js", "schemes2.js", "tech.js", "tools.js", "uis.js"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
 self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(fetch(e.request).then(res=>{const copy=res.clone();caches.open(CACHE).then(c=>c.put(e.request,copy)).catch(()=>{});return res}).catch(()=>caches.match(e.request).then(r=>r||caches.match("index.html"))))});
