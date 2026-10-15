@@ -150,3 +150,35 @@ Circular flow infographic without people: forest plot → logging → lower land
 ## Как отдавать мне
 
 Присылай картинку в чат и пиши, в какой раздел она относится, — или просто присылай: по заголовкам на плитках я сам разберусь, как в прошлый раз.
+
+## Новые вкладки «Хвойные» и «Лиственные»
+
+### 22. Хвойные породы (сетка 4×1, как прошлый ассет видов сосен)
+Куда: «Хвойные» — карточки ели, лиственницы, кедра, пихты.
+```
+Four tall tiles in the same style as a species card: each shows a mature tree in its natural habitat, with three circular insets on the right (needles close-up, cone, wood cross-section) and a dark-green caption bar with the Russian name and Latin name: "Ель обыкновенная (Picea abies)" — dense conical spruce reaching the ground, hanging cones; "Лиственница сибирская (Larix sibirica)" — tall larch with soft light-green tufted needles, small upright cones, red-brown heartwood; "Кедр сибирский (Pinus sibirica)" — massive five-needle pine with large purple-brown cones full of nuts; "Пихта сибирская (Abies sibirica)" — narrow spire-shaped fir with flat soft needles, upright cones, smooth grey bark with resin blisters.
+```
+
+### 23. Лиственные породы (сетка 4×2)
+Куда: «Лиственные» — карточки пород.
+```
+Eight tiles, same style: tree, insets with leaf, fruit or flower, wood cross-section, caption bar with Russian and Latin name: "Берёза (Betula pendula)", "Осина (Populus tremula)", "Дуб черешчатый (Quercus robur)", "Липа мелколистная (Tilia cordata)", "Ольха чёрная (Alnus glutinosa)", "Ясень (Fraxinus excelsior)", "Бук восточный (Fagus orientalis)", "Тополь (Populus nigra)".
+```
+
+### 24. Что даёт берёза (сетка 4×2)
+Куда: «Берёза».
+```
+Eight tiles with captions: rolls of white birch bark, "Береста"; dark tar dripping from a clay pot over fire, "Дёготь"; birch sap dripping from a tap into a glass jar in early spring, "Берёзовый сок"; black chaga growth on a birch trunk, "Чага"; birch bark baskets and lidded containers, "Туеса"; stack of birch plywood sheets with layered edge, "Фанера"; split birch firewood stack, "Дрова"; bath broom of birch twigs, "Веник".
+```
+
+### 25. Продукты хвойных (сетка 4×2)
+Куда: «Ель», «Лиственница», «Кедр», «Пихта».
+```
+Eight tiles with captions: cedar nuts in cones and shelled kernels, "Кедровые орехи"; bottle of golden cedar nut oil, "Кедровое масло"; small amber bottle of fir essential oil with fir sprigs, "Пихтовое масло"; violin top made of spruce with fine straight grain, "Резонансная ель"; larch terrace decking, "Лиственничная терраса"; larch piles in water under a pier, "Лиственничные сваи"; spruce bark pieces with leather hides, "Еловое корьё"; natural chewing resin pieces, "Сера".
+```
+
+### 26. Продукты лиственных (сетка 4×2)
+Куда: «Дуб», «Липа», «Осина», «Ольха», «Ясень».
+```
+Eight tiles with captions: oak barrels in a cellar, "Дубовые бочки"; oak parquet floor, "Дубовый паркет"; black bog oak slab, "Мореный дуб"; linden bast strips and bast shoes, "Лыко и мочало"; carved linden spoons and icon board, "Липовая резьба"; aspen shingles on a wooden church dome, "Осиновый лемех"; matchsticks and matchboxes, "Спички"; alder wood chips smoking fish, "Ольховая щепа для копчения".
+```
