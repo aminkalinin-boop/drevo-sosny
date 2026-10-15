@@ -169,10 +169,10 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script charset="utf-8" src="species.js"></script>
 <script charset="utf-8" src="photos.js"></script>
 <script charset="utf-8" src="assets2.js"></script>
+<script charset="utf-8" src="assets3.js"></script>
 <script>
 const K={forest:"Раздел",live:"Живое / целое",part:"Часть дерева",proc:"Процесс",prod:"Сырьё, полуфабрикат",final:"Готовая продукция",waste:"Остатки, побочное, риски",place:"Место, объект",doc:"Документы, право",info:"Справка",tech:"Техника"};
 const SCH=[
- {id:"pine",t:"Древо сосны",root:"pine"},
  {id:"conif",t:"Хвойные",root:"con_root"},
  {id:"decid",t:"Лиственные",root:"dc_root"},
  {id:"forest",t:"Лес",root:"f_root"},
@@ -200,7 +200,7 @@ const title=id=>id.startsWith("t:")?T[id.slice(2)].t:plain(N[id].t);
 function firstSent(s,max=140){s=plain(s).replace(/\s+/g," ").trim();const m=s.match(/^.{20,}?[.!?](\s|$)/);let r=m?m[0].trim():s;return r.length>max?r.slice(0,max).replace(/\s\S*$/,"")+"…":r}
 /* состояние */
 const ST={};SCH.forEach(s=>ST[s.id]=[s.root]);
-let cur="pine";
+let cur="conif";
 const treeOpen={};SCH.forEach(s=>treeOpen[s.id]=new Set());
 /* вкладки и панели */
 const tabs=document.getElementById("tabs"),panes=document.getElementById("panes");
@@ -225,14 +225,14 @@ function nodeScreen(id,tab){const n=N[id];let h="";
  if(isRoot&&PH[tab]){h+=photoHtml(PH[tab],HSX[tab],"Иллюстрация к разделу")+`<p class="note">Нажимай на подписи и предметы на картинке.</p>`}
  h+=`<div class="kind">${K[n.k]||""}</div><h2>${rich(n.t)}</h2>`;
  if(n.s)h+=`<p class="lead">${n.s}</p>`;
- if(n.im)h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`;
+ if(n.im&&!(n.pics&&n.pics.length))h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`;
  if(n.pics&&n.pics.length){const any=n.pics.some(p=>p.hs&&p.hs.length);h+=n.pics.map(p=>photoHtml(p.src,p.hs,plain(n.t))).join("");if(any)h+=`<p class="note">На картинке можно нажимать на подписи и плитки.</p>`}
  if(n.n)h+=`<div class="names"><b>Как называют.</b> ${rich(n.n)}</div>`;
  if(n.w)h+=`<p>${rich(n.w)}</p>`;
  if(n.h)h+=`<h3 class="sec">Как получают / как делают</h3><p class="how">${rich(n.h)}</p>`;
  if(n.f)h+=`<h3 class="sec">Подробности</h3><ul>${n.f.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
  if(n.y)h+=`<h3 class="sec">${n.c?"Ещё":"Что из этого получают"}</h3><ul>${n.y.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
- if(n.c&&n.c.length){const lbl=["part","live","prod","waste","final"].includes(n.k)&&tab==="pine"?"Что из этого получают":"Дальше";h+=`<h3 class="sec">${lbl} · ${n.c.length}</h3><div class="items">${n.c.map(item).join("")}</div>`}
+ if(n.c&&n.c.length){const lbl=["part","live","prod","waste","final"].includes(n.k)&&(tab==="conif"||tab==="decid")?"Что из этого получают":"Дальше";h+=`<h3 class="sec">${lbl} · ${n.c.length}</h3><div class="items">${n.c.map(item).join("")}</div>`}
  if(n.tl&&n.tl.length){h+=n.k==="tech"?`<h3 class="sec">Оборудование · ${n.tl.length}</h3><div class="items">${n.tl.map(toolItem).join("")}</div>`:`<h3 class="sec">Инструменты и оборудование</h3><div class="chips">${n.tl.map(t=>`<button type="button" class="chip tl" data-tool="${t}">${T[t].t}</button>`).join("")}</div>`}
  if(n.ln){const l=n.ln.filter(x=>N[x]);if(l.length)h+=`<h3 class="sec">Связано в других разделах</h3><div class="items">${l.map(lnItem).join("")}</div>`}
  if(isRoot)h+=`<div class="legend">${Object.entries(K).map(([k,v])=>`<span><i style="background:var(--${k==="info"?"line":k==="forest"?"live":k})"></i>${v}</span>`).join("")}</div>`;
