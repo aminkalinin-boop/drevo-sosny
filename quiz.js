@@ -3,7 +3,7 @@
 const KEY="les-quiz-v1";
 let stats={};try{stats=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){stats={}}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(stats))}catch(e){}};
-const QS=SCH.filter(s=>s.id!=="tech");
+const QS=SCH.filter(s=>s.id!=="tech"&&s.id!=="atech");
 const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const pick=(a,n)=>shuf(a).slice(0,n);
 const title=id=>plain(N[id].t);
@@ -13,8 +13,8 @@ function redact(text,t){let out=text;plain(t).toLowerCase().split(/[^а-яёa-z0
 function uniqTitles(arr,ans){const seen=new Set([ans.toLowerCase()]);return arr.filter(x=>{const k=x.toLowerCase();if(seen.has(k))return false;seen.add(k);return true})}
 function mk(prompt,answer,pool,id,sid,type,extra){const d=uniqTitles(shuf(pool),answer).slice(0,3);if(d.length<3)return null;return {prompt,answer,opts:shuf([answer,...d]),id,sid,type,extra}}
 /* варианты вопросов по одному пункту */
-function qDef(id){const n=N[id],w=plain(n.w);if(!w||w.length<30)return null;const sid=tabOf(id);let same=ids(sid).filter(x=>x!==id&&N[x].k===n.k);if(same.length<3)same=ids(sid).filter(x=>x!==id);
- return mk(`О чём это?<br><q>${redact(firstSent(n.w),n.t)}</q>`,title(id),same.map(title),id,sid,"def")}
+function qDef(id){const n=N[id],src=n.w||(n.f||[])[0]||"",w=plain(src);if(!w||w.length<30)return null;const sid=tabOf(id);let same=ids(sid).filter(x=>x!==id&&N[x].k===n.k);if(same.length<3)same=ids(sid).filter(x=>x!==id);
+ return mk(`О чём это?<br><q>${redact(firstSent(src),n.t)}</q>`,title(id),same.map(title),id,sid,"def")}
 function qFrom(id){const n=N[id],p=P[id];if(!p||!n.e||!["prod","final","waste","part","live"].includes(n.k))return null;const sid=tabOf(id);
  const pool=ids(sid).filter(x=>x!==id&&x!==p&&["part","prod","live","waste"].includes(N[x].k)).map(title);
  return mk(`Из чего получают «${title(id)}»?`,title(p),pool,id,sid,"from")}
@@ -34,7 +34,7 @@ function items(scope){let a=[];scope.forEach(s=>{a=a.concat(s==="gloss"?Object.k
 /* интерфейс */
 const pane=document.getElementById("pane-quiz");let run=null;
 function mastered(list){return list.filter(i=>(stats[i]||0)>0).length}
-function setup(){const rows=[...QS.map(s=>({id:s.id,t:s.t})),{id:"tools",t:"Техника и оборудование"},{id:"gloss",t:"Словарь терминов"}];
+function setup(){const rows=[...QS.map(s=>({id:s.id,t:(s.sec==="apk"?"АПК · ":"ЛПК · ")+s.t})),{id:"tools",t:"Техника и оборудование (ЛПК и АПК)"},{id:"gloss",t:"Словарь терминов"}];
  pane.innerHTML=`<p class="lead-s">Вопросы собираются из карточек справочника: узнать пункт по описанию, из чего его получают, какое оборудование нужно, что значит термин. Прогресс сохраняется на этом устройстве.</p>
  <div class="quiz-box"><h2 class="qh">Что проверяем</h2><div class="qscope">${rows.map(r=>{const l=items([r.id]).filter(i=>i.startsWith("g:")||i.startsWith("t:")||forItem(i,false));return `<label class="qchk"><input type="checkbox" value="${r.id}" ${r.id!=="gloss"&&r.id!=="tools"?"checked":""}><span>${r.t}</span><small>${mastered(l)} из ${l.length} освоено</small></label>`}).join("")}</div>
  <h2 class="qh">Сколько вопросов</h2><div class="qcount">${[10,20,50].map(n=>`<label class="qradio"><input type="radio" name="qn" value="${n}" ${n===10?"checked":""}><span>${n}</span></label>`).join("")}<label class="qradio"><input type="radio" name="qn" value="all"><span>Каждый пункт по порядку</span></label><label class="qradio"><input type="radio" name="qn" value="weak"><span>Только неосвоенные</span></label></div>
