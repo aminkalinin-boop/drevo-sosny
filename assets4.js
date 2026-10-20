@@ -66,7 +66,10 @@
     opil: "a_opil.webp",
     pellet: "a_pellet.webp",
     woodflour: "a_woodflour.webp",
-    srub: "a_srub.webp"
+    srub: "a_srub.webp",
+    kraft: "a_kraft.webp",
+    paper: "a_paper.webp",
+    liquor: "a_liquor.webp"
   };
   for (const [id, filename] of Object.entries(images)) {
     if (window.N[id] && !window.N[id].im) window.N[id].im = filename;
