@@ -1,4 +1,4 @@
-/* Изображения недостающих карточек: ASSET_PROMPTS_3.md, листы 1–5 из 96.
+/* Изображения недостающих карточек: ASSET_PROMPTS_3.md, листы 1–8 из 96.
  * У каждой карточки своя фотография в WebP. Уже заданные иллюстрации не заменяем.
  */
 (function () {
@@ -42,7 +42,31 @@
     solder: "a_solder.webp",
     bow: "a_bow.webp",
     sizing: "a_sizing.webp",
-    rubber: "a_rubber.webp"
+    rubber: "a_rubber.webp",
+    varnish: "a_varnish.webp",
+    seal: "a_seal.webp",
+    turp: "a_turp.webp",
+    solvent: "a_solvent.webp",
+    camphor: "a_camphor.webp",
+    terp: "a_terp.webp",
+    aroma: "a_aroma.webp",
+    turp_fuel: "a_turp_fuel.webp",
+    pineoil: "a_pineoil.webp",
+    wood: "a_wood.webp",
+    zabolon: "a_zabolon.webp",
+    yadro: "a_yadro.webp",
+    serdc: "a_serdc.webp",
+    felled: "a_felled.webp",
+    bkch: "a_bkch.webp",
+    izdel: "a_izdel.webp",
+    gorbyl: "a_gorbyl.webp",
+    techchip: "a_techchip.webp",
+    hydrol: "a_hydrol.webp",
+    arbolit: "a_arbolit.webp",
+    opil: "a_opil.webp",
+    pellet: "a_pellet.webp",
+    woodflour: "a_woodflour.webp",
+    srub: "a_srub.webp"
   };
   for (const [id, filename] of Object.entries(images)) {
     if (window.N[id] && !window.N[id].im) window.N[id].im = filename;
