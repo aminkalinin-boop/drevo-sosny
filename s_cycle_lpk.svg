@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1394" width="600" height="1394" font-family="PT Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#4a4a4a"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2e6b3a"/></marker></defs>
+<rect width="600" height="1394" fill="#f7f6f1"/>
+<rect x="34" y="16" width="262" height="88" rx="12" fill="#e3efe0" stroke="#2e6b3a" stroke-width="2.5"/>
+<text x="46" y="52" font-size="18" font-weight="700" fill="#1d2a22">1. Лес и питомник</text>
+<text x="46" y="80" font-size="16" fill="#3e4a42">сеянцы на вырубки</text>
+<rect x="320" y="16" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="55.0" font-size="16" fill="#3b2a1e">Живица до рубки →</text>
+<text x="330" y="77.0" font-size="16" fill="#3b2a1e">канифоль, скипидар</text>
+<line x1="296" y1="60.0" x2="316" y2="60.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="104" x2="165.0" y2="127" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="130" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="166" font-size="18" font-weight="700" fill="#1d2a22">2. Лесозаготовка</text>
+<text x="46" y="194" font-size="16" fill="#3e4a42">харвестер и форвардер</text>
+<rect x="320" y="130" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="158.0" font-size="16" fill="#3b2a1e">Сучья → подушка, щепа</text>
+<text x="330" y="180.0" font-size="16" fill="#3b2a1e">Зелень → ХВМ, масла</text>
+<text x="330" y="202.0" font-size="16" fill="#3b2a1e">Шишки → семена</text>
+<line x1="296" y1="174.0" x2="316" y2="174.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="218" x2="165.0" y2="241" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="244" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="280" font-size="18" font-weight="700" fill="#1d2a22">3. Нижний склад</text>
+<text x="46" y="308" font-size="16" fill="#3e4a42">сканер и сортировка</text>
+<rect x="320" y="244" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="283.0" font-size="16" fill="#3b2a1e">Дрова и гниль →</text>
+<text x="330" y="305.0" font-size="16" fill="#3b2a1e">уголь, лесохимия</text>
+<line x1="296" y1="288.0" x2="316" y2="288.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="332" x2="165.0" y2="355" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="358" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="394" font-size="18" font-weight="700" fill="#1d2a22">4. Лесопиление</text>
+<text x="46" y="422" font-size="16" fill="#3e4a42">окорка и распиловка</text>
+<rect x="320" y="358" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="386.0" font-size="16" fill="#3b2a1e">Кора → энергоцентр</text>
+<text x="330" y="408.0" font-size="16" fill="#3b2a1e">Горбыль → щепа</text>
+<text x="330" y="430.0" font-size="16" fill="#3b2a1e">Опилки → пеллеты</text>
+<line x1="296" y1="402.0" x2="316" y2="402.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="446" x2="165.0" y2="469" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="472" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="508" font-size="18" font-weight="700" fill="#1d2a22">5. Сушка и обработка</text>
+<text x="46" y="536" font-size="16" fill="#3e4a42">брус, CLT, погонаж</text>
+<rect x="320" y="472" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="511.0" font-size="16" fill="#3b2a1e">Стружка → пеллеты, ЦСП,</text>
+<text x="330" y="533.0" font-size="16" fill="#3b2a1e">подстилка для ферм</text>
+<line x1="296" y1="516.0" x2="316" y2="516.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="560" x2="165.0" y2="583" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="586" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="622" font-size="18" font-weight="700" fill="#1d2a22">6. Фанерный завод</text>
+<text x="46" y="650" font-size="16" fill="#3e4a42">фанера, LVL</text>
+<rect x="320" y="586" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="625.0" font-size="16" fill="#3b2a1e">Карандаш → черенки</text>
+<text x="330" y="647.0" font-size="16" fill="#3b2a1e">Берёста → дёготь</text>
+<line x1="296" y1="630.0" x2="316" y2="630.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="674" x2="165.0" y2="697" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="700" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="736" font-size="18" font-weight="700" fill="#1d2a22">7. ЦБК</text>
+<text x="46" y="764" font-size="16" fill="#3e4a42">целлюлоза, бумага, картон</text>
+<rect x="320" y="700" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="728.0" font-size="16" fill="#3b2a1e">Щёлок → энергия</text>
+<text x="330" y="750.0" font-size="16" fill="#3b2a1e">Мыло → талловое масло</text>
+<text x="330" y="772.0" font-size="16" fill="#3b2a1e">Скипидар → камфора</text>
+<line x1="296" y1="744.0" x2="316" y2="744.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="788" x2="165.0" y2="811" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="814" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="850" font-size="18" font-weight="700" fill="#1d2a22">8. Плитный завод</text>
+<text x="46" y="878" font-size="16" fill="#3e4a42">ДСП, OSB, МДФ</text>
+<rect x="320" y="814" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="853.0" font-size="16" fill="#3b2a1e">Пыль, обрезки плит →</text>
+<text x="330" y="875.0" font-size="16" fill="#3b2a1e">энергоцентр</text>
+<line x1="296" y1="858.0" x2="316" y2="858.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="902" x2="165.0" y2="925" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="928" width="262" height="88" rx="12" fill="#f5e5c2" stroke="#865608" stroke-width="2.5"/>
+<text x="46" y="964" font-size="18" font-weight="700" fill="#1d2a22">9. Энергоцентр</text>
+<text x="46" y="992" font-size="16" fill="#3e4a42">пар и ток всем цехам</text>
+<rect x="320" y="928" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="967.0" font-size="16" fill="#3b2a1e">Зола → питомник, поля</text>
+<text x="330" y="989.0" font-size="16" fill="#3b2a1e">Дым → тепло теплицам</text>
+<line x1="296" y1="972.0" x2="316" y2="972.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="1016" x2="165.0" y2="1039" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="1042" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="1078" font-size="18" font-weight="700" fill="#1d2a22">10. Пеллеты и брикеты</text>
+<text x="46" y="1106" font-size="16" fill="#3e4a42">опилки и стружка</text>
+<rect x="320" y="1042" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="1081.0" font-size="16" fill="#3b2a1e">Мука → ДПК</text>
+<text x="330" y="1103.0" font-size="16" fill="#3b2a1e">Опилки → грибы, подстилка</text>
+<line x1="296" y1="1086.0" x2="316" y2="1086.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="1130" x2="165.0" y2="1153" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="1156" width="262" height="88" rx="12" fill="#dbe7f3" stroke="#23507a" stroke-width="2.5"/>
+<text x="46" y="1192" font-size="18" font-weight="700" fill="#1d2a22">11. Лесохимия, пиролиз</text>
+<text x="46" y="1220" font-size="16" fill="#3e4a42">уголь, канифоль, масла</text>
+<rect x="320" y="1156" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="1195.0" font-size="16" fill="#3b2a1e">Газ → обогрев реторт</text>
+<text x="330" y="1217.0" font-size="16" fill="#3b2a1e">Жижка → уксус, креозот</text>
+<line x1="296" y1="1200.0" x2="316" y2="1200.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<line x1="165.0" y1="1244" x2="165.0" y2="1267" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="34" y="1270" width="262" height="88" rx="12" fill="#e3efe0" stroke="#2e6b3a" stroke-width="2.5"/>
+<text x="46" y="1306" font-size="18" font-weight="700" fill="#1d2a22">12. Продукция и возврат</text>
+<text x="46" y="1334" font-size="16" fill="#3e4a42">потребителям</text>
+<rect x="320" y="1270" width="272" height="88" rx="12" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="330" y="1309.0" font-size="16" fill="#3b2a1e">Макулатура → ЦБК</text>
+<text x="330" y="1331.0" font-size="16" fill="#3b2a1e">Лом, поддоны → плиты</text>
+<line x1="296" y1="1314.0" x2="316" y2="1314.0" stroke="#4a4a4a" stroke-width="2" marker-end="url(#a)"/>
+<path d="M34 1314.0 H14 V60.0 H30" fill="none" stroke="#2e6b3a" stroke-width="3" marker-end="url(#g)"/>
+<text transform="translate(8,687.0) rotate(-90)" text-anchor="middle" font-size="14" font-weight="700" fill="#2e6b3a">зола, компост, сеянцы → новый лес</text>
+</svg>
