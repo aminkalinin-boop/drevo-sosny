@@ -1,0 +1,1471 @@
+{
+  "format_version": 1,
+  "project": "Древо сосны",
+  "source_queue": "NO_PICTURES(1).md",
+  "integrated_positions": 385,
+  "remaining_queue_positions": 871,
+  "published_commit": "6eafa97a454a2fb193a4ebc9904a35b834eb7936",
+  "publication_branch": "gh-pages",
+  "last_successful_deployment": 40029595945,
+  "cycle_size": 50,
+  "current_cycle": 3,
+  "generated_canvases_in_current_cycle": 41,
+  "current_cycle_status": "blocked_execution_environment_unavailable",
+  "failed_generation": 42,
+  "failed_generation_counted": false,
+  "next_original_queue_position_to_generate": 546,
+  "next_title": "Сгущёнка",
+  "partial_cycle_integrated": false,
+  "full_review": "pending until all queue positions are illustrated, per user request",
+  "working_source_index": ".reference/batch_pipeline_state.json",
+  "generated_unreviewed": [
+    {
+      "cycle": 3,
+      "generation": 1,
+      "card_count": 1,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 386,
+          "card_id": "pl_cycle",
+          "kind": "n",
+          "title": "Жизненный цикл поля",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 2,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 387,
+          "card_id": "pl_grain",
+          "kind": "n",
+          "title": "Зерновые культуры",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 388,
+          "card_id": "gr_wheat",
+          "kind": "n",
+          "title": "Пшеница",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 389,
+          "card_id": "wh_winter",
+          "kind": "n",
+          "title": "Озимая пшеница",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 390,
+          "card_id": "wh_spring",
+          "kind": "n",
+          "title": "Яровая пшеница",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 3,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 391,
+          "card_id": "wh_durum",
+          "kind": "n",
+          "title": "Твёрдая пшеница (дурум)",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 392,
+          "card_id": "wh_grain",
+          "kind": "n",
+          "title": "Зерно пшеницы",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 393,
+          "card_id": "wh_flour",
+          "kind": "n",
+          "title": "Мука",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 394,
+          "card_id": "wh_bread",
+          "kind": "n",
+          "title": "Хлеб и хлебобулочные изделия",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 4,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 395,
+          "card_id": "wh_pasta",
+          "kind": "n",
+          "title": "Макароны",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 396,
+          "card_id": "wh_confect",
+          "kind": "n",
+          "title": "Кондитерские изделия",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 397,
+          "card_id": "wh_semolina",
+          "kind": "n",
+          "title": "Манная крупа",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 398,
+          "card_id": "wh_bran",
+          "kind": "n",
+          "title": "Отруби",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 5,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 399,
+          "card_id": "wh_germ",
+          "kind": "n",
+          "title": "Зародыши",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 400,
+          "card_id": "wh_starch",
+          "kind": "n",
+          "title": "Крахмал и глютен",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 401,
+          "card_id": "wh_spirit",
+          "kind": "n",
+          "title": "Спирт и биоэтанол",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 402,
+          "card_id": "wh_feed",
+          "kind": "n",
+          "title": "Фуражное зерно и комбикорм",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 6,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 403,
+          "card_id": "wh_export",
+          "kind": "n",
+          "title": "Экспорт зерна",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 404,
+          "card_id": "wh_straw",
+          "kind": "n",
+          "title": "Солома",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 405,
+          "card_id": "gr_rye",
+          "kind": "n",
+          "title": "Рожь",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 406,
+          "card_id": "rye_flour",
+          "kind": "n",
+          "title": "Ржаная мука и хлеб",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 7,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 407,
+          "card_id": "rye_malt",
+          "kind": "n",
+          "title": "Ржаной солод",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 408,
+          "card_id": "rye_other",
+          "kind": "n",
+          "title": "Прочее",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 409,
+          "card_id": "gr_barley",
+          "kind": "n",
+          "title": "Ячмень",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 410,
+          "card_id": "br_malt",
+          "kind": "n",
+          "title": "Солод → пиво, квас, виски",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 8,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 411,
+          "card_id": "br_groats",
+          "kind": "n",
+          "title": "Перловка и ячневая крупа",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 412,
+          "card_id": "br_feed",
+          "kind": "n",
+          "title": "Корм",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 413,
+          "card_id": "gr_oats",
+          "kind": "n",
+          "title": "Овёс",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 414,
+          "card_id": "oat_food",
+          "kind": "n",
+          "title": "Овсяные хлопья, крупа, толокно",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 9,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 415,
+          "card_id": "oat_feed",
+          "kind": "n",
+          "title": "Корм",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 416,
+          "card_id": "gr_trit",
+          "kind": "n",
+          "title": "Тритикале",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 417,
+          "card_id": "gr_corn",
+          "kind": "n",
+          "title": "Кукуруза",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 418,
+          "card_id": "cn_grain",
+          "kind": "n",
+          "title": "Зерно",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 10,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 419,
+          "card_id": "cn_silage",
+          "kind": "n",
+          "title": "Силос",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 420,
+          "card_id": "cn_starch",
+          "kind": "n",
+          "title": "Крахмал, патока, сиропы",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 421,
+          "card_id": "cn_oil",
+          "kind": "n",
+          "title": "Кукурузное масло",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 422,
+          "card_id": "cn_sweet",
+          "kind": "n",
+          "title": "Сахарная кукуруза",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 11,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 423,
+          "card_id": "cn_other",
+          "kind": "n",
+          "title": "Прочее",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 424,
+          "card_id": "gr_rice",
+          "kind": "n",
+          "title": "Рис",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 425,
+          "card_id": "rc_groats",
+          "kind": "n",
+          "title": "Рисовая крупа",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 426,
+          "card_id": "rc_waste",
+          "kind": "n",
+          "title": "Лузга, мучка, солома",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 12,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 427,
+          "card_id": "gr_buck",
+          "kind": "n",
+          "title": "Гречиха",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 428,
+          "card_id": "bw_groats",
+          "kind": "n",
+          "title": "Гречневая крупа",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 429,
+          "card_id": "bw_honey",
+          "kind": "n",
+          "title": "Гречишный мёд",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 430,
+          "card_id": "bw_husk",
+          "kind": "n",
+          "title": "Лузга",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 13,
+      "card_count": 6,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 431,
+          "card_id": "gr_millet",
+          "kind": "n",
+          "title": "Просо",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 432,
+          "card_id": "gr_sorg",
+          "kind": "n",
+          "title": "Сорго",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 433,
+          "card_id": "pl_legume",
+          "kind": "n",
+          "title": "Зернобобовые",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 434,
+          "card_id": "lg_pea",
+          "kind": "n",
+          "title": "Горох",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 435,
+          "card_id": "lg_soy",
+          "kind": "n",
+          "title": "Соя",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 436,
+          "card_id": "soy_oil",
+          "kind": "n",
+          "title": "Соевое масло и лецитин",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 14,
+      "card_count": 6,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 437,
+          "card_id": "soy_meal",
+          "kind": "n",
+          "title": "Соевый шрот",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 438,
+          "card_id": "soy_food",
+          "kind": "n",
+          "title": "Соевые продукты",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 439,
+          "card_id": "lg_chick",
+          "kind": "n",
+          "title": "Нут",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 440,
+          "card_id": "lg_lentil",
+          "kind": "n",
+          "title": "Чечевица",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 441,
+          "card_id": "lg_bean",
+          "kind": "n",
+          "title": "Фасоль",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 442,
+          "card_id": "lg_lupin",
+          "kind": "n",
+          "title": "Люпин",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 15,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 443,
+          "card_id": "lg_vetch",
+          "kind": "n",
+          "title": "Вика",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 444,
+          "card_id": "pl_oil",
+          "kind": "n",
+          "title": "Масличные культуры",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 445,
+          "card_id": "ol_sun",
+          "kind": "n",
+          "title": "Подсолнечник",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 446,
+          "card_id": "sun_oil",
+          "kind": "n",
+          "title": "Подсолнечное масло",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 16,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 447,
+          "card_id": "sun_margarine",
+          "kind": "n",
+          "title": "Маргарин и спреды",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 448,
+          "card_id": "sun_mayo",
+          "kind": "n",
+          "title": "Майонез и соусы",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 449,
+          "card_id": "sun_meal",
+          "kind": "n",
+          "title": "Жмых и шрот",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 450,
+          "card_id": "sun_husk",
+          "kind": "n",
+          "title": "Лузга подсолнечника",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 17,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 451,
+          "card_id": "sun_seed",
+          "kind": "n",
+          "title": "Семечки и кондитерка",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 452,
+          "card_id": "sun_other",
+          "kind": "n",
+          "title": "Прочее",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 453,
+          "card_id": "ol_rape",
+          "kind": "n",
+          "title": "Рапс",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 454,
+          "card_id": "ol_flax",
+          "kind": "n",
+          "title": "Лён масличный",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 18,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 455,
+          "card_id": "ol_mustard",
+          "kind": "n",
+          "title": "Горчица",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 456,
+          "card_id": "ol_camel",
+          "kind": "n",
+          "title": "Рыжик и лён",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 457,
+          "card_id": "ol_safflower",
+          "kind": "n",
+          "title": "Эфиромасличные",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 458,
+          "card_id": "pl_tech",
+          "kind": "n",
+          "title": "Технические культуры",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 19,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 459,
+          "card_id": "tc_beet",
+          "kind": "n",
+          "title": "Сахарная свёкла",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 460,
+          "card_id": "bt_sugar",
+          "kind": "n",
+          "title": "Сахар",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 461,
+          "card_id": "bt_pulp",
+          "kind": "n",
+          "title": "Жом",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 462,
+          "card_id": "bt_molasses",
+          "kind": "n",
+          "title": "Меласса",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 20,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 463,
+          "card_id": "bt_defecate",
+          "kind": "n",
+          "title": "Дефекат",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 464,
+          "card_id": "bt_tops",
+          "kind": "n",
+          "title": "Ботва",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 465,
+          "card_id": "tc_flax",
+          "kind": "n",
+          "title": "Лён-долгунец",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 466,
+          "card_id": "tc_hemp",
+          "kind": "n",
+          "title": "Конопля техническая",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 21,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 467,
+          "card_id": "tc_hops",
+          "kind": "n",
+          "title": "Хмель",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 468,
+          "card_id": "tc_tobacco",
+          "kind": "n",
+          "title": "Табак",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 469,
+          "card_id": "pl_potato",
+          "kind": "n",
+          "title": "Картофель",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 470,
+          "card_id": "pt_food",
+          "kind": "n",
+          "title": "Столовый картофель",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 22,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 471,
+          "card_id": "pt_chips",
+          "kind": "n",
+          "title": "Чипсы, фри, хлопья",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 472,
+          "card_id": "pt_starch",
+          "kind": "n",
+          "title": "Картофельный крахмал",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 473,
+          "card_id": "pt_spirit",
+          "kind": "n",
+          "title": "Спирт",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 474,
+          "card_id": "pt_feed",
+          "kind": "n",
+          "title": "Корм",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 23,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 475,
+          "card_id": "pt_store",
+          "kind": "n",
+          "title": "Хранение",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 476,
+          "card_id": "pt_tops",
+          "kind": "n",
+          "title": "Ботва",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 477,
+          "card_id": "pl_veg",
+          "kind": "n",
+          "title": "Овощи",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 478,
+          "card_id": "vg_tomato",
+          "kind": "n",
+          "title": "Томат",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 24,
+      "card_count": 6,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 479,
+          "card_id": "vg_cucumber",
+          "kind": "n",
+          "title": "Огурец",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 480,
+          "card_id": "vg_cabbage",
+          "kind": "n",
+          "title": "Капуста",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 481,
+          "card_id": "vg_carrot",
+          "kind": "n",
+          "title": "Морковь",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 482,
+          "card_id": "vg_beet",
+          "kind": "n",
+          "title": "Свёкла столовая",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 483,
+          "card_id": "vg_onion",
+          "kind": "n",
+          "title": "Лук",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 484,
+          "card_id": "vg_garlic",
+          "kind": "n",
+          "title": "Чеснок",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 25,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 485,
+          "card_id": "vg_pepper",
+          "kind": "n",
+          "title": "Перец",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 486,
+          "card_id": "vg_egg",
+          "kind": "n",
+          "title": "Баклажан",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 487,
+          "card_id": "vg_squash",
+          "kind": "n",
+          "title": "Кабачок, тыква, патиссон",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 488,
+          "card_id": "vg_salad",
+          "kind": "n",
+          "title": "Салаты и зелень",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 26,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 489,
+          "card_id": "vg_green",
+          "kind": "n",
+          "title": "Тепличные комбинаты",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 490,
+          "card_id": "pl_melon",
+          "kind": "n",
+          "title": "Бахчевые",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 491,
+          "card_id": "pl_fruit",
+          "kind": "n",
+          "title": "Плодовые культуры",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 492,
+          "card_id": "fr_apple",
+          "kind": "n",
+          "title": "Яблоня",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 27,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 493,
+          "card_id": "ap_fresh",
+          "kind": "n",
+          "title": "Свежие яблоки",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 494,
+          "card_id": "ap_juice",
+          "kind": "n",
+          "title": "Соки и пюре",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 495,
+          "card_id": "ap_cider",
+          "kind": "n",
+          "title": "Сидр и кальвадос",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 496,
+          "card_id": "ap_pastila",
+          "kind": "n",
+          "title": "Пастила, джемы, сушка",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 28,
+      "card_count": 6,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 497,
+          "card_id": "ap_pomace",
+          "kind": "n",
+          "title": "Яблочные выжимки",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 498,
+          "card_id": "fr_pear",
+          "kind": "n",
+          "title": "Груша",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 499,
+          "card_id": "fr_cherry",
+          "kind": "n",
+          "title": "Вишня и черешня",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 500,
+          "card_id": "fr_plum",
+          "kind": "n",
+          "title": "Слива и алыча",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 501,
+          "card_id": "fr_apricot",
+          "kind": "n",
+          "title": "Абрикос",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 502,
+          "card_id": "fr_peach",
+          "kind": "n",
+          "title": "Персик",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 29,
+      "card_count": 6,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 503,
+          "card_id": "fr_nut",
+          "kind": "n",
+          "title": "Орехоплодные",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 504,
+          "card_id": "pl_berry",
+          "kind": "n",
+          "title": "Ягодные культуры",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 505,
+          "card_id": "br_straw",
+          "kind": "n",
+          "title": "Земляника садовая (клубника)",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 506,
+          "card_id": "br_rasp",
+          "kind": "n",
+          "title": "Малина",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 507,
+          "card_id": "br_currant",
+          "kind": "n",
+          "title": "Смородина",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 508,
+          "card_id": "br_seabuck",
+          "kind": "n",
+          "title": "Облепиха",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 30,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 509,
+          "card_id": "br_honeysuckle",
+          "kind": "n",
+          "title": "Жимолость",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 510,
+          "card_id": "br_blue",
+          "kind": "n",
+          "title": "Голубика и клюква",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 511,
+          "card_id": "br_gooseberry",
+          "kind": "n",
+          "title": "Крыжовник, арония, ирга",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 512,
+          "card_id": "pl_grape",
+          "kind": "n",
+          "title": "Виноград",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 31,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 513,
+          "card_id": "gp_wine",
+          "kind": "n",
+          "title": "Тихие вина",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 514,
+          "card_id": "gp_spark",
+          "kind": "n",
+          "title": "Игристые вина",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 515,
+          "card_id": "gp_brandy",
+          "kind": "n",
+          "title": "Коньяк (бренди)",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 516,
+          "card_id": "gp_juice",
+          "kind": "n",
+          "title": "Виноградный сок",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 32,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 517,
+          "card_id": "gp_raisin",
+          "kind": "n",
+          "title": "Изюм",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 518,
+          "card_id": "gp_pomace",
+          "kind": "n",
+          "title": "Выжимки и косточки",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 519,
+          "card_id": "pl_forage",
+          "kind": "n",
+          "title": "Кормовые культуры",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 520,
+          "card_id": "fd_alfalfa",
+          "kind": "n",
+          "title": "Люцерна",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 33,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 521,
+          "card_id": "fd_clover",
+          "kind": "n",
+          "title": "Клевер",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 522,
+          "card_id": "fd_grass",
+          "kind": "n",
+          "title": "Злаковые травы",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 523,
+          "card_id": "fd_mix",
+          "kind": "n",
+          "title": "Однолетние смеси",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 524,
+          "card_id": "fd_root",
+          "kind": "n",
+          "title": "Кормовые корнеплоды",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 34,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 525,
+          "card_id": "fd_silage",
+          "kind": "n",
+          "title": "Заготовка силоса и сенажа",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 526,
+          "card_id": "fd_pasture",
+          "kind": "n",
+          "title": "Пастбища и сенокосы",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 527,
+          "card_id": "pl_green",
+          "kind": "n",
+          "title": "Сидераты и покровные культуры",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 528,
+          "card_id": "pl_mush",
+          "kind": "n",
+          "title": "Грибоводство",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 35,
+      "card_count": 2,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 529,
+          "card_id": "ms_champ",
+          "kind": "n",
+          "title": "Шампиньон",
+          "section": "Растениеводство"
+        },
+        {
+          "queue_position": 530,
+          "card_id": "ms_oyster",
+          "kind": "n",
+          "title": "Вешенка",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 36,
+      "card_count": 1,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 531,
+          "card_id": "ms_shii",
+          "kind": "n",
+          "title": "Шиитаке и другие",
+          "section": "Растениеводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 37,
+      "card_count": 1,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 532,
+          "card_id": "an_root",
+          "kind": "n",
+          "title": "Животноводство",
+          "section": "Животноводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 38,
+      "card_count": 1,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 533,
+          "card_id": "an_cycle",
+          "kind": "n",
+          "title": "Цикл в животноводстве",
+          "section": "Животноводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 39,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 534,
+          "card_id": "an_cattle",
+          "kind": "n",
+          "title": "Крупный рогатый скот (КРС)",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 535,
+          "card_id": "ct_dairy",
+          "kind": "n",
+          "title": "Молочные породы",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 536,
+          "card_id": "ct_beef",
+          "kind": "n",
+          "title": "Мясные породы",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 537,
+          "card_id": "ct_comb",
+          "kind": "n",
+          "title": "Комбинированные породы",
+          "section": "Животноводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 40,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 538,
+          "card_id": "ct_keep",
+          "kind": "n",
+          "title": "Содержание и кормление",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 539,
+          "card_id": "ct_milk",
+          "kind": "n",
+          "title": "Молоко",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 540,
+          "card_id": "mk_drink",
+          "kind": "n",
+          "title": "Питьевое молоко",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 541,
+          "card_id": "mk_cream",
+          "kind": "n",
+          "title": "Сливки",
+          "section": "Животноводство"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "generation": 41,
+      "card_count": 4,
+      "status": "generated_unreviewed_not_integrated",
+      "cards": [
+        {
+          "queue_position": 542,
+          "card_id": "mk_butter",
+          "kind": "n",
+          "title": "Сливочное масло",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 543,
+          "card_id": "mk_sour",
+          "kind": "n",
+          "title": "Кисломолочные продукты",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 544,
+          "card_id": "mk_cottage",
+          "kind": "n",
+          "title": "Творог",
+          "section": "Животноводство"
+        },
+        {
+          "queue_position": 545,
+          "card_id": "mk_cheese",
+          "kind": "n",
+          "title": "Сыр",
+          "section": "Животноводство"
+        }
+      ]
+    }
+  ]
+}
