@@ -178,6 +178,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script charset="utf-8" src="apk_agro.js"></script>
 <script charset="utf-8" src="apk_proc.js"></script>
 <script charset="utf-8" src="apk_tech.js"></script>
+<script charset="utf-8" src="chains.js"></script>
 <script charset="utf-8" src="photos.js"></script>
 <script charset="utf-8" src="assets2.js"></script>
 <script charset="utf-8" src="assets3.js"></script>
@@ -192,6 +193,7 @@ const SCH=[
  {id:"zag",t:"Лесозаготовка",root:"z_root",sec:"lpk"},
  {id:"vost",t:"Лесовосстановление",root:"v_root",sec:"lpk"},
  {id:"derevo",t:"Деревообработка",root:"d_root",sec:"lpk"},
+ {id:"chl",t:"Переделы",root:"x_root",sec:"lpk"},
  {id:"real",t:"Реализация",root:"r_root",sec:"lpk"},
  {id:"uis",t:"ЛПК в УИС",root:"u_root",sec:"lpk"},
  {id:"tech",t:"Техника",root:"tech_root",sec:"lpk"},
@@ -200,6 +202,7 @@ const SCH=[
  {id:"agro",t:"Агротехнологии",root:"ag_root",sec:"apk"},
  {id:"newtech",t:"Новые технологии",root:"nt_root",sec:"apk"},
  {id:"proc",t:"Переработка",root:"pr_root",sec:"apk"},
+ {id:"cha",t:"Переделы",root:"y_root",sec:"apk"},
  {id:"econ",t:"Экономика и рынок",root:"ec_root",sec:"apk"},
  {id:"auis",t:"АПК в УИС",root:"au_root",sec:"apk"},
  {id:"atech",t:"Техника АПК",root:"at_root",sec:"apk"}
@@ -237,7 +240,7 @@ const kidCount=id=>(N[id].c||[]).length+((N[id].k==="tech"&&N[id].tl)?N[id].tl.l
 function item(id){const n=N[id],c=kidCount(id);
  return `<button type="button" class="item k-${n.k}${n.im?" thumb":""}" data-nav="${id}">${n.im?`<img src="${n.im}" alt="" loading="lazy">`:""}<span class="tx"><b>${plain(n.t)}</b>${n.s?`<small>${n.s}</small>`:""}</span><span class="go">${c?c+" ›":"›"}</span></button>`}
 function toolItem(t){const x=T[t];return `<button type="button" class="item k-tool${x.im?" thumb":""}" data-tool="${t}">${x.im?`<img src="${x.im}" alt="" loading="lazy">`:""}<span class="tx"><b>${x.t}</b><small>${firstSent(x.w)}</small></span><span class="go">›</span></button>`}
-const lnItem=id=>`<button type="button" class="item k-${N[id].k}" data-go="${id}"><span class="tx"><b>${plain(N[id].t)}</b><small>Раздел «${SCH.find(s=>s.id===tabOf(id)).t}»</small></span><span class="go">→</span></button>`;
+const lnItem=id=>`<button type="button" class="item k-${N[id].k}" data-go="${id}"><span class="tx"><b>${plain(N[id].t)}</b><small>${(t=>`${t.sec==="apk"?"АПК":"ЛПК"} · раздел «${t.t}»`)(SCH.find(s=>s.id===tabOf(id)))}</small></span><span class="go">→</span></button>`;
 function hsBtn([i,x,y,w,hh]){const st=`style="left:${x}%;top:${y}%;width:${w}%;height:${hh}%"`;
  if(i.startsWith("g:")){const k=i.slice(2);return G[k]?`<button type="button" class="hs term" data-t="${k}" ${st} aria-label="${k}"></button>`:""}
  if(i.startsWith("t_"))return T[i]?`<button type="button" class="hs" data-tool="${i}" ${st} aria-label="${T[i].t}"></button>`:"";
@@ -255,7 +258,7 @@ function nodeScreen(id,tab){const n=N[id];let h="";
  if(n.h)h+=`<h3 class="sec">Как получают / как делают</h3><p class="how">${rich(n.h)}</p>`;
  if(n.f)h+=`<h3 class="sec">Подробности</h3><ul>${n.f.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
  if(n.y)h+=`<h3 class="sec">${n.c?"Ещё":"Что из этого получают"}</h3><ul>${n.y.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
- if(n.c&&n.c.length){const lbl=["part","live","prod","waste","final"].includes(n.k)&&["conif","decid","plant","anim"].includes(tab)?"Что из этого получают":"Дальше";h+=`<h3 class="sec">${lbl} · ${n.c.length}</h3><div class="items">${n.c.map(item).join("")}</div>`}
+ if(n.c&&n.c.length){const lbl=["part","live","prod","waste","final"].includes(n.k)&&["conif","decid","plant","anim","chl","cha"].includes(tab)?"Что из этого получают":"Дальше";h+=`<h3 class="sec">${lbl} · ${n.c.length}</h3><div class="items">${n.c.map(item).join("")}</div>`}
  if(n.tl&&n.tl.length){h+=n.k==="tech"?`<h3 class="sec">Оборудование · ${n.tl.length}</h3><div class="items">${n.tl.map(toolItem).join("")}</div>`:`<h3 class="sec">Инструменты и оборудование</h3><div class="chips">${n.tl.map(t=>`<button type="button" class="chip tl" data-tool="${t}">${T[t].t}</button>`).join("")}</div>`}
  if(n.ln){const l=n.ln.filter(x=>N[x]);if(l.length)h+=`<h3 class="sec">Связано в других разделах</h3><div class="items">${l.map(lnItem).join("")}</div>`}
  if(isRoot)h+=`<div class="legend">${Object.entries(K).map(([k,v])=>`<span><i style="background:var(--${k==="info"?"line":k==="forest"?"live":k})"></i>${v}</span>`).join("")}</div>`;
