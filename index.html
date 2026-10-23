@@ -205,9 +205,10 @@ const SCH=[
  {id:"cha",t:"Переделы",root:"y_root",sec:"apk"},
  {id:"econ",t:"Экономика и рынок",root:"ec_root",sec:"apk"},
  {id:"auis",t:"АПК в УИС",root:"au_root",sec:"apk"},
- {id:"atech",t:"Техника АПК",root:"at_root",sec:"apk"}
+ {id:"atech",t:"Техника АПК",root:"at_root",sec:"apk"},
+ {id:"mix",t:"Пересечения отраслей",root:"mx_root",sec:"mix"}
 ];
-const SECS={lpk:"ЛПК · лес",apk:"АПК · сельское хозяйство"};let sector="lpk";
+const SECS={lpk:"ЛПК · лес",apk:"АПК · село",mix:"ЛПК + АПК"};const SECSH={lpk:"ЛПК",apk:"АПК",mix:"ЛПК + АПК"};let sector="lpk";
 const EXTRA=[{id:"quiz",t:"Тест"},{id:"gloss",t:"Словарь"}];
 /* связи */
 const P={};Object.keys(N).forEach(id=>(N[id].c||[]).forEach(c=>{if(!P[c])P[c]=id}));
@@ -240,7 +241,7 @@ const kidCount=id=>(N[id].c||[]).length+((N[id].k==="tech"&&N[id].tl)?N[id].tl.l
 function item(id){const n=N[id],c=kidCount(id);
  return `<button type="button" class="item k-${n.k}${n.im?" thumb":""}" data-nav="${id}">${n.im?`<img src="${n.im}" alt="" loading="lazy">`:""}<span class="tx"><b>${plain(n.t)}</b>${n.s?`<small>${n.s}</small>`:""}</span><span class="go">${c?c+" ›":"›"}</span></button>`}
 function toolItem(t){const x=T[t];return `<button type="button" class="item k-tool${x.im?" thumb":""}" data-tool="${t}">${x.im?`<img src="${x.im}" alt="" loading="lazy">`:""}<span class="tx"><b>${x.t}</b><small>${firstSent(x.w)}</small></span><span class="go">›</span></button>`}
-const lnItem=id=>`<button type="button" class="item k-${N[id].k}" data-go="${id}"><span class="tx"><b>${plain(N[id].t)}</b><small>${(t=>`${t.sec==="apk"?"АПК":"ЛПК"} · раздел «${t.t}»`)(SCH.find(s=>s.id===tabOf(id)))}</small></span><span class="go">→</span></button>`;
+const lnItem=id=>`<button type="button" class="item k-${N[id].k}" data-go="${id}"><span class="tx"><b>${plain(N[id].t)}</b><small>${(t=>`${SECSH[t.sec]} · раздел «${t.t}»`)(SCH.find(s=>s.id===tabOf(id)))}</small></span><span class="go">→</span></button>`;
 function hsBtn([i,x,y,w,hh]){const st=`style="left:${x}%;top:${y}%;width:${w}%;height:${hh}%"`;
  if(i.startsWith("g:")){const k=i.slice(2);return G[k]?`<button type="button" class="hs term" data-t="${k}" ${st} aria-label="${k}"></button>`:""}
  if(i.startsWith("t_"))return T[i]?`<button type="button" class="hs" data-tool="${i}" ${st} aria-label="${T[i].t}"></button>`:"";
