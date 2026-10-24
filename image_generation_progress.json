@@ -4,17 +4,17 @@
   "source_queue": "NO_PICTURES(1).md",
   "integrated_positions": 1256,
   "remaining_queue_positions": 0,
-  "published_commit": "4208935945269f9e28168a572f76036d6ffc8e93",
+  "published_commit": "dea1707ec013a68b19934a9bcc76711e17cecab4",
   "publication_branch": "gh-pages",
-  "last_successful_deployment": 40090120848,
+  "last_successful_deployment": 40094483914,
   "cycle_size": 50,
   "current_cycle": 6,
   "generated_canvases_in_current_cycle": 50,
-  "current_cycle_status": "integrated_awaiting_final_review",
+  "current_cycle_status": "complete",
   "partial_cycle_integrated": false,
   "next_original_queue_position_to_generate": null,
   "next_title": null,
-  "full_review": "pending until all queue positions are illustrated, per user request",
+  "full_review": "Visual review complete; runtime validation passed for all 1256 detail and item renderers; corrected deployment verification pending",
   "working_source_index": ".reference/batch_pipeline_state.json",
   "updated_at": "2026-10-24",
   "generated_unreviewed": [],
@@ -25,7 +25,7 @@
       "card_id": "y_germ",
       "title": "Зародыш пшеницы",
       "issue": "На листе показаны пророщенные зёрна; проверить и заменить на выделенные зародыши пшеницы как фракцию помола.",
-      "status": "deferred_until_final_review"
+      "status": "resolved_by_final_qa_replacement"
     },
     {
       "cycle": 4,
@@ -33,7 +33,7 @@
       "card_id": "y_oatkern",
       "title": "Овсяное ядро",
       "issue": "Проверить, что показано очищенное овсяное ядро без цветковых плёнок; на холсте зерно выглядит плёнчатым.",
-      "status": "deferred_until_final_review"
+      "status": "resolved_by_final_qa_replacement"
     },
     {
       "cycle": 5,
@@ -41,10 +41,10 @@
       "card_id": "ec_prices",
       "title": "Цены и рынки",
       "issue": "Убрать вымышленные биржевые проценты и котировки; оставить наглядную сцену товарного рынка без числовых данных.",
-      "status": "deferred_until_final_review"
+      "status": "resolved_by_final_qa_replacement"
     }
   ],
-  "publication_status": "Cycle 6 prepared for publication; published_commit still records previous deployment",
+  "publication_status": "Cycle 6 published; final QA fixes prepared",
   "last_integrated_cycle": {
     "cycle": 6,
     "canvases": 50,
@@ -57,5 +57,72 @@
     "review_status": "pending_final_review"
   },
   "planned_generations": [],
-  "planned_reuse": []
+  "planned_reuse": [],
+  "generated_canvases_total": 363,
+  "qa_corrective_canvases": 3,
+  "final_qa_fixes": {
+    "replaced_cards": [
+      {
+        "card_id": "y_germ",
+        "queue_position": 674,
+        "image": "a_y_germ.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "y_oatkern",
+        "queue_position": 690,
+        "image": "a_y_oatkern.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "ec_prices",
+        "queue_position": 983,
+        "image": "a_ec_prices.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "mx_t_wastex",
+        "queue_position": 1115,
+        "image": "a_mx_t_wastex.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "mx_t_carbon",
+        "queue_position": 1116,
+        "image": "a_mx_t_carbon.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "dc_cmp",
+        "queue_position": 65,
+        "image": "a_dc_cmp.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "f_zapas",
+        "queue_position": 81,
+        "image": "a_f_zapas.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "bk_other",
+        "queue_position": 62,
+        "image": "a_bk_other.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "z_f_safe",
+        "queue_position": 121,
+        "image": "a_z_f_safe.webp",
+        "canvas": 3
+      },
+      {
+        "card_id": "mx_r_nitrogen",
+        "queue_position": 1078,
+        "image": "a_mx_r_nitrogen.webp",
+        "canvas": 3
+      }
+    ],
+    "trimmed_files": 114
+  }
 }

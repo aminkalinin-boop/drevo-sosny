@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-24",
+  "positions": 1256,
+  "unique_images": 1210,
+  "visual_review": {
+    "positions_reviewed": 1256,
+    "method": "Reviewed all 79 contact sheets against queue captions; inspected corrections at full size",
+    "replaced_cards": [
+      {
+        "card_id": "y_germ",
+        "queue_position": 674,
+        "image": "a_y_germ.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "y_oatkern",
+        "queue_position": 690,
+        "image": "a_y_oatkern.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "ec_prices",
+        "queue_position": 983,
+        "image": "a_ec_prices.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "mx_t_wastex",
+        "queue_position": 1115,
+        "image": "a_mx_t_wastex.webp",
+        "canvas": 1
+      },
+      {
+        "card_id": "mx_t_carbon",
+        "queue_position": 1116,
+        "image": "a_mx_t_carbon.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "dc_cmp",
+        "queue_position": 65,
+        "image": "a_dc_cmp.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "f_zapas",
+        "queue_position": 81,
+        "image": "a_f_zapas.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "bk_other",
+        "queue_position": 62,
+        "image": "a_bk_other.webp",
+        "canvas": 2
+      },
+      {
+        "card_id": "z_f_safe",
+        "queue_position": 121,
+        "image": "a_z_f_safe.webp",
+        "canvas": 3
+      },
+      {
+        "card_id": "mx_r_nitrogen",
+        "queue_position": 1078,
+        "image": "a_mx_r_nitrogen.webp",
+        "canvas": 3
+      }
+    ],
+    "trimmed_files": 114,
+    "ocr_note": "OCR used only to flag candidates; Cyrillic recognition was unreliable, so it was not used as an automatic pass criterion"
+  },
+  "runtime_validation": {
+    "positions": 1256,
+    "ids": 1256,
+    "detail_screens_checked": 1256,
+    "item_screens_checked": 1256,
+    "assets": [
+      "assets2.js",
+      "assets3.js",
+      "assets4.js",
+      "assets5.js",
+      "assets6.js",
+      "assets7.js",
+      "assets8.js",
+      "assets9.js",
+      "assets10.js",
+      "assets11.js"
+    ],
+    "errors": [],
+    "rendered_image_sources": "1241 unique sources checked separately"
+  },
+  "live_validation_before_fixes": {
+    "checked": 1254,
+    "errors": [],
+    "deployment": 40094483914
+  },
+  "corrected_deployment_verification": "pending"
+}
