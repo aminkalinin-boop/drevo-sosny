@@ -172,3 +172,19 @@ body[data-sector="ref"]{--bg:#eef1f8;--panel:#fffefa;--fg:#303951;--muted:#68718
 body[data-sector="ref"] .landscape{display:block;opacity:.35;background-image:linear-gradient(#8592b41a 1px,transparent 1px),linear-gradient(90deg,#8592b41a 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to right,#000,transparent 22%,transparent 78%,#000)}
 body[data-sector="ref"] .landscape::before,body[data-sector="ref"] .landscape::after,body[data-sector="ref"] .landscape-floor{display:none}
 body[data-sector="ref"] .brand-icon{padding:6px;border:1px solid var(--line);border-radius:10px;background:var(--nav-soft)}
+
+/* Extend botanical margins underneath the paper, including wide screens. */
+body .landscape::before,body .landscape::after{width:max(160px,calc((100vw - 1240px)/2 + 110px));mask-image:none}
+body[data-sector="apk"] .landscape::before,body[data-sector="apk"] .landscape::after,body[data-sector="mix"] .landscape::after{mask-image:none}
+body[data-sector="mix"]{background:linear-gradient(90deg,#c8dfc8 0%,#e0ead1 32%,#f0ebca 60%,#f5dda0 100%);background-attachment:fixed}
+.dictionary-words{display:none}
+body[data-sector="ref"] .landscape{opacity:1;mask-image:none;background:none;mix-blend-mode:normal}
+body[data-sector="ref"] .dictionary-words{display:block;position:absolute;inset:0;overflow:hidden;color:#7280a1;opacity:.26;font-family:var(--f-disp);user-select:none}
+.dictionary-words span{position:absolute;white-space:nowrap;font-size:clamp(19px,1.7vw,34px);transform:rotate(-10deg)}
+.dictionary-words span:nth-child(even){transform:rotate(9deg);font-style:italic}
+.dictionary-words span:nth-child(1){left:2%;top:13%}.dictionary-words span:nth-child(2){left:5%;top:29%;font-size:24px}.dictionary-words span:nth-child(3){left:1%;top:46%}.dictionary-words span:nth-child(4){left:4%;top:65%;font-size:23px}.dictionary-words span:nth-child(5){left:2%;top:85%}
+.dictionary-words span:nth-child(6){right:2%;top:15%}.dictionary-words span:nth-child(7){right:3%;top:33%;font-size:25px}.dictionary-words span:nth-child(8){right:1%;top:53%}.dictionary-words span:nth-child(9){right:2%;top:72%;font-size:24px}.dictionary-words span:nth-child(10){right:4%;top:90%}
+@media(max-width:700px){body .landscape::before,body .landscape::after{width:100px}.dictionary-words span{font-size:18px!important}body[data-sector="ref"] .dictionary-words{opacity:.18}}
+
+body .landscape::before,body .landscape::after{mask-image:linear-gradient(to right,#000 calc(100% - 70px),transparent)}
+body[data-sector="apk"] .landscape::before,body[data-sector="apk"] .landscape::after,body[data-sector="mix"] .landscape::after{mask-image:linear-gradient(to left,#000 calc(100% - 70px),transparent)}
