@@ -102,7 +102,7 @@ button.chip.tl{background:var(--tool-bg);color:var(--tool)}
 button.chip.lk{border-style:dashed;border-color:var(--tech);color:var(--tech);background:transparent}
 .legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.8rem;color:var(--muted);margin:18px 0 0}
 .legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:6px;height:14px;border-radius:2px;display:inline-block}
-button.term{font:inherit;background:none;border:none;padding:0;color:inherit;cursor:help;border-bottom:1.5px dotted var(--accent);text-align:inherit}
+.nw{white-space:nowrap}button.term{display:inline;font:inherit;background:none;border:none;padding:0;color:inherit;cursor:help;border-bottom:1.5px dotted var(--accent);text-align:inherit}
 button.nlink{font:inherit;background:none;border:none;padding:0;color:var(--tech);cursor:pointer;text-decoration:underline;text-align:inherit}
 .pop{position:fixed;z-index:70;max-width:340px;background:var(--panel);color:var(--fg);border:1px solid var(--accent);border-radius:10px;padding:10px 12px;box-shadow:0 8px 28px rgba(0,0,0,.2);font-size:.93rem}
 .pop b{display:block;font-family:var(--f-disp);font-size:1.05rem;margin-bottom:2px}
@@ -251,7 +251,7 @@ function autoTerms(html){let depth=0;return html.split(/(<[^>]+>)/).map(seg=>{
 function rich(s,auto=true){if(!s)return"";
  const h=s.replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g,(m,k,d)=>{if(!G[k])return d||k;SEEN.add(k);return `<button type="button" class="term" data-t="${k}">${d||k}</button>`})
   .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,(m,id,d)=>N[id]?`<button type="button" class="nlink" data-go="${id}">${d||plain(N[id].t)}</button>`:T[id]?`<button type="button" class="nlink" data-tool="${id}">${d||T[id].t}</button>`:(d||id));
- return auto?autoTerms(h):h}
+ const r=auto?autoTerms(h):h;return r.replace(/(<button[^>]*class="(?:term|nlink)"[^>]*>[^<]*<\/button>)([.,;:!?»)…]+)/g,'<span class="nw">$1$2</span>')}
 const title=id=>id.startsWith("t:")?T[id.slice(2)].t:plain(N[id].t);
 function firstSent(s,max=140){s=plain(s).replace(/\s+/g," ").trim();const m=s.match(/^.{20,}?[.!?](\s|$)/);let r=m?m[0].trim():s;return r.length>max?r.slice(0,max).replace(/\s\S*$/,"")+"…":r}
 /* состояние */
