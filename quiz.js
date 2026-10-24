@@ -34,7 +34,7 @@ function items(scope){let a=[];scope.forEach(s=>{a=a.concat(s==="gloss"?Object.k
 /* интерфейс */
 const pane=document.getElementById("pane-quiz");let run=null;
 function mastered(list){return list.filter(i=>(stats[i]||0)>0).length}
-function setup(){const rows=[...QS.map(s=>({id:s.id,t:({lpk:"ЛПК · ",apk:"АПК · ",mix:"ЛПК + АПК · "}[s.sec]||"")+s.t})),{id:"tools",t:"Техника и оборудование (ЛПК и АПК)"},{id:"gloss",t:"Словарь терминов"}];
+function setup(){const rows=[...QS.map(s=>({id:s.id,t:({lpk:"ЛПК · ",apk:"АПК · ",mix:"Межотраслевое · "}[s.sec]||"")+s.t})),{id:"tools",t:"Техника и оборудование (ЛПК и АПК)"},{id:"gloss",t:"Словарь терминов"}];
  pane.innerHTML=`<p class="lead-s">Вопросы собираются из карточек справочника: узнать пункт по описанию, из чего его получают, какое оборудование нужно, что значит термин. Прогресс сохраняется на этом устройстве.</p>
  <div class="quiz-box"><h2 class="qh">Что проверяем</h2><div class="qscope">${rows.map(r=>{const l=items([r.id]).filter(i=>i.startsWith("g:")||i.startsWith("t:")||forItem(i,false));return `<label class="qchk"><input type="checkbox" value="${r.id}" ${r.id!=="gloss"&&r.id!=="tools"?"checked":""}><span>${r.t}</span><small>${mastered(l)} из ${l.length} освоено</small></label>`}).join("")}</div>
  <h2 class="qh">Сколько вопросов</h2><div class="qcount">${[10,20,50].map(n=>`<label class="qradio"><input type="radio" name="qn" value="${n}" ${n===10?"checked":""}><span>${n}</span></label>`).join("")}<label class="qradio"><input type="radio" name="qn" value="all"><span>Каждый пункт по порядку</span></label><label class="qradio"><input type="radio" name="qn" value="weak"><span>Только неосвоенные</span></label></div>

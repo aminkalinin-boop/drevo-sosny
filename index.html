@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Древо сосны</title>
+<title>Лес и поле — справочник ЛПК и АПК</title>
 <meta name="author" content="Минигулов Александр Рафаильевич">
 <meta name="theme-color" content="#1f4a2c">
 <link rel="manifest" href="manifest.webmanifest">
@@ -37,7 +37,7 @@ body{background:var(--bg);color:var(--fg);font:16px/1.5 var(--f-body);padding-in
 .wrap{max-width:1240px;margin:0 auto;padding-inline:16px}
 header.top{background:var(--head);color:var(--head-fg);padding-block:14px 0}
 header.top .wrap{display:flex;flex-direction:column;gap:6px}
-.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.brand .sub{opacity:.75;font-size:.95rem}
 h1{font:700 1.7rem/1.1 var(--f-disp);margin:0}
 .author{font-size:.85rem;opacity:.8}
 .search{position:relative}
@@ -49,6 +49,7 @@ h1{font:700 1.7rem/1.1 var(--f-disp);margin:0}
 .results small{color:var(--muted)}
 .sector{display:flex;gap:6px;flex-wrap:wrap}
 .sector button{font:inherit;font-size:.9rem;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:transparent;color:var(--head-fg);cursor:pointer}
+.sector .sm{display:none}@media (max-width:700px){.sector .lg{display:none}.sector .sm{display:inline}}
 .sector button[aria-pressed="true"]{background:var(--head-fg);color:var(--head)}
 .tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-top:6px}
 .tabs::-webkit-scrollbar{display:none}
@@ -152,16 +153,17 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <body>
 
 <header class="top"><div class="wrap">
-  <div class="brand"><h1>Древо сосны</h1></div>
+  <div class="brand"><h1>Лес и поле</h1><span class="sub">справочник ЛПК и АПК</span></div>
   <div class="search"><input id="q" type="search" placeholder="Поиск по всему справочнику: канифоль, харвестер, ряска, голштинская…" aria-label="Поиск по справочнику" autocomplete="off"><div class="results" id="res" hidden></div></div>
   <div class="sector" id="sector" role="group" aria-label="Раздел справочника"></div>
   <nav class="tabs" role="tablist" id="tabs"></nav>
 </div></header>
 <main class="wrap" id="panes"></main>
-<div class="wrap"><footer class="foot">© 2026 Минигулов Александр Рафаильевич. Справочник по лесу и лесной экономике. Цифры ориентировочные, нормативы сверяйте с действующими документами.</footer></div>
+<div class="wrap"><footer class="foot">© 2026 Минигулов Александр Рафаильевич. Справочник по лесопромышленному и агропромышленному комплексам. Цифры ориентировочные, нормативы сверяйте с действующими документами.</footer></div>
 <div class="pop" id="pop" hidden></div>
 
 <script charset="utf-8" src="glossary.js"></script>
+<script charset="utf-8" src="glossary2.js"></script>
 <script>window.N={};</script>
 <script charset="utf-8" src="pine.js"></script>
 <script charset="utf-8" src="schemes1.js"></script>
@@ -180,6 +182,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script charset="utf-8" src="apk_tech.js"></script>
 <script charset="utf-8" src="chains.js"></script>
 <script charset="utf-8" src="cycles.js"></script>
+<script charset="utf-8" src="structure.js"></script>
 <script charset="utf-8" src="photos.js"></script>
 <script charset="utf-8" src="assets2.js"></script>
 <script charset="utf-8" src="assets3.js"></script>
@@ -194,31 +197,32 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script>
 const K={forest:"Раздел",live:"Живое / целое",part:"Часть дерева",proc:"Процесс",prod:"Сырьё, полуфабрикат",final:"Готовая продукция",waste:"Остатки, побочное, риски",place:"Место, объект",idea:"Идея, в теории",doc:"Документы, право",info:"Справка",tech:"Техника"};
 const SCH=[
- {id:"conif",t:"Хвойные",root:"con_root",sec:"lpk"},
- {id:"decid",t:"Лиственные",root:"dc_root",sec:"lpk"},
- {id:"forest",t:"Лес",root:"f_root",sec:"lpk"},
- {id:"otvod",t:"Отвод делянки",root:"o_root",sec:"lpk"},
- {id:"zag",t:"Лесозаготовка",root:"z_root",sec:"lpk"},
- {id:"vost",t:"Лесовосстановление",root:"v_root",sec:"lpk"},
- {id:"derevo",t:"Деревообработка",root:"d_root",sec:"lpk"},
- {id:"chl",t:"Переделы",root:"x_root",sec:"lpk"},
- {id:"cyl",t:"Идеальный цикл",root:"il_root",sec:"lpk"},
- {id:"real",t:"Реализация",root:"r_root",sec:"lpk"},
- {id:"uis",t:"ЛПК в УИС",root:"u_root",sec:"lpk"},
+ {id:"lres",t:"Ресурсы",root:"gl_res",sec:"lpk"},
+ {id:"lprod",t:"Производство",root:"gl_prod",sec:"lpk"},
+ {id:"lproc",t:"Переработка",root:"gl_proc",sec:"lpk"},
  {id:"tech",t:"Техника",root:"tech_root",sec:"lpk"},
- {id:"plant",t:"Растениеводство",root:"pl_root",sec:"apk"},
- {id:"anim",t:"Животноводство",root:"an_root",sec:"apk"},
- {id:"agro",t:"Агротехнологии",root:"ag_root",sec:"apk"},
- {id:"newtech",t:"Новые технологии",root:"nt_root",sec:"apk"},
- {id:"proc",t:"Переработка",root:"pr_root",sec:"apk"},
- {id:"cha",t:"Переделы",root:"y_root",sec:"apk"},
+ {id:"real",t:"Рынок",root:"r_root",sec:"lpk"},
+ {id:"uis",t:"УИС",root:"u_root",sec:"lpk"},
+ {id:"lfut",t:"Перспективы",root:"lf_root",sec:"lpk"},
+ {id:"cyl",t:"Идеальный цикл",root:"il_root",sec:"lpk"},
+ {id:"ares",t:"Ресурсы",root:"ga_res",sec:"apk"},
+ {id:"aprod",t:"Производство",root:"ag_root",sec:"apk"},
+ {id:"aproc",t:"Переработка",root:"ga_proc",sec:"apk"},
+ {id:"atech",t:"Техника",root:"at_root",sec:"apk"},
+ {id:"econ",t:"Рынок",root:"ec_root",sec:"apk"},
+ {id:"auis",t:"УИС",root:"au_root",sec:"apk"},
+ {id:"afut",t:"Перспективы",root:"nt_root",sec:"apk"},
  {id:"cya",t:"Идеальный цикл",root:"ia_root",sec:"apk"},
- {id:"econ",t:"Экономика и рынок",root:"ec_root",sec:"apk"},
- {id:"auis",t:"АПК в УИС",root:"au_root",sec:"apk"},
- {id:"atech",t:"Техника АПК",root:"at_root",sec:"apk"},
- {id:"mix",t:"Пересечения отраслей",root:"mx_root",sec:"mix"}
+ {id:"mres",t:"Ресурсы",root:"mx_land",sec:"mix"},
+ {id:"mprod",t:"Обмен продукцией",root:"mx_root",sec:"mix"},
+ {id:"mproc",t:"Переработка",root:"gm_proc",sec:"mix"},
+ {id:"mtech",t:"Техника и энергия",root:"gm_tech",sec:"mix"},
+ {id:"mmkt",t:"Экономика и риски",root:"gm_mkt",sec:"mix"},
+ {id:"muis",t:"УИС",root:"mx_uis",sec:"mix"},
+ {id:"mfut",t:"Перспективы",root:"mx_theory",sec:"mix"},
+ {id:"mcyc",t:"Идеальный цикл",root:"im_root",sec:"mix"}
 ];
-const SECS={lpk:"ЛПК · лес",apk:"АПК · село",mix:"ЛПК + АПК"};const SECSH={lpk:"ЛПК",apk:"АПК",mix:"ЛПК + АПК"};let sector="lpk";
+const SECS={lpk:"Лесопромышленный комплекс",apk:"Агропромышленный комплекс",mix:"Межотраслевое взаимодействие"};const SECSH={lpk:"ЛПК",apk:"АПК",mix:"Межотраслевое"};let sector="lpk";
 const EXTRA=[{id:"quiz",t:"Тест"},{id:"gloss",t:"Словарь"}];
 /* связи */
 const P={};Object.keys(N).forEach(id=>(N[id].c||[]).forEach(c=>{if(!P[c])P[c]=id}));
@@ -228,19 +232,35 @@ function pathOf(id){const a=[id];let x=id;while(P[x]){x=P[x];a.unshift(x)}return
 const USED={},GROUPS={};Object.keys(N).forEach(id=>(N[id].tl||[]).forEach(t=>{const m=N[id].k==="tech"?GROUPS:USED;(m[t]=m[t]||[]).includes(id)||(m[t]=m[t]||[]).push(id)}));
 const cap=s=>s[0].toUpperCase()+s.slice(1);
 function plain(s){return (s||"").replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g,(m,k,d)=>d||k).replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,(m,k,d)=>d||k).replace(/<[^>]+>/g,"")}
-function rich(s){if(!s)return"";
- return s.replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g,(m,k,d)=>G[k]?`<button type="button" class="term" data-t="${k}">${d||k}</button>`:(d||k))
-  .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,(m,id,d)=>N[id]?`<button type="button" class="nlink" data-go="${id}">${d||plain(N[id].t)}</button>`:T[id]?`<button type="button" class="nlink" data-tool="${id}">${d||T[id].t}</button>`:(d||id))}
+/* автоматические подсказки: термины словаря находятся в любом тексте с учётом окончаний */
+const AUTO_SKIP=new Set(["пар","ус","чаша","колот","кап","хак","вар","сорт","порода","запас","ядро","тара","брус","бревно","щепа","навоз","сено","крупа","полок","дека","венец","веник","сучок","пайка","флюс","припой","пасека","улей","молодь","телка","бычок","икра пищевая","трещина","урожайность","центнер","лемех","аукцион","биржа","пошлина","поддон","штабель","вахта","пищевая промышленность","опилки","отруби","фанера","гниль","пороки","ассортимент","гм","фз","мв"]);
+const AUTO_SHORT=new Set(["жом","жмых","шрот","луб","лыко","узв","бад","ачс","кмц","мкц","дсп","осп","мдф","двп","дпк","цсп","лдсп","lvl","clt","hdf","ксб","тгк","чпу","цбк","зкс","гсм","впм","вом","кфх","лпх","апк","npk","nft","ndvi","tmr","fsc","bt","мдо","кас","озу","окс","упд","эсд","барда","меласса","лузга","жижка","кизяк","глютен","канола","луб","мезга","пахта","казеин","скоп","шпон","кряж","чурак","перга","сусло","руно","садок","кросс","падь","кница","полог","сруб","трут","пинен","солод","силос","сенаж","опара","лпк","уис","фсин","уфсин","уик","ик","лиу","кп","укп","фку","фгуп","цтао","оиу","иту","крс","мрс","лэп","тэц","гост","фк","фсф","osb","тдт","мтз","гис","фгис","gps","ндс","фао","спк","бвмк","пвх","цбп","ddgs","мрот","оухд","уфиц","гуфсин"]);
+const esc=w=>w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+function stemRx(w){w=w.toLowerCase().replace(/[её]/g,"ё");const ee=x=>esc(x).replace(/ё/g,"[её]");
+ if(w.length<=4||/[a-z0-9]/.test(w))return ee(w)+"[а-яё]{0,2}";
+ const st=w.replace(/[аеёиоуыэюяйь]+$/,"");return ee(st.length>=4?st:w)+"[а-яё]{0,5}"}
+const AUTO_KEYS=Object.keys(G).filter(k=>!AUTO_SKIP.has(k)&&(k.length>=6||k.includes(" ")||AUTO_SHORT.has(k))).sort((a,b)=>b.length-a.length);
+const AUTO_RX=new RegExp("(?<![\\p{L}\\d])("+AUTO_KEYS.map(k=>k.split(/\s+/).map(stemRx).join("\\s+")).join("|")+")(?![\\p{L}\\d])","giu");
+const AUTO_TEST=AUTO_KEYS.map(k=>[k,new RegExp("^"+k.split(/\s+/).map(stemRx).join("\\s+")+"$","iu")]);
+let SEEN=new Set();
+function autoTerms(html){let depth=0;return html.split(/(<[^>]+>)/).map(seg=>{
+  if(seg.startsWith("<")){if(/^<button/i.test(seg))depth++;else if(/^<\/button/i.test(seg))depth--;return seg}
+  if(depth>0||!seg.trim())return seg;
+  return seg.replace(AUTO_RX,m=>{const hit=AUTO_TEST.find(([k,r])=>r.test(m));if(!hit)return m;const k=hit[0];if(SEEN.has(k))return m;SEEN.add(k);return `<button type="button" class="term" data-t="${k}">${m}</button>`})}).join("")}
+function rich(s,auto=true){if(!s)return"";
+ const h=s.replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g,(m,k,d)=>{if(!G[k])return d||k;SEEN.add(k);return `<button type="button" class="term" data-t="${k}">${d||k}</button>`})
+  .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,(m,id,d)=>N[id]?`<button type="button" class="nlink" data-go="${id}">${d||plain(N[id].t)}</button>`:T[id]?`<button type="button" class="nlink" data-tool="${id}">${d||T[id].t}</button>`:(d||id));
+ return auto?autoTerms(h):h}
 const title=id=>id.startsWith("t:")?T[id.slice(2)].t:plain(N[id].t);
 function firstSent(s,max=140){s=plain(s).replace(/\s+/g," ").trim();const m=s.match(/^.{20,}?[.!?](\s|$)/);let r=m?m[0].trim():s;return r.length>max?r.slice(0,max).replace(/\s\S*$/,"")+"…":r}
 /* состояние */
 const ST={};SCH.forEach(s=>ST[s.id]=[s.root]);
-let cur="conif";
+let cur="lres";
 const treeOpen={};SCH.forEach(s=>treeOpen[s.id]=new Set());
 /* вкладки и панели */
 const tabs=document.getElementById("tabs"),panes=document.getElementById("panes");
 tabs.innerHTML=[...SCH,...EXTRA].map(s=>`<button role="tab" data-tab="${s.id}" ${s.sec?`data-sec="${s.sec}"`:""} aria-selected="${s.id===cur}" ${s.sec&&s.sec!==sector?"hidden":""}>${s.t}</button>`).join("");
-document.getElementById("sector").innerHTML=Object.entries(SECS).map(([k,v])=>`<button type="button" data-secsel="${k}" aria-pressed="${k===sector}">${v}</button>`).join("");
+document.getElementById("sector").innerHTML=Object.entries(SECS).map(([k,v])=>`<button type="button" data-secsel="${k}" aria-pressed="${k===sector}"><span class="lg">${v}</span><span class="sm">${SECSH[k]}</span></button>`).join("");
 function setSector(sec){if(sec===sector)return;sector=sec;document.querySelectorAll("#tabs button[data-sec]").forEach(b=>b.hidden=b.dataset.sec!==sec);document.querySelectorAll("#sector button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.secsel===sec))}
 panes.innerHTML=SCH.map(s=>`<section id="pane-${s.id}" ${s.id===cur?"":"hidden"}>
  <div class="navbar"><button type="button" class="back" data-back aria-label="Назад">‹</button><div class="crumbs" id="cr-${s.id}"></div><button type="button" class="treebtn" data-tree="${s.id}">Дерево</button></div>
@@ -257,10 +277,10 @@ function hsBtn([i,x,y,w,hh]){const st=`style="left:${x}%;top:${y}%;width:${w}%;h
  if(i.startsWith("t_"))return T[i]?`<button type="button" class="hs" data-tool="${i}" ${st} aria-label="${T[i].t}"></button>`:"";
  return N[i]?`<button type="button" class="hs" data-go="${i}" ${st} aria-label="${plain(N[i].t)}"></button>`:""}
 function photoHtml(src,hs,alt){return `<div class="photo"><img src="${src}" alt="${alt||""}" loading="lazy">${(hs||[]).map(hsBtn).join("")}</div>`}
-function nodeScreen(id,tab){const n=N[id];let h="";
+function nodeScreen(id,tab){const n=N[id];let h="";SEEN=new Set();
  const isRoot=ROOTTAB[id];
- if(isRoot&&PH[tab]){h+=photoHtml(PH[tab],HSX[tab],"Иллюстрация к разделу")+`<p class="note">Нажимай на подписи и предметы на картинке.</p>`}
- h+=`<div class="kind">${K[n.k]||""}</div><h2>${rich(n.t)}</h2>`;
+ if(PHR[id]&&PH[PHR[id]]){h+=photoHtml(PH[PHR[id]],HSX[PHR[id]],"Иллюстрация к разделу")+`<p class="note">Нажимай на подписи и предметы на картинке.</p>`}
+ h+=`<div class="kind">${K[n.k]||""}</div><h2>${rich(n.t,false)}</h2>`;
  if(n.s)h+=`<p class="lead">${n.s}</p>`;
  if(n.im&&!(n.pics&&n.pics.length))h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`;
  if(n.pics&&n.pics.length){const any=n.pics.some(p=>p.hs&&p.hs.length);h+=n.pics.map(p=>photoHtml(p.src,p.hs,plain(n.t))).join("");if(any)h+=`<p class="note">На картинке можно нажимать на подписи и плитки.</p>`}
@@ -269,12 +289,12 @@ function nodeScreen(id,tab){const n=N[id];let h="";
  if(n.h)h+=`<h3 class="sec">Как получают / как делают</h3><p class="how">${rich(n.h)}</p>`;
  if(n.f)h+=`<h3 class="sec">Подробности</h3><ul>${n.f.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
  if(n.y)h+=`<h3 class="sec">${n.c?"Ещё":"Что из этого получают"}</h3><ul>${n.y.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
- if(n.c&&n.c.length){const lbl=["part","live","prod","waste","final"].includes(n.k)&&["conif","decid","plant","anim","chl","cha"].includes(tab)?"Что из этого получают":"Дальше";h+=`<h3 class="sec">${lbl} · ${n.c.length}</h3><div class="items">${n.c.map(item).join("")}</div>`}
+ if(n.c&&n.c.length){const lbl=["part","live","prod","waste","final"].includes(n.k)&&["lres","ares","lproc","aproc"].includes(tab)?"Что из этого получают":"Дальше";h+=`<h3 class="sec">${lbl} · ${n.c.length}</h3><div class="items">${n.c.map(item).join("")}</div>`}
  if(n.tl&&n.tl.length){h+=n.k==="tech"?`<h3 class="sec">Оборудование · ${n.tl.length}</h3><div class="items">${n.tl.map(toolItem).join("")}</div>`:`<h3 class="sec">Инструменты и оборудование</h3><div class="chips">${n.tl.map(t=>`<button type="button" class="chip tl" data-tool="${t}">${T[t].t}</button>`).join("")}</div>`}
  if(n.ln){const l=n.ln.filter(x=>N[x]);if(l.length)h+=`<h3 class="sec">Связано в других разделах</h3><div class="items">${l.map(lnItem).join("")}</div>`}
  if(isRoot)h+=`<div class="legend">${Object.entries(K).map(([k,v])=>`<span><i style="background:var(--${k==="info"?"line":k==="forest"?"live":k})"></i>${v}</span>`).join("")}</div>`;
  return h}
-function toolScreen(t){const x=T[t];let h=`<div class="kind">Оборудование · ${x.g}</div><h2>${x.t}</h2>${x.im?`<img class="cimg" src="${x.im}" alt="${x.t}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`:""}<p>${rich(x.w)}</p>`;
+function toolScreen(t){const x=T[t];SEEN=new Set();let h=`<div class="kind">Оборудование · ${x.g}</div><h2>${x.t}</h2>${x.im?`<img class="cimg" src="${x.im}" alt="${x.t}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`:""}<p>${rich(x.w)}</p>`;
  if(x.how)h+=`<h3 class="sec">Как устроено и работает</h3><p class="how">${rich(x.how)}</p>`;
  if(x.use)h+=`<h3 class="sec">Для чего</h3><p>${rich(x.use)}</p>`;
  if(x.perf)h+=`<h3 class="sec">Производительность и цифры</h3><p>${rich(x.perf)}</p>`;
@@ -330,9 +350,15 @@ function renderGl(f){gl.innerHTML=GL.filter(k=>!f||k.includes(f)||G[k].toLowerCa
 renderGl("");document.getElementById("gq").addEventListener("input",e=>renderGl(e.target.value.trim().toLowerCase()));
 /* клики */
 const pop=document.getElementById("pop");
+function showTerm(t){const k=t.dataset.t;pop.innerHTML=`<b>${cap(k)}</b>${G[k]}`;pop.hidden=false;const r=t.getBoundingClientRect(),pw=Math.min(340,innerWidth-24);pop.style.width=pw+"px";pop.style.left=Math.min(Math.max(12,r.left),innerWidth-pw-12)+"px";const ph=pop.offsetHeight;pop.style.top=(r.bottom+8+ph>innerHeight?Math.max(8,r.top-ph-8):r.bottom+8)+"px";}
+/* наведение мышью: подсказка появляется без нажатия */
+if(matchMedia("(hover:hover)").matches){let ht=null;
+ document.addEventListener("mouseover",e=>{const t=e.target.closest("button.term");if(t){clearTimeout(ht);showTerm(t);return}if(e.target.closest("#pop")){clearTimeout(ht);return}});
+ document.addEventListener("mouseout",e=>{if(e.target.closest("button.term")||e.target.closest("#pop")){clearTimeout(ht);ht=setTimeout(()=>{pop.hidden=true},350)}});}
+
 document.addEventListener("click",e=>{
  const t=e.target.closest("button.term");
- if(t){e.stopPropagation();const k=t.dataset.t;pop.innerHTML=`<b>${cap(k)}</b>${G[k]}`;pop.hidden=false;const r=t.getBoundingClientRect(),pw=Math.min(340,innerWidth-24);pop.style.width=pw+"px";pop.style.left=Math.min(Math.max(12,r.left),innerWidth-pw-12)+"px";const ph=pop.offsetHeight;pop.style.top=(r.bottom+8+ph>innerHeight?Math.max(8,r.top-ph-8):r.bottom+8)+"px";return}
+ if(t){e.stopPropagation();showTerm(t);return}
  if(!e.target.closest("#pop"))pop.hidden=true;
  if(!e.target.closest(".search"))res.hidden=true;
  const inRes=!!e.target.closest("[data-res]");if(inRes){res.hidden=true;q.blur()}
@@ -357,4 +383,3 @@ if("serviceWorker" in navigator&&location.protocol==="https:"&&!/claude\.ai|clau
 
 </body>
 </html>
-
