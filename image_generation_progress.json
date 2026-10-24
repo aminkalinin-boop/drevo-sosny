@@ -4,13 +4,13 @@
   "source_queue": "NO_PICTURES(1).md",
   "integrated_positions": 1013,
   "remaining_queue_positions": 243,
-  "published_commit": "8ef8ccb3050497703fc88614c655b5c62bf13a54",
+  "published_commit": "4208935945269f9e28168a572f76036d6ffc8e93",
   "publication_branch": "gh-pages",
-  "last_successful_deployment": 40076455851,
+  "last_successful_deployment": 40090120848,
   "cycle_size": 50,
   "current_cycle": 6,
   "generated_canvases_in_current_cycle": 0,
-  "current_cycle_status": "ready_to_plan",
+  "current_cycle_status": "generating",
   "partial_cycle_integrated": false,
   "next_original_queue_position_to_generate": 1014,
   "next_title": "ЛПК в корм животным и питомцам",
@@ -44,7 +44,7 @@
       "status": "deferred_until_final_review"
     }
   ],
-  "publication_status": "Cycle 5 prepared for publication; published_commit still records previous deployment",
+  "publication_status": "Cycle 5 published; live file check recorded separately",
   "last_integrated_cycle": {
     "cycle": 5,
     "canvases": 50,
@@ -55,5 +55,2014 @@
       1013
     ],
     "review_status": "pending_final_review"
-  }
+  },
+  "planned_generations": [
+    {
+      "cycle": 6,
+      "generation": 1,
+      "cards": [
+        {
+          "queue_position": 1014,
+          "card_id": "mx_feed",
+          "kind": "n",
+          "title": "ЛПК в корм животным и питомцам",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1016,
+          "card_id": "mx_yeast",
+          "kind": "n",
+          "title": "Кормовые дрожжи из древесины",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1017,
+          "card_id": "mx_cellfeed",
+          "kind": "n",
+          "title": "Целлюлоза в кормах для собак и кошек",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1018,
+          "card_id": "mx_lsbind",
+          "kind": "n",
+          "title": "Лигносульфонаты как связующее для гранул",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1019,
+          "card_id": "mx_tanninfeed",
+          "kind": "n",
+          "title": "Танины в кормах",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1020,
+          "card_id": "mx_charfeed",
+          "kind": "n",
+          "title": "Древесный уголь в кормах",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 2,
+      "cards": [
+        {
+          "queue_position": 1021,
+          "card_id": "mx_branchfeed",
+          "kind": "n",
+          "title": "Веточный корм и древесная зелень",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1022,
+          "card_id": "mx_arabgal",
+          "kind": "n",
+          "title": "Арабиногалактан и дигидрокверцетин в кормах",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1023,
+          "card_id": "mx_petlitter",
+          "kind": "n",
+          "title": "Подстилка и наполнители для питомцев",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1024,
+          "card_id": "mx_soil",
+          "kind": "n",
+          "title": "ЛПК для почвы и растений",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 3,
+      "cards": [
+        {
+          "queue_position": 1025,
+          "card_id": "mx_ash",
+          "kind": "n",
+          "title": "Древесная зола",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1026,
+          "card_id": "mx_biochar",
+          "kind": "n",
+          "title": "Биоуголь в почве",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1027,
+          "card_id": "mx_barkcompost",
+          "kind": "n",
+          "title": "Компост из коры и опилок с навозом",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1028,
+          "card_id": "mx_mulch",
+          "kind": "n",
+          "title": "Мульча из коры и щепы",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 4,
+      "cards": [
+        {
+          "queue_position": 1029,
+          "card_id": "mx_lignum",
+          "kind": "n",
+          "title": "Гуматы и удобрения из лигнина",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1030,
+          "card_id": "mx_woodvinegar",
+          "kind": "n",
+          "title": "Древесный уксус в растениеводстве",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1031,
+          "card_id": "mx_sludge",
+          "kind": "n",
+          "title": "Осадки очистных сооружений ЦБК",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1032,
+          "card_id": "mx_seedlings",
+          "kind": "n",
+          "title": "Кассеты и торфяно-древесные грунты",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 5,
+      "cards": [
+        {
+          "queue_position": 1033,
+          "card_id": "mx_ag2lpk",
+          "kind": "n",
+          "title": "АПК для лесной промышленности",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1034,
+          "card_id": "mx_starchpaper",
+          "kind": "n",
+          "title": "Крахмал в бумаге и картоне",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1035,
+          "card_id": "mx_bioglue",
+          "kind": "n",
+          "title": "Клеи из сои, казеина, крови",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1036,
+          "card_id": "mx_oilwood",
+          "kind": "n",
+          "title": "Растительные масла и воск для защиты древесины",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 6,
+      "cards": [
+        {
+          "queue_position": 1037,
+          "card_id": "mx_agriboard",
+          "kind": "n",
+          "title": "Плиты из соломы, лузги, костры",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1038,
+          "card_id": "mx_strawpulp",
+          "kind": "n",
+          "title": "Солома в целлюлозно-бумажной промышленности",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1039,
+          "card_id": "mx_hydrolraw",
+          "kind": "n",
+          "title": "Сельские отходы для гидролизных заводов",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1040,
+          "card_id": "mx_land",
+          "kind": "n",
+          "title": "Лес и поле на одной земле",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 7,
+      "cards": [
+        {
+          "queue_position": 1041,
+          "card_id": "mx_belts",
+          "kind": "n",
+          "title": "Полезащитные лесополосы",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1042,
+          "card_id": "mx_erosion",
+          "kind": "n",
+          "title": "Противоэрозионные насаждения",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1043,
+          "card_id": "mx_silvopast",
+          "kind": "n",
+          "title": "Выпас и сенокошение на лесных участках",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1044,
+          "card_id": "mx_forestbees",
+          "kind": "n",
+          "title": "Лесное пчеловодство",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 8,
+      "cards": [
+        {
+          "queue_position": 1045,
+          "card_id": "mx_alley",
+          "kind": "n",
+          "title": "Аллейные посадки",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1046,
+          "card_id": "mx_srcplant",
+          "kind": "n",
+          "title": "Плантации быстрорастущих деревьев",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1047,
+          "card_id": "mx_overgrown",
+          "kind": "n",
+          "title": "Зарастающие сельхозземли",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1048,
+          "card_id": "mx_shiitake",
+          "kind": "n",
+          "title": "Грибы на брёвнах и в лесу",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 9,
+      "cards": [
+        {
+          "queue_position": 1049,
+          "card_id": "mx_xmas",
+          "kind": "n",
+          "title": "Ёлки на сельхозземлях",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1050,
+          "card_id": "mx_reindeer",
+          "kind": "n",
+          "title": "Северное оленеводство",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1051,
+          "card_id": "mx_energy",
+          "kind": "n",
+          "title": "Общая энергетика",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1052,
+          "card_id": "mx_grain_dry",
+          "kind": "n",
+          "title": "Сушка зерна на древесном топливе",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 10,
+      "cards": [
+        {
+          "queue_position": 1053,
+          "card_id": "mx_greenheat",
+          "kind": "n",
+          "title": "Теплицы на тепле лесопилок",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1054,
+          "card_id": "mx_farmboil",
+          "kind": "n",
+          "title": "Котлы на биомассе на фермах",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1055,
+          "card_id": "mx_tech",
+          "kind": "n",
+          "title": "Общая техника и технологии",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1056,
+          "card_id": "mx_tractor",
+          "kind": "n",
+          "title": "Трактор с лесным оборудованием",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 11,
+      "cards": [
+        {
+          "queue_position": 1057,
+          "card_id": "mx_presses",
+          "kind": "n",
+          "title": "Грануляторы и экструдеры",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1058,
+          "card_id": "mx_dronesat",
+          "kind": "n",
+          "title": "Дроны, спутники, ГИС",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1059,
+          "card_id": "mx_chippers",
+          "kind": "n",
+          "title": "Рубительные машины и мульчеры",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1060,
+          "card_id": "mx_pack",
+          "kind": "n",
+          "title": "Тара и материалы ЛПК для АПК",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 12,
+      "cards": [
+        {
+          "queue_position": 1061,
+          "card_id": "mx_crates",
+          "kind": "n",
+          "title": "Ящики, поддоны, контейнеры",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1062,
+          "card_id": "mx_paperpack",
+          "kind": "n",
+          "title": "Бумажная и картонная упаковка",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1063,
+          "card_id": "mx_posts",
+          "kind": "n",
+          "title": "Столбы для виноградников, хмельников, ограждений",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1064,
+          "card_id": "mx_barrels",
+          "kind": "n",
+          "title": "Дубовые бочки для вина и коньяка",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 13,
+      "cards": [
+        {
+          "queue_position": 1065,
+          "card_id": "mx_farmbuild",
+          "kind": "n",
+          "title": "Сельские постройки из дерева",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1066,
+          "card_id": "mx_chem",
+          "kind": "n",
+          "title": "Общая химия и биотехнологии",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1068,
+          "card_id": "mx_ethanol2",
+          "kind": "n",
+          "title": "Биоэтанол из соломы и опилок",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1069,
+          "card_id": "mx_tanning",
+          "kind": "n",
+          "title": "Дубление кожи лесными танинами",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 14,
+      "cards": [
+        {
+          "queue_position": 1070,
+          "card_id": "mx_vetpharm",
+          "kind": "n",
+          "title": "Лесные вещества в ветеринарии",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1071,
+          "card_id": "mx_bioplast",
+          "kind": "n",
+          "title": "Биопластики",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1072,
+          "card_id": "mx_uis",
+          "kind": "n",
+          "title": "Совмещение ЛПК и АПК в УИС",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1073,
+          "card_id": "mx_uis_loop",
+          "kind": "n",
+          "title": "Замкнутый цикл учреждения",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 15,
+      "cards": [
+        {
+          "queue_position": 1074,
+          "card_id": "mx_uis_econ",
+          "kind": "n",
+          "title": "Экономический эффект совмещения",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1075,
+          "card_id": "mx_risks",
+          "kind": "n",
+          "title": "Ограничения и риски",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1076,
+          "card_id": "mx_r_treated",
+          "kind": "n",
+          "title": "Обработанная древесина",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1077,
+          "card_id": "mx_r_species",
+          "kind": "n",
+          "title": "Опасные породы",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 16,
+      "cards": [
+        {
+          "queue_position": 1078,
+          "card_id": "mx_r_nitrogen",
+          "kind": "n",
+          "title": "Азотное голодание",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1079,
+          "card_id": "mx_r_logist",
+          "kind": "n",
+          "title": "Логистика и влажность",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1080,
+          "card_id": "mx_r_phyto",
+          "kind": "n",
+          "title": "Фитосанитария и болезни",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1081,
+          "card_id": "mx_theory",
+          "kind": "n",
+          "title": "В теории",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 17,
+      "cards": [
+        {
+          "queue_position": 1082,
+          "card_id": "mx_t_feed",
+          "kind": "n",
+          "title": "Корм и белок из древесины",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1083,
+          "card_id": "mx_t_steam",
+          "kind": "n",
+          "title": "Паровзрывная обработка опилок для жвачных",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1084,
+          "card_id": "mx_t_fungi",
+          "kind": "n",
+          "title": "Грибная обработка соломы и опилок",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1085,
+          "card_id": "mx_t_mycoprot",
+          "kind": "n",
+          "title": "Грибной белок на сахарах древесины",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 18,
+      "cards": [
+        {
+          "queue_position": 1086,
+          "card_id": "mx_t_leafprot",
+          "kind": "n",
+          "title": "Белковый концентрат из листьев деревьев",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1087,
+          "card_id": "mx_t_poplar",
+          "kind": "n",
+          "title": "Деревья с изменённым лигнином",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1088,
+          "card_id": "mx_t_soil",
+          "kind": "n",
+          "title": "Почва, вода и удобрения",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1089,
+          "card_id": "mx_t_woodchipbio",
+          "kind": "n",
+          "title": "Щепные биореакторы на дренаже полей",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 19,
+      "cards": [
+        {
+          "queue_position": 1090,
+          "card_id": "mx_t_hydrogel",
+          "kind": "n",
+          "title": "Целлюлозные гидрогели для удержания влаги",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1091,
+          "card_id": "mx_t_mulchfilm",
+          "kind": "n",
+          "title": "Мульча-плёнка и горшки из целлюлозы и лигнина",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1092,
+          "card_id": "mx_t_slowfert",
+          "kind": "n",
+          "title": "Удобрения медленного действия на основе биоугля и лигнина",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1093,
+          "card_id": "mx_t_feedchar",
+          "kind": "n",
+          "title": "Каскад «уголь в корм → навоз → почва»",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 20,
+      "cards": [
+        {
+          "queue_position": 1094,
+          "card_id": "mx_t_mycorr",
+          "kind": "n",
+          "title": "Микоризные грибы для полей и лесополос",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1095,
+          "card_id": "mx_t_materials",
+          "kind": "n",
+          "title": "Новые материалы из леса для села и пищепрома",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1096,
+          "card_id": "mx_t_coating",
+          "kind": "n",
+          "title": "Съедобные покрытия для фруктов и овощей",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1097,
+          "card_id": "mx_t_nanofood",
+          "kind": "n",
+          "title": "Наноцеллюлоза в продуктах",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 21,
+      "cards": [
+        {
+          "queue_position": 1098,
+          "card_id": "mx_t_activepack",
+          "kind": "n",
+          "title": "Активная упаковка с лесными экстрактами",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1099,
+          "card_id": "mx_t_cltfarm",
+          "kind": "n",
+          "title": "Деревянные фермы, теплицы и элеваторы из CLT",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1100,
+          "card_id": "mx_t_protect",
+          "kind": "n",
+          "title": "Защита растений и животных лесными веществами",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1101,
+          "card_id": "mx_t_antibio",
+          "kind": "n",
+          "title": "Хвойные экстракты и смолы вместо кормовых антибиотиков",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 22,
+      "cards": [
+        {
+          "queue_position": 1102,
+          "card_id": "mx_t_biopest",
+          "kind": "n",
+          "title": "Биопестициды из скипидара, дёгтя, древесного уксуса",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1103,
+          "card_id": "mx_t_pheromone",
+          "kind": "n",
+          "title": "Феромоны из лесохимии",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1104,
+          "card_id": "mx_t_animals",
+          "kind": "n",
+          "title": "Животные и лес вместе",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1105,
+          "card_id": "mx_t_firegraze",
+          "kind": "n",
+          "title": "Противопожарный выпас",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 23,
+      "cards": [
+        {
+          "queue_position": 1106,
+          "card_id": "mx_t_pigoak",
+          "kind": "n",
+          "title": "Откорм свиней желудями в дубравах",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1107,
+          "card_id": "mx_t_silvopoultry",
+          "kind": "n",
+          "title": "Куры и гуси под деревьями",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1108,
+          "card_id": "mx_t_bees",
+          "kind": "n",
+          "title": "Медоносы на вырубках и в лесополосах",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1109,
+          "card_id": "mx_t_industry",
+          "kind": "n",
+          "title": "Энергия и промышленный симбиоз",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 24,
+      "cards": [
+        {
+          "queue_position": 1110,
+          "card_id": "mx_t_biorefinery",
+          "kind": "n",
+          "title": "Агролесной биоперерабатывающий завод",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1111,
+          "card_id": "mx_t_pulpgreen",
+          "kind": "n",
+          "title": "Теплицы и рыбные фермы при ЦБК",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1112,
+          "card_id": "mx_t_ecopark",
+          "kind": "n",
+          "title": "Лесоаграрный парк в одном районе",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1113,
+          "card_id": "mx_t_duckweed",
+          "kind": "n",
+          "title": "Ряска на очищенных стоках",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 25,
+      "cards": [
+        {
+          "queue_position": 1114,
+          "card_id": "mx_t_econ",
+          "kind": "n",
+          "title": "Экономика и цифровые модели",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1115,
+          "card_id": "mx_t_wastex",
+          "kind": "n",
+          "title": "Биржа отходов между лесопилками и фермами",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1116,
+          "card_id": "mx_t_carbon",
+          "kind": "n",
+          "title": "Углеродные единицы от лесополос и биоугля",
+          "section": "Пересечения отраслей"
+        },
+        {
+          "queue_position": 1117,
+          "card_id": "mx_t_coop",
+          "kind": "n",
+          "title": "Агролесные кооперативы",
+          "section": "Пересечения отраслей"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 26,
+      "cards": [
+        {
+          "queue_position": 1118,
+          "card_id": "t_lesegais",
+          "kind": "t",
+          "title": "ЛесЕГАИС (Цифровые системы)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1119,
+          "card_id": "t_slasher",
+          "kind": "t",
+          "title": "Раскряжёвочная установка (Складская техника)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1120,
+          "card_id": "t_sorter",
+          "kind": "t",
+          "title": "Сортировочный транспортёр (Складская техника)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1121,
+          "card_id": "t_debarker",
+          "kind": "t",
+          "title": "Окорочный станок (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 27,
+      "cards": [
+        {
+          "queue_position": 1122,
+          "card_id": "t_metaldet",
+          "kind": "t",
+          "title": "Металлодетектор (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1123,
+          "card_id": "t_sharpener",
+          "kind": "t",
+          "title": "Заточной станок (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 28,
+      "cards": [
+        {
+          "queue_position": 1124,
+          "card_id": "t_bandsaw",
+          "kind": "t",
+          "title": "Ленточнопильный станок (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1125,
+          "card_id": "t_fps",
+          "kind": "t",
+          "title": "Фрезерно-пильная линия (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1126,
+          "card_id": "t_optimizer",
+          "kind": "t",
+          "title": "Торцовочный станок с оптимизатором (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1127,
+          "card_id": "t_fingerjoint",
+          "kind": "t",
+          "title": "Линия сращивания (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1128,
+          "card_id": "t_press",
+          "kind": "t",
+          "title": "Пресс для склейки (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1129,
+          "card_id": "t_lathe",
+          "kind": "t",
+          "title": "Лущильный станок (Фанерный завод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 29,
+      "cards": [
+        {
+          "queue_position": 1130,
+          "card_id": "t_veneerdry",
+          "kind": "t",
+          "title": "Сушилка шпона (Фанерный завод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1131,
+          "card_id": "t_hotpress",
+          "kind": "t",
+          "title": "Горячий пресс (Плитный завод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1132,
+          "card_id": "t_autoclave",
+          "kind": "t",
+          "title": "Автоклав для пропитки (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1133,
+          "card_id": "t_thermo",
+          "kind": "t",
+          "title": "Камера термомодификации (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1134,
+          "card_id": "t_sander",
+          "kind": "t",
+          "title": "Шлифовальный станок (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1135,
+          "card_id": "t_paintline",
+          "kind": "t",
+          "title": "Покрасочная линия (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 30,
+      "cards": [
+        {
+          "queue_position": 1136,
+          "card_id": "t_packer",
+          "kind": "t",
+          "title": "Упаковочная машина (Лесозавод)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1137,
+          "card_id": "t_pelletizer",
+          "kind": "t",
+          "title": "Гранулятор (Биотопливо)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1138,
+          "card_id": "t_mill",
+          "kind": "t",
+          "title": "Сушилка и мельница (Переработка зелени)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1139,
+          "card_id": "t_retort",
+          "kind": "t",
+          "title": "Печь-реторта (Лесохимия)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1140,
+          "card_id": "t_plough",
+          "kind": "t",
+          "title": "Лесной плуг (Лесовосстановление)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1141,
+          "card_id": "t_scarifier",
+          "kind": "t",
+          "title": "Дисковый рыхлитель (Лесовосстановление)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 31,
+      "cards": [
+        {
+          "queue_position": 1142,
+          "card_id": "t_cultivator",
+          "kind": "t",
+          "title": "Культиватор (Лесовосстановление)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1143,
+          "card_id": "t_circsaw",
+          "kind": "t",
+          "title": "Дисковая (круглопильная) пилорама (Лесопиление)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1144,
+          "card_id": "t_resaw",
+          "kind": "t",
+          "title": "Делительный (ребровый) станок (Лесопиление)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1145,
+          "card_id": "t_crosscut",
+          "kind": "t",
+          "title": "Торцовочный станок (Лесопиление)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1146,
+          "card_id": "t_vacdry",
+          "kind": "t",
+          "title": "Вакуумная сушильная камера (Сушка)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1147,
+          "card_id": "t_spindle",
+          "kind": "t",
+          "title": "Фрезерный станок (Строгание и фрезерование)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 32,
+      "cards": [
+        {
+          "queue_position": 1148,
+          "card_id": "t_tenon",
+          "kind": "t",
+          "title": "Шипорезный станок (Строгание и фрезерование)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1149,
+          "card_id": "t_mortiser",
+          "kind": "t",
+          "title": "Сверлильно-пазовальный станок (Строгание и фрезерование)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1150,
+          "card_id": "t_lathe_wood",
+          "kind": "t",
+          "title": "Токарный станок по дереву (Строгание и фрезерование)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1151,
+          "card_id": "t_edgebander",
+          "kind": "t",
+          "title": "Кромкооблицовочный станок (Отделка)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1152,
+          "card_id": "t_panelsaw",
+          "kind": "t",
+          "title": "Форматно-раскроечный станок (Отделка)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1153,
+          "card_id": "t_calibsander",
+          "kind": "t",
+          "title": "Калибровально-шлифовальный станок (Отделка)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 33,
+      "cards": [
+        {
+          "queue_position": 1154,
+          "card_id": "t_glue",
+          "kind": "t",
+          "title": "Клеенаносящий станок (Склейка)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1155,
+          "card_id": "t_vacpress",
+          "kind": "t",
+          "title": "Вакуумный (мембранный) пресс (Склейка)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1156,
+          "card_id": "t_rounder",
+          "kind": "t",
+          "title": "Оцилиндровочный станок (Домостроение)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1157,
+          "card_id": "t_cupcutter",
+          "kind": "t",
+          "title": "Чашкозарезной станок (Домостроение)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1158,
+          "card_id": "t_setter",
+          "kind": "t",
+          "title": "Разводной станок (Инструментальное хозяйство)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1159,
+          "card_id": "t_knifegrinder",
+          "kind": "t",
+          "title": "Ножеточильный станок (Инструментальное хозяйство)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 34,
+      "cards": [
+        {
+          "queue_position": 1160,
+          "card_id": "t_clipper",
+          "kind": "t",
+          "title": "Ножницы для шпона (Фанера и плиты)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1161,
+          "card_id": "t_flaker",
+          "kind": "t",
+          "title": "Стружечный станок (Фанера и плиты)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1162,
+          "card_id": "t_refiner",
+          "kind": "t",
+          "title": "Дефибратор (рафинёр) (Фанера и плиты)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1163,
+          "card_id": "t_hammermill",
+          "kind": "t",
+          "title": "Молотковая дробилка (Биотопливо)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1164,
+          "card_id": "t_briquetter",
+          "kind": "t",
+          "title": "Брикетировщик (Биотопливо)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1165,
+          "card_id": "t_resinplant",
+          "kind": "t",
+          "title": "Канифольно-терпентинная установка (Лесохимия)",
+          "section": "Техника ЛПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 35,
+      "cards": [
+        {
+          "queue_position": 1166,
+          "card_id": "t_extractor",
+          "kind": "t",
+          "title": "Экстракционная установка (Лесохимия)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1167,
+          "card_id": "t_still",
+          "kind": "t",
+          "title": "Перегонный куб для эфирного масла (Лесохимия)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1168,
+          "card_id": "t_rectif",
+          "kind": "t",
+          "title": "Ректификационная колонна (Лесохимия)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1169,
+          "card_id": "t_sprayer",
+          "kind": "t",
+          "title": "Опрыскиватель (Лесовосстановление)",
+          "section": "Техника ЛПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1170,
+          "card_id": "t_tractor_k",
+          "kind": "t",
+          "title": "Колёсный трактор (Тракторы)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1171,
+          "card_id": "t_tractor_cr",
+          "kind": "t",
+          "title": "Гусеничный трактор (Тракторы)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 36,
+      "cards": [
+        {
+          "queue_position": 1172,
+          "card_id": "t_plough_a",
+          "kind": "t",
+          "title": "Плуг (Обработка почвы)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1173,
+          "card_id": "t_disc",
+          "kind": "t",
+          "title": "Дисковая борона (дискатор) (Обработка почвы)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1174,
+          "card_id": "t_cultiv",
+          "kind": "t",
+          "title": "Культиватор (Обработка почвы)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1175,
+          "card_id": "t_harrow",
+          "kind": "t",
+          "title": "Борона (Обработка почвы)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1176,
+          "card_id": "t_roller_a",
+          "kind": "t",
+          "title": "Каток почвенный (Обработка почвы)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1177,
+          "card_id": "t_ripper",
+          "kind": "t",
+          "title": "Глубокорыхлитель (Обработка почвы)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 37,
+      "cards": [
+        {
+          "queue_position": 1178,
+          "card_id": "t_seeder_a",
+          "kind": "t",
+          "title": "Сеялка (Посев и посадка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1179,
+          "card_id": "t_potplant",
+          "kind": "t",
+          "title": "Картофелесажалка (Посев и посадка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1180,
+          "card_id": "t_planter_a",
+          "kind": "t",
+          "title": "Рассадопосадочная машина (Посев и посадка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1181,
+          "card_id": "t_seedtreat",
+          "kind": "t",
+          "title": "Протравитель семян (Посев и посадка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1182,
+          "card_id": "t_spreader",
+          "kind": "t",
+          "title": "Разбрасыватель удобрений (Удобрения и защита)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1183,
+          "card_id": "t_sprayer_a",
+          "kind": "t",
+          "title": "Прицепной опрыскиватель (Удобрения и защита)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 38,
+      "cards": [
+        {
+          "queue_position": 1184,
+          "card_id": "t_sprayer_self",
+          "kind": "t",
+          "title": "Самоходный опрыскиватель (Удобрения и защита)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1185,
+          "card_id": "t_agrodrone",
+          "kind": "t",
+          "title": "Агродрон (Удобрения и защита)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1186,
+          "card_id": "t_pivot",
+          "kind": "t",
+          "title": "Дождевальная машина кругового действия (Орошение)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1187,
+          "card_id": "t_drip",
+          "kind": "t",
+          "title": "Система капельного орошения (Орошение)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1188,
+          "card_id": "t_pump",
+          "kind": "t",
+          "title": "Насосная станция (Орошение)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1189,
+          "card_id": "t_combine",
+          "kind": "t",
+          "title": "Зерноуборочный комбайн (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 39,
+      "cards": [
+        {
+          "queue_position": 1190,
+          "card_id": "t_header_corn",
+          "kind": "t",
+          "title": "Кукурузная и подсолнечная жатка (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1191,
+          "card_id": "t_beetharv",
+          "kind": "t",
+          "title": "Свеклоуборочный комбайн (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1192,
+          "card_id": "t_potharv",
+          "kind": "t",
+          "title": "Картофелеуборочный комбайн (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1193,
+          "card_id": "t_forage",
+          "kind": "t",
+          "title": "Кормоуборочный комбайн (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1194,
+          "card_id": "t_mower",
+          "kind": "t",
+          "title": "Косилка (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1195,
+          "card_id": "t_baler",
+          "kind": "t",
+          "title": "Пресс-подборщик (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 40,
+      "cards": [
+        {
+          "queue_position": 1196,
+          "card_id": "t_wrapper",
+          "kind": "t",
+          "title": "Обмотчик рулонов (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1197,
+          "card_id": "t_flaxpull",
+          "kind": "t",
+          "title": "Льнотеребилка и льнокомбайн (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1198,
+          "card_id": "t_orchard",
+          "kind": "t",
+          "title": "Садовая техника (Уборка урожая)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1199,
+          "card_id": "t_grainclean",
+          "kind": "t",
+          "title": "Зерноочистительная машина (Послеуборочная доработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1200,
+          "card_id": "t_seedclean",
+          "kind": "t",
+          "title": "Семяочистительная линия (Послеуборочная доработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1201,
+          "card_id": "t_dryer",
+          "kind": "t",
+          "title": "Зерносушилка (Послеуборочная доработка)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 41,
+      "cards": [
+        {
+          "queue_position": 1202,
+          "card_id": "t_elev",
+          "kind": "t",
+          "title": "Элеватор и силосы (Послеуборочная доработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1203,
+          "card_id": "t_silobag",
+          "kind": "t",
+          "title": "Зерновой рукав (Послеуборочная доработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1204,
+          "card_id": "t_vegstore",
+          "kind": "t",
+          "title": "Овощехранилище (Послеуборочная доработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1205,
+          "card_id": "t_ca_store",
+          "kind": "t",
+          "title": "Фруктохранилище с РГС (Послеуборочная доработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1206,
+          "card_id": "t_milkparlor",
+          "kind": "t",
+          "title": "Доильный зал (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1207,
+          "card_id": "t_robot",
+          "kind": "t",
+          "title": "Робот-дояр (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 42,
+      "cards": [
+        {
+          "queue_position": 1208,
+          "card_id": "t_milktank",
+          "kind": "t",
+          "title": "Танк-охладитель молока (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1209,
+          "card_id": "t_mixer",
+          "kind": "t",
+          "title": "Кормосмеситель-раздатчик (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1210,
+          "card_id": "t_manurecon",
+          "kind": "t",
+          "title": "Навозоуборочные системы (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1211,
+          "card_id": "t_pigfeed",
+          "kind": "t",
+          "title": "Кормовые системы свинокомплекса (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1212,
+          "card_id": "t_incub",
+          "kind": "t",
+          "title": "Инкубатор промышленный (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1213,
+          "card_id": "t_cage",
+          "kind": "t",
+          "title": "Клеточные батареи и вольеры для кур (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 43,
+      "cards": [
+        {
+          "queue_position": 1214,
+          "card_id": "t_broilerhouse",
+          "kind": "t",
+          "title": "Бройлерный птичник (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1215,
+          "card_id": "t_shear",
+          "kind": "t",
+          "title": "Стригальная машинка (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1216,
+          "card_id": "t_hive",
+          "kind": "t",
+          "title": "Улей (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1217,
+          "card_id": "t_honeyext",
+          "kind": "t",
+          "title": "Медогонка (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1218,
+          "card_id": "t_ras",
+          "kind": "t",
+          "title": "Установка замкнутого водоснабжения (УЗВ) (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1219,
+          "card_id": "t_cagefarm",
+          "kind": "t",
+          "title": "Садковая линия (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 44,
+      "cards": [
+        {
+          "queue_position": 1220,
+          "card_id": "t_dungpress",
+          "kind": "t",
+          "title": "Шнековый пресс для брикетов из навоза (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1221,
+          "card_id": "t_biogas",
+          "kind": "t",
+          "title": "Биогазовая установка (Животноводство)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1222,
+          "card_id": "t_millroll",
+          "kind": "t",
+          "title": "Вальцовый станок (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1223,
+          "card_id": "t_sifter",
+          "kind": "t",
+          "title": "Рассев (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1224,
+          "card_id": "t_kneader",
+          "kind": "t",
+          "title": "Тестомесильная машина (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1225,
+          "card_id": "t_oven",
+          "kind": "t",
+          "title": "Хлебопекарная печь (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 45,
+      "cards": [
+        {
+          "queue_position": 1226,
+          "card_id": "t_diffuser",
+          "kind": "t",
+          "title": "Диффузионный аппарат (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1227,
+          "card_id": "t_centrifuge",
+          "kind": "t",
+          "title": "Центрифуга сахарная (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1228,
+          "card_id": "t_oilpress",
+          "kind": "t",
+          "title": "Шнековый маслопресс (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1229,
+          "card_id": "t_extract_a",
+          "kind": "t",
+          "title": "Экстрактор масла (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1230,
+          "card_id": "t_separator",
+          "kind": "t",
+          "title": "Сепаратор-сливкоотделитель (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1231,
+          "card_id": "t_pasteur",
+          "kind": "t",
+          "title": "Пастеризационно-охладительная установка (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 46,
+      "cards": [
+        {
+          "queue_position": 1232,
+          "card_id": "t_homog",
+          "kind": "t",
+          "title": "Гомогенизатор (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1233,
+          "card_id": "t_cheesevat",
+          "kind": "t",
+          "title": "Сыроизготовитель (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1234,
+          "card_id": "t_meatgrinder",
+          "kind": "t",
+          "title": "Волчок (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1235,
+          "card_id": "t_cutter",
+          "kind": "t",
+          "title": "Куттер (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1236,
+          "card_id": "t_stuffer",
+          "kind": "t",
+          "title": "Колбасный шприц (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1237,
+          "card_id": "t_smoker",
+          "kind": "t",
+          "title": "Термокамера (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 47,
+      "cards": [
+        {
+          "queue_position": 1238,
+          "card_id": "t_autoclave_f",
+          "kind": "t",
+          "title": "Автоклав консервный (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1239,
+          "card_id": "t_freezer",
+          "kind": "t",
+          "title": "Шоковая заморозка (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1240,
+          "card_id": "t_feedmill",
+          "kind": "t",
+          "title": "Комбикормовый завод (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1241,
+          "card_id": "t_pellet_a",
+          "kind": "t",
+          "title": "Гранулятор комбикорма (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1242,
+          "card_id": "t_extruder",
+          "kind": "t",
+          "title": "Экструдер (Пищевая переработка)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1243,
+          "card_id": "t_vfrack",
+          "kind": "t",
+          "title": "Стеллажи вертикальной фермы (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 48,
+      "cards": [
+        {
+          "queue_position": 1244,
+          "card_id": "t_led",
+          "kind": "t",
+          "title": "Фитосветильники (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1245,
+          "card_id": "t_nft",
+          "kind": "t",
+          "title": "Гидропонная система NFT (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1246,
+          "card_id": "t_climate",
+          "kind": "t",
+          "title": "Климат-контроль сити-фермы (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1247,
+          "card_id": "t_greenh_a",
+          "kind": "t",
+          "title": "Промышленная теплица (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1248,
+          "card_id": "t_dwpond",
+          "kind": "t",
+          "title": "Пруд или бассейн для ряски (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1249,
+          "card_id": "t_dwtray",
+          "kind": "t",
+          "title": "Многоярусная установка для ряски (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 49,
+      "cards": [
+        {
+          "queue_position": 1250,
+          "card_id": "t_pbr",
+          "kind": "t",
+          "title": "Фотобиореактор (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1251,
+          "card_id": "t_insectfarm",
+          "kind": "t",
+          "title": "Ферма чёрной львинки (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1252,
+          "card_id": "t_mushroom",
+          "kind": "t",
+          "title": "Грибной комплекс (Новые технологии)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1253,
+          "card_id": "t_autopilot",
+          "kind": "t",
+          "title": "Система автопилотирования (Точное земледелие)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1254,
+          "card_id": "t_yieldmon",
+          "kind": "t",
+          "title": "Картирование урожайности (Точное земледелие)",
+          "section": "Техника АПК — единицы оборудования"
+        },
+        {
+          "queue_position": 1255,
+          "card_id": "t_meteo",
+          "kind": "t",
+          "title": "Агрометеостанция и датчики (Точное земледелие)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "generation": 50,
+      "cards": [
+        {
+          "queue_position": 1256,
+          "card_id": "t_soilsampler",
+          "kind": "t",
+          "title": "Пробоотборник почвы (Точное земледелие)",
+          "section": "Техника АПК — единицы оборудования"
+        }
+      ]
+    }
+  ],
+  "planned_reuse": [
+    {
+      "queue_position": 1015,
+      "card_id": "mx_hvm",
+      "kind": "n",
+      "title": "Хвойно-витаминная мука",
+      "section": "Пересечения отраслей",
+      "image": "a_x_hvm.webp",
+      "reused_from_card_id": "x_hvm"
+    },
+    {
+      "queue_position": 1067,
+      "card_id": "mx_sterols",
+      "kind": "n",
+      "title": "Фитостерины",
+      "section": "Пересечения отраслей",
+      "image": "a_x_sterol.webp",
+      "reused_from_card_id": "x_sterol"
+    }
+  ]
 }
