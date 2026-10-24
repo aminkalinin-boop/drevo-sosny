@@ -188,3 +188,13 @@ body[data-sector="ref"] .dictionary-words{display:block;position:absolute;inset:
 
 body .landscape::before,body .landscape::after{mask-image:linear-gradient(to right,#000 calc(100% - 70px),transparent)}
 body[data-sector="apk"] .landscape::before,body[data-sector="apk"] .landscape::after,body[data-sector="mix"] .landscape::after{mask-image:linear-gradient(to left,#000 calc(100% - 70px),transparent)}
+
+/* Акварельные фоны блоков ЛПК, АПК и межотраслевого взаимодействия */
+body[data-sector="lpk"] .landscape,body[data-sector="apk"] .landscape,body[data-sector="mix"] .landscape{background:url('bg_lpk.webp') center bottom/cover no-repeat;mix-blend-mode:normal;opacity:1;mask-image:none}
+body[data-sector="apk"] .landscape{background-image:url('bg_apk.webp')}
+body[data-sector="mix"] .landscape{background-image:url('bg_mix.webp')}
+body[data-sector="lpk"] .landscape::before,body[data-sector="lpk"] .landscape::after,body[data-sector="lpk"] .landscape-floor,
+body[data-sector="apk"] .landscape::before,body[data-sector="apk"] .landscape::after,body[data-sector="apk"] .landscape-floor,
+body[data-sector="mix"] .landscape::before,body[data-sector="mix"] .landscape::after,body[data-sector="mix"] .landscape-floor{display:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body:not([data-sector="ref"]) .landscape{opacity:.16}}
+:root[data-theme="dark"] body:not([data-sector="ref"]) .landscape{opacity:.16}
