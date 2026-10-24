@@ -4,9 +4,9 @@
   "source_queue": "NO_PICTURES(1).md",
   "integrated_positions": 1256,
   "remaining_queue_positions": 0,
-  "published_commit": "dea1707ec013a68b19934a9bcc76711e17cecab4",
+  "published_commit": "28ee468a3b1f9006100e8f20810333c036e568a0",
   "publication_branch": "gh-pages",
-  "last_successful_deployment": 40094483914,
+  "last_successful_deployment": 40097334198,
   "cycle_size": 50,
   "current_cycle": 6,
   "generated_canvases_in_current_cycle": 50,
@@ -14,7 +14,7 @@
   "partial_cycle_integrated": false,
   "next_original_queue_position_to_generate": null,
   "next_title": null,
-  "full_review": "Visual review complete; runtime validation passed for all 1256 detail and item renderers; corrected deployment verification pending",
+  "full_review": "Complete: all 1256 positions visually reviewed; file, runtime and live deployment validation passed; all known visual issues corrected",
   "working_source_index": ".reference/batch_pipeline_state.json",
   "updated_at": "2026-10-24",
   "generated_unreviewed": [],
@@ -44,7 +44,7 @@
       "status": "resolved_by_final_qa_replacement"
     }
   ],
-  "publication_status": "Cycle 6 published; final QA fixes prepared",
+  "publication_status": "complete",
   "last_integrated_cycle": {
     "cycle": 6,
     "canvases": 50,
@@ -54,7 +54,7 @@
       1014,
       1256
     ],
-    "review_status": "pending_final_review"
+    "review_status": "complete"
   },
   "planned_generations": [],
   "planned_reuse": [],

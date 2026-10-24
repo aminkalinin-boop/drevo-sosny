@@ -95,5 +95,32 @@
     "errors": [],
     "deployment": 40094483914
   },
-  "corrected_deployment_verification": "pending"
+  "corrected_deployment_verification": {
+    "validated_content_commit": "28ee468a3b1f9006100e8f20810333c036e568a0",
+    "deployment": 40097334198,
+    "conclusion": "success",
+    "changed_files_checked": 129,
+    "http_and_byte_comparison_errors": []
+  },
+  "status": "complete",
+  "file_validation": {
+    "unique_images": 1210,
+    "position_sequence_ok": true,
+    "errors": []
+  },
+  "javascript_syntax": {
+    "files_checked": 32,
+    "errors": []
+  },
+  "browser_verification": {
+    "url": "https://aminkalinin-boop.github.io/drevo-sosny/",
+    "cards": [
+      "Варенье, джем, повидло, мармелад, пастила",
+      "Пробоотборник почвы",
+      "Зародыш пшеницы",
+      "Азотное голодание"
+    ],
+    "result": "Images loaded with visible full captions; final two cards checked after corrected deployment",
+    "note": "Browser extension metadata errors were excluded from application errors"
+  }
 }
