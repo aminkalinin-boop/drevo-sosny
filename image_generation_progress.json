@@ -4,9 +4,9 @@
   "source_queue": "NO_PICTURES(1).md",
   "integrated_positions": 1283,
   "remaining_queue_positions": 0,
-  "published_commit": "28ee468a3b1f9006100e8f20810333c036e568a0",
+  "published_commit": "2bd36f01a10f4bbc1b628a127c2c16856c679a13",
   "publication_branch": "gh-pages",
-  "last_successful_deployment": 40097334198,
+  "last_successful_deployment": 40107928779,
   "cycle_size": 50,
   "current_cycle": 6,
   "generated_canvases_in_current_cycle": 50,
@@ -14,7 +14,7 @@
   "partial_cycle_integrated": false,
   "next_original_queue_position_to_generate": null,
   "next_title": null,
-  "full_review": "Original queue complete; 27 supplementary illustrations visually reviewed, runtime and deployment validation pending",
+  "full_review": "Complete: all 1283 positions visually reviewed; 1283 detail screens and 1283 list items validated; 27 new WebP files and all 34 changed published files verified",
   "working_source_index": ".reference/batch_pipeline_state.json",
   "updated_at": "2026-10-24",
   "generated_unreviewed": [],
@@ -44,7 +44,7 @@
       "status": "resolved_by_final_qa_replacement"
     }
   ],
-  "publication_status": "27 supplementary cards prepared; deployment pending",
+  "publication_status": "complete",
   "last_integrated_cycle": {
     "cycle": 6,
     "canvases": 50,
@@ -130,6 +130,8 @@
     "cards": 27,
     "canvases": 8,
     "source_commit": "abf03e89a54907007a88ab0073b5d8efdc475455",
-    "status": "prepared"
+    "status": "complete",
+    "published_commit": "2bd36f01a10f4bbc1b628a127c2c16856c679a13",
+    "last_successful_deployment": 40107928779
   }
 }

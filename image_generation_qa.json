@@ -102,7 +102,7 @@
     "changed_files_checked": 129,
     "http_and_byte_comparison_errors": []
   },
-  "status": "Supplement prepared, live validation pending",
+  "status": "complete",
   "file_validation": {
     "unique_images": 1210,
     "position_sequence_ok": true,
@@ -144,7 +144,22 @@
         "files_checked": 36,
         "errors": []
       },
-      "deployment_verification": "pending"
+      "deployment_verification": {
+        "validated_content_commit": "2bd36f01a10f4bbc1b628a127c2c16856c679a13",
+        "deployment": 40107928779,
+        "conclusion": "success",
+        "changed_files_checked": 34,
+        "http_and_byte_comparison_errors": []
+      },
+      "browser_verification": {
+        "url": "https://aminkalinin-boop.github.io/drevo-sosny/",
+        "cards": [
+          "lf_wood",
+          "im_6",
+          "ga_proc"
+        ],
+        "result": "All representative images loaded; full captions visually verified; same-name cards have distinct correct images; cluster root scheme preserved"
+      }
     }
   ]
 }
