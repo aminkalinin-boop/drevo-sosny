@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Лес и поле — справочник ЛПК и АПК</title>
+<title>Древо отраслей — ресурсы, технологии, производство</title>
+<meta name="description" content="Древо отраслей: наглядный справочник о ресурсах, технологиях и производстве в ЛПК, АПК и других отраслях.">
 <meta name="author" content="Минигулов Александр Рафаильевич">
 <meta name="theme-color" content="#1f4a2c">
 <link rel="manifest" href="manifest.webmanifest">
@@ -151,17 +152,20 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 @media (min-width:1001px){.treebtn{display:none}}
 .mapbox{background:#f7f8f4;border:1px solid var(--line);border-radius:12px;padding:6px;margin:8px 0}.mapbox{overflow:auto;-webkit-overflow-scrolling:touch}.mapbox svg{height:auto;display:block;max-width:none}.mapzoom{display:flex;align-items:center;gap:8px;margin-top:6px}.mapzoom small{color:var(--muted,#666)}path.rg{stroke:#5b6158;stroke-width:.6;cursor:pointer}path.rg:hover{stroke:#000;stroke-width:1.4}path.rg.sel{stroke:#c0392b;stroke-width:2}.maplegend{display:flex;flex-wrap:wrap;gap:10px;font-size:.85rem;margin:4px 0 8px}.maplegend i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:5px;vertical-align:-2px;border:1px solid var(--line)}.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}.mapinfo{border-left:3px solid var(--accent);padding:4px 12px;margin:6px 0}
 </style>
+<link rel="stylesheet" href="redesign.css">
 </head>
-<body>
+<body data-sector="lpk">
+<div class="landscape" aria-hidden="true"></div>
+<a class="skip-link" href="#panes">К материалам</a>
 
 <header class="top"><div class="wrap">
-  <div class="brand"><h1>Лес и поле</h1><span class="sub">справочник ЛПК и АПК</span></div>
-  <div class="search"><input id="q" type="search" placeholder="Поиск по всему справочнику: канифоль, харвестер, ряска, голштинская…" aria-label="Поиск по справочнику" autocomplete="off"><div class="results" id="res" hidden></div></div>
+  <div class="brand"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 64 64"><use id="brand-mark" href="theme-motifs.svg#forest"></use></svg><div><h1>Древо отраслей</h1><span class="sub">Ресурсы · Технологии · Производство</span></div><span class="sector-caption" id="sector-caption">Лесопромышленный комплекс</span></div>
+  <div class="search"><input id="q" type="search" placeholder="Поиск по всем отраслям: сырьё, технологии, продукция…" aria-label="Поиск по справочнику" autocomplete="off"><div class="results" id="res" hidden></div></div>
   <div class="sector" id="sector" role="group" aria-label="Раздел справочника"></div>
   <nav class="tabs" role="tablist" id="tabs"></nav>
 </div></header>
-<main class="wrap" id="panes"></main>
-<div class="wrap"><footer class="foot">© 2026 Минигулов Александр Рафаильевич. Справочник по лесопромышленному и агропромышленному комплексам. Цифры ориентировочные, нормативы сверяйте с действующими документами.</footer></div>
+<main class="wrap" id="panes" tabindex="-1"></main>
+<div class="wrap"><footer class="foot"><div><b>Древо отраслей</b><span>От ресурсов — к технологиям и готовой продукции</span></div><div class="developer">Разработчик — <strong>Минигулов Александр Рафаильевич</strong><span>© 2026 · Цифры ориентировочные, нормативы сверяйте с действующими документами.</span></div></footer></div>
 <div class="pop" id="pop" hidden></div>
 
 <script charset="utf-8" src="glossary.js"></script>
@@ -265,20 +269,30 @@ function firstSent(s,max=140){s=plain(s).replace(/\s+/g," ").trim();const m=s.ma
 /* состояние */
 const ST={};SCH.forEach(s=>ST[s.id]=[s.root]);
 let cur="lres";
-const treeOpen={};SCH.forEach(s=>treeOpen[s.id]=new Set());
+const treeOpen={},treePins={};SCH.forEach(s=>{treeOpen[s.id]=new Set();treePins[s.id]=new Set()});
+/* Адреса отражают актуальную структуру: раздел → подраздел → карточка. */
+const NODE_NUMBER={};
+SCH.forEach(s=>{const number=String(SCH.filter(x=>x.sec===s.sec).indexOf(s)+1);const walk=(id,n,seen)=>{if(seen.has(id)||!N[id])return;seen=new Set(seen);seen.add(id);if(!NODE_NUMBER[id])NODE_NUMBER[id]=n;(N[id].c||[]).forEach((c,i)=>walk(c,n+"."+(i+1),seen))};walk(s.root,number,new Set())});
+function compactNumber(id){const n=NODE_NUMBER[id]||"";return n.split(".").length>3?n.split(".").pop():n}
+function focusBranch(tab,id){treeOpen[tab]=new Set([...treePins[tab],...pathOf(id)]);treePins[tab].forEach(x=>pathOf(x).forEach(p=>treeOpen[tab].add(p)))}
+function setTheme(sec){document.body.dataset.sector=sec;document.getElementById("sector-caption").textContent=SECS[sec];document.getElementById("brand-mark").setAttribute("href","theme-motifs.svg#"+({lpk:"forest",apk:"wheat",mix:"branches",ref:"book"}[sec]||"branches"));document.querySelector('meta[name="theme-color"]').content=sec==="apk"?"#80591e":sec==="mix"?"#51665b":"#234c38"}
+function closeNavigator(){document.querySelectorAll(".side.open").forEach(x=>x.classList.remove("open"));document.querySelectorAll("[data-tree]").forEach(x=>x.setAttribute("aria-expanded","false"));document.body.classList.remove("navigator-open")}
+function revealCurrent(tab){const target=document.querySelector("#tr-"+tab+" [aria-current='page']");if(target){const side=document.getElementById("sd-"+tab),head=side.querySelector(".nav-head");side.scrollTop+=target.getBoundingClientRect().top-side.getBoundingClientRect().top-(head?head.offsetHeight:0)-side.clientHeight/3}}
+
 /* вкладки и панели */
 const tabs=document.getElementById("tabs"),panes=document.getElementById("panes");
 tabs.innerHTML=[...SCH,...EXTRA].map(s=>`<button role="tab" data-tab="${s.id}" ${s.sec?`data-sec="${s.sec}"`:""} aria-selected="${s.id===cur}" ${s.sec&&s.sec!==sector?"hidden":""}>${s.t}</button>`).join("");
 document.getElementById("sector").innerHTML=Object.entries(SECS).map(([k,v])=>`<button type="button" data-secsel="${k}" aria-pressed="${k===sector}"><span class="lg">${v}</span><span class="sm">${SECSH[k]}</span></button>`).join("");
-function setSector(sec){if(sec===sector)return;sector=sec;document.querySelectorAll("#tabs button[data-sec]").forEach(b=>b.hidden=b.dataset.sec!==sec);document.querySelectorAll("#sector button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.secsel===sec))}
+function setSector(sec){setTheme(sec);if(sec===sector)return;closeNavigator();sector=sec;document.querySelectorAll("#tabs button[data-sec]").forEach(b=>b.hidden=b.dataset.sec!==sec);document.querySelectorAll("#sector button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.secsel===sec))}
 panes.innerHTML=SCH.map(s=>`<section id="pane-${s.id}" ${s.id===cur?"":"hidden"}>
- <div class="navbar"><button type="button" class="back" data-back aria-label="Назад">‹</button><div class="crumbs" id="cr-${s.id}"></div><button type="button" class="treebtn" data-tree="${s.id}">Дерево</button></div>
- <div class="layout"><article class="screen" id="sc-${s.id}"></article><aside class="side" id="sd-${s.id}"><h3>Всё дерево раздела</h3><div id="tr-${s.id}"></div></aside></div></section>`).join("")+
+ <div class="navbar"><button type="button" class="back" data-back aria-label="На уровень выше" title="На уровень выше">↑</button><div class="crumbs" id="cr-${s.id}"></div><button type="button" class="treebtn" data-tree="${s.id}" aria-controls="sd-${s.id}" aria-expanded="false">☷ Древо</button></div>
+ <div class="layout"><article class="screen" id="sc-${s.id}"></article><aside class="side" id="sd-${s.id}" aria-label="Навигатор по древу"><div class="nav-head"><div class="nav-title"><h3>Навигатор по древу</h3><button type="button" class="nav-close" data-close-tree aria-label="Закрыть навигатор">×</button></div><p>${SECSH[s.sec]} · ${s.t}</p><div class="nav-actions"><button type="button" data-locate="${s.id}">◎ К текущему</button><button type="button" data-collapse="${s.id}">Свернуть лишнее</button></div></div><div class="tree-body" id="tr-${s.id}"></div><p class="nav-hint">Стрелка — раскрыть · название — перейти<br>Закрепите ветвь, чтобы оставить её открытой.</p></aside></div></section>`).join("")+
  `<section id="pane-quiz" hidden></section><section id="pane-gloss" hidden><div class="glbox"><input id="gq" type="search" placeholder="Найти термин" aria-label="Поиск по словарю"><div class="gl" id="gl"></div></div></section>`;
+document.body.insertAdjacentHTML("beforeend",'<button class="nav-backdrop" data-close-tree aria-label="Закрыть навигатор"></button>');
 /* экран */
 const kidCount=id=>(N[id].c||[]).length+((N[id].k==="tech"&&N[id].tl)?N[id].tl.length:0);
 function item(id){const n=N[id],c=kidCount(id);
- return `<button type="button" class="item k-${n.k}${n.im?" thumb":""}" data-nav="${id}">${n.im?`<img src="${n.im}" alt="" loading="lazy">`:""}<span class="tx"><b>${plain(n.t)}</b>${n.s?`<small>${n.s}</small>`:""}</span><span class="go">${c?c+" ›":"›"}</span></button>`}
+ return `<button type="button" class="item k-${n.k}${n.im?" thumb":""}" data-nav="${id}">${n.im?`<img src="${n.im}" alt="" loading="lazy">`:""}<span class="tx"><span class="item-number">${NODE_NUMBER[id]||""}</span><b>${plain(n.t)}</b>${n.s?`<small>${n.s}</small>`:""}</span><span class="go">${c?c+" ›":"›"}</span></button>`}
 function toolItem(t){const x=T[t];return `<button type="button" class="item k-tool${x.im?" thumb":""}" data-tool="${t}">${x.im?`<img src="${x.im}" alt="" loading="lazy">`:""}<span class="tx"><b>${x.t}</b><small>${firstSent(x.w)}</small></span><span class="go">›</span></button>`}
 const lnItem=id=>`<button type="button" class="item k-${N[id].k}" data-go="${id}"><span class="tx"><b>${plain(N[id].t)}</b><small>${(t=>`${SECSH[t.sec]} · раздел «${t.t}»`)(SCH.find(s=>s.id===tabOf(id)))}</small></span><span class="go">→</span></button>`;
 function hsBtn([i,x,y,w,hh]){const st=`style="left:${x}%;top:${y}%;width:${w}%;height:${hh}%"`;
@@ -327,7 +341,7 @@ function regionInfo(k){const g=window.RG,d=g.d[k];const lv=(arr,i)=>arr[i];
 function nodeScreen(id,tab){const n=N[id];let h="";SEEN=new Set();
  const isRoot=ROOTTAB[id];
  if(PHR[id]&&PH[PHR[id]]){h+=photoHtml(PH[PHR[id]],HSX[PHR[id]],"Иллюстрация к разделу")+`<p class="note">Нажимай на подписи и предметы на картинке.</p>`}
- h+=`<div class="kind">${K[n.k]||""}</div><h2>${rich(n.t,false)}</h2>`;
+ h+=`<div class="kind"><span class="node-address">${NODE_NUMBER[id]||""}</span> ${K[n.k]||""}</div><h2>${rich(n.t,false)}</h2>`;
  if(n.s)h+=`<p class="lead">${n.s}</p>`;
  if(n.im&&!(n.pics&&n.pics.length))h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`;
  if(n.pics&&n.pics.length){const any=n.pics.some(p=>p.hs&&p.hs.length);h+=n.pics.map(p=>photoHtml(p.src,p.hs,plain(n.t),p.z)).join("");if(any)h+=`<p class="note">На картинке можно нажимать на подписи и плитки.</p>`}
@@ -355,23 +369,22 @@ function render(tab,scroll=true){const st=ST[tab],top=st[st.length-1];
  document.getElementById("cr-"+tab).innerHTML=st.map((x,i)=>(i?"<span>›</span>":"")+`<button type="button" data-crumb="${i}">${title(x)}</button>`).join("");
  const cr=document.getElementById("cr-"+tab);cr.scrollLeft=cr.scrollWidth;
  document.querySelector(`#pane-${tab} .back`).disabled=st.length<2;
- const last=[...st].reverse().find(x=>!x.startsWith("t:"));pathOf(last).forEach(x=>treeOpen[tab].add(x));renderTree(tab,last);
+ const last=[...st].reverse().find(x=>!x.startsWith("t:"));focusBranch(tab,last);renderTree(tab,last);requestAnimationFrame(()=>revealCurrent(tab));
  if(scroll){const nb=document.querySelector(`#pane-${tab} .navbar`);const y=nb.getBoundingClientRect().top+scrollY-0;if(scrollY>y)scrollTo({top:y,behavior:"auto"})}}
 /* дерево обзора */
-function renderTree(tab,sel){const s=SCH.find(x=>x.id===tab),open=treeOpen[tab],path=new Set(pathOf(sel));
+function renderTree(tab,sel){
+ const s=SCH.find(x=>x.id===tab),open=treeOpen[tab],path=new Set(pathOf(sel));
  const st=ST[tab],top=st[st.length-1],selTool=top.startsWith("t:")?top.slice(2):null;
- const ents=id=>[...(N[id].c||[]).map(c=>["n",c]),...(N[id].k==="tech"?(N[id].tl||[]).map(t=>["t",t]):[])];
- const lines=(d,gs,last)=>{let h="";gs.forEach(v=>h+=`<i class="g${v?" v":""}"></i>`);if(d>0)h+=`<i class="el${last?" l":""}"></i>`;return h};
- const row=(id,d,gs,last)=>{const kids=ents(id),o=open.has(id);let h=`<div class="r">`+lines(d,gs,last);
-  h+=`<div class="rb"><button type="button" class="car${kids.length?"":" none"}" data-tt="${id}" aria-label="${o?"Свернуть":"Развернуть"}">${kids.length?(o?"▾":"▸"):""}</button><button type="button" class="tn${id===sel&&!selTool?" on":path.has(id)?" path":""}" data-go="${id}">${plain(N[id].t)}</button></div></div>`;
-  if(o){const g2=d===0?[]:[...gs,!last];kids.forEach(([k,c],i)=>{const l=i===kids.length-1;h+=k==="n"?row(c,d+1,g2,l):`<div class="r">${lines(d+1,g2,l)}<div class="rb"><span class="car none"></span><button type="button" class="tn tt${c===selTool&&id===sel?" on":""}" data-tool="${c}" data-grp="${id}">${T[c].t}</button></div></div>`})}
-  return h};
- document.getElementById("tr-"+tab).innerHTML=row(s.root,0,[],true)}
+ const row=(id,depth=0)=>{const n=N[id];if(!n)return "";const children=n.c||[],tools=n.k==="tech"?(n.tl||[]):[],has=children.length+tools.length,o=open.has(id),on=id===sel&&!selTool,inPath=path.has(id),pinned=treePins[tab].has(id);
+  return `<div class="tree-branch${inPath?' in-path':''}" data-branch="${id}"><div class="tree-row${on?' selected':inPath?' ancestor':''}"><button type="button" class="tree-toggle${has?'':' empty'}" ${has?`data-tt="${id}" aria-expanded="${o}" aria-controls="children-${tab}-${id}"`:'tabindex="-1" aria-hidden="true"'} aria-label="${o?'Свернуть':'Развернуть'}: ${plain(n.t)}">${has?(o?'⌄':'›'):'·'}</button><button type="button" class="tree-node" data-go="${id}" ${on?'aria-current="page"':''} title="${NODE_NUMBER[id]||''} ${plain(n.t)}"><span class="tree-number">${compactNumber(id)}</span><span>${plain(n.t)}</span></button>${has?`<button type="button" class="tree-pin${pinned?' pinned':''}" data-pin="${id}" aria-pressed="${pinned}" aria-label="${pinned?'Открепить':'Закрепить'} ветвь: ${plain(n.t)}" title="${pinned?'Открепить':'Закрепить'} ветвь">⌖</button>`:''}</div>${has&&o?`<div class="tree-children" id="children-${tab}-${id}">${children.map(c=>row(c,depth+1)).join('')}${tools.map((t,i)=>`<div class="tree-branch${selTool===t&&id===sel?' in-path':''}"><div class="tree-row${selTool===t&&id===sel?' selected':''}"><span class="tree-toggle empty">·</span><button type="button" class="tree-node" data-tool="${t}" data-grp="${id}" ${selTool===t&&id===sel?'aria-current="page"':''}><span class="tree-number">${children.length+i+1}</span><span>${T[t].t}</span></button></div></div>`).join('')}</div>`:''}</div>`};
+ document.getElementById("tr-"+tab).innerHTML=row(s.root);
+ requestAnimationFrame(()=>{document.querySelectorAll("#tr-"+tab+" .tree-children").forEach(box=>{box.querySelectorAll(':scope > .path-rail').forEach(x=>x.remove());const child=[...box.children].find(x=>x.classList.contains('in-path'));if(!child)return;const rail=document.createElement('i');rail.className='path-rail';rail.style.height=(child.querySelector('.tree-row').getBoundingClientRect().top-box.getBoundingClientRect().top+child.querySelector('.tree-row').offsetHeight/2)+'px';box.append(rail)})});
+}
 /* навигация */
 function snapshot(){return {tab:cur,st:ST[cur]?ST[cur].slice():null}}
 const hkey=s=>s?s.tab+"|"+(s.st||[]).join("/"):"";
 function pushHist(){try{const prev=hkey(history.state),now=snapshot();if(hkey(now)===prev)return;history.pushState(Object.assign(now,{prev}),"")}catch(e){}}
-function openTab(t,push=true){const sx=[...SCH,...EXTRA].find(x=>x.id===t);if(sx)setSector(sx.sec);cur=t;document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));[...SCH,...EXTRA].forEach(s=>document.getElementById("pane-"+s.id).hidden=s.id!==t);
+function openTab(t,push=true){closeNavigator();const sx=[...SCH,...EXTRA].find(x=>x.id===t);if(sx)setSector(sx.sec);cur=t;document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));[...SCH,...EXTRA].forEach(s=>document.getElementById("pane-"+s.id).hidden=s.id!==t);
  const b=document.querySelector(`#tabs button[data-tab="${t}"]`);if(b)b.scrollIntoView({inline:"nearest",block:"nearest"});if(ST[t])render(t,false);if(push)pushHist()}
 function go(id){const t=tabOf(id);if(!t)return;ST[t]=pathOf(id);if(t!==cur)openTab(t,false);render(t);pushHist()}
 function nav(id){const st=ST[cur];if(st[st.length-1].startsWith("t:")){ST[cur]=pathOf(id);if(tabOf(id)!==cur){go(id);return}}else if(P[id]===st[st.length-1])st.push(id);else{go(id);return}render(cur);pushHist()}
@@ -418,15 +431,20 @@ document.addEventListener("click",e=>{
  const tab=e.target.closest("#tabs button");if(tab){openTab(tab.dataset.tab);return}
  if(e.target.closest("[data-back]")){if(ST[cur]&&ST[cur].length>1){const want=hkey({tab:cur,st:ST[cur].slice(0,-1)});let hs=null;try{hs=history.state}catch(x){}if(hs&&hs.prev===want){history.back()}else{ST[cur].pop();render(cur);try{history.replaceState(Object.assign(snapshot(),{prev:hs&&hs.prev}),"")}catch(x){}}}return}
  const cr=e.target.closest("[data-crumb]");if(cr){ST[cur]=ST[cur].slice(0,+cr.dataset.crumb+1);render(cur);pushHist();return}
- const tb=e.target.closest("[data-tree]");if(tb){document.getElementById("sd-"+tb.dataset.tree).classList.toggle("open");return}
- const tt=e.target.closest("[data-tt]");if(tt){const o=treeOpen[cur],id=tt.dataset.tt;o.has(id)?o.delete(id):o.add(id);const st=ST[cur];renderTree(cur,[...st].reverse().find(x=>!x.startsWith("t:")));return}
+ if(e.target.closest("[data-close-tree]")){closeNavigator();return}
+ const locate=e.target.closest("[data-locate],[data-collapse]");if(locate){const tab=locate.dataset.locate||locate.dataset.collapse,st=ST[tab],last=[...st].reverse().find(x=>!x.startsWith('t:'));if(locate.dataset.collapse)focusBranch(tab,last);else pathOf(last).forEach(x=>treeOpen[tab].add(x));renderTree(tab,last);requestAnimationFrame(()=>revealCurrent(tab));return}
+ const pin=e.target.closest('[data-pin]');if(pin){const pins=treePins[cur],id=pin.dataset.pin;pins.has(id)?pins.delete(id):pins.add(id);const st=ST[cur];renderTree(cur,[...st].reverse().find(x=>!x.startsWith('t:')));return}
+ const tb=e.target.closest("[data-tree]");if(tb){const side=document.getElementById("sd-"+tb.dataset.tree),opening=!side.classList.contains('open');closeNavigator();if(opening){side.classList.add('open');document.body.classList.add('navigator-open');tb.setAttribute('aria-expanded','true');requestAnimationFrame(()=>{revealCurrent(tb.dataset.tree);side.querySelector('.nav-close').focus()})}return}
+ const tt=e.target.closest("[data-tt]");if(tt){const o=treeOpen[cur],id=tt.dataset.tt;if(o.has(id))o.delete(id);else{const parent=P[id];const peers=parent?(N[parent].c||[]):[];const keep=new Set();treePins[cur].forEach(p=>pathOf(p).forEach(x=>keep.add(x)));const remove=x=>{if(keep.has(x))return;o.delete(x);(N[x].c||[]).forEach(remove)};peers.filter(x=>x!==id).forEach(remove);o.add(id)}const st=ST[cur];renderTree(cur,[...st].reverse().find(x=>!x.startsWith("t:")));return}
  const nv=e.target.closest("[data-nav]");if(nv){nav(nv.dataset.nav);return}
  const tl=e.target.closest("[data-tool]");if(tl&&inRes&&GROUPS[tl.dataset.tool]){const g=GROUPS[tl.dataset.tool][0],t=tabOf(g);ST[t]=pathOf(g).concat("t:"+tl.dataset.tool);openTab(t,false);render(t);pushHist();return}
- if(tl){if(tl.dataset.grp){ST[cur]=pathOf(tl.dataset.grp).concat("t:"+tl.dataset.tool);render(cur);pushHist();if(innerWidth<=1000)document.getElementById("sd-"+cur).classList.remove("open")}else openTool(tl.dataset.tool);return}
- const g=e.target.closest("[data-go]");if(g){go(g.dataset.go);if(e.target.closest(".side")&&innerWidth<=1000)document.getElementById("sd-"+cur).classList.remove("open");return}
+ if(tl){if(tl.dataset.grp){ST[cur]=pathOf(tl.dataset.grp).concat("t:"+tl.dataset.tool);render(cur);pushHist();if(innerWidth<=1000)closeNavigator()}else openTool(tl.dataset.tool);return}
+ const g=e.target.closest("[data-go]");if(g){const fromTree=!!g.closest(".side");go(g.dataset.go);if(fromTree&&innerWidth<=1000)closeNavigator();return}
 });
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){pop.hidden=true;res.hidden=true}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){pop.hidden=true;res.hidden=true;const trigger=document.querySelector('[data-tree][aria-expanded="true"]');closeNavigator();if(trigger)trigger.focus()}
+ if(e.key==="Tab"&&document.body.classList.contains('navigator-open')){const side=document.querySelector('.side.open'),els=[...side.querySelectorAll('button')].filter(x=>x.getClientRects().length&&!x.disabled&&x.tabIndex>=0),first=els[0],last=els[els.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
 addEventListener("scroll",()=>{pop.hidden=true},{passive:true});
+setTheme(sector);
 SCH.forEach(s=>render(s.id,false));
 try{history.replaceState(snapshot(),"")}catch(e){}
 if("serviceWorker" in navigator&&location.protocol==="https:"&&!/claude\.ai|claudeusercontent/.test(location.host)){navigator.serviceWorker.register("sw.js").catch(()=>{})}
