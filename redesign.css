@@ -1,6 +1,6 @@
 /* Древо отраслей — единая типографика, тематические палитры и навигатор. */
-:root{--bg:#f4f7f1;--panel:#fffefa;--fg:#24382e;--muted:#607268;--line:#d8e2d7;--head:#234c38;--head-fg:#fffefa;--accent:#946b24;--hl:#e7efe5;--nav-path:#347252;--nav-soft:#e7efe5;--nav-active:#234f38;--nav-text:#fff;--motif:url('forest-background.svg');--nav-shadow:0 12px 38px #233d2a09;color-scheme:light}
-body[data-sector="apk"]{--bg:#fbf7ed;--panel:#fffdf7;--fg:#453b28;--muted:#776c53;--line:#e8ddc4;--head:#80591e;--head-fg:#fffdf7;--accent:#8a6019;--hl:#f7edcf;--nav-path:#ad7a22;--nav-soft:#f7edcf;--nav-active:#73501d;--motif:url('wheat-background.svg');--nav-shadow:0 12px 38px #77562409}
+:root{--bg:#f4f7f1;--panel:#fffefa;--fg:#24382e;--muted:#607268;--line:#d8e2d7;--head:#234c38;--head-fg:#fffefa;--accent:#946b24;--hl:#e7efe5;--nav-path:#347252;--nav-soft:#e7efe5;--nav-active:#234f38;--nav-text:#fff;--motif:none;--nav-shadow:0 12px 38px #233d2a09;color-scheme:light}
+body[data-sector="apk"]{--bg:#fbf7ed;--panel:#fffdf7;--fg:#453b28;--muted:#776c53;--line:#e8ddc4;--head:#80591e;--head-fg:#fffdf7;--accent:#8a6019;--hl:#f7edcf;--nav-path:#ad7a22;--nav-soft:#f7edcf;--nav-active:#73501d;--motif:none;--nav-shadow:0 12px 38px #77562409}
 body[data-sector="mix"]{--bg:#f3f5ee;--panel:#fffefa;--fg:#33443b;--muted:#697466;--line:#dce2d3;--head:#51665b;--accent:#886632;--nav-path:#6d8060;--nav-soft:#eaf0df;--nav-active:#425b4b}
 body[data-sector="ref"]{--bg:#f6f5f0;--panel:#fffefa;--fg:#38413d;--muted:#6c746c;--line:#e0e2d8;--head:#51635a;--nav-soft:#eef0e7;--nav-active:#425b4b}
 body{margin:0;padding-bottom:0;min-height:100vh;background:var(--bg);font-size:17px;line-height:1.6;overflow-wrap:break-word}
@@ -106,3 +106,69 @@ button:focus-visible{outline:3px solid var(--nav-path);outline-offset:3px}
 }
 :root[data-theme="dark"] body{--bg:#17231c;--panel:#1d2c23;--fg:#e5ece4;--muted:#afbcaf;--line:#3a4d3e;--head:#bbd8bc;--head-fg:#19291f;--nav-soft:#2b4031;--nav-path:#83b98e;--nav-active:#355e43;--accent:#dec18a;color-scheme:dark}
 :root[data-theme="dark"] body[data-sector="apk"]{--bg:#272318;--panel:#302b1f;--fg:#f2ebd7;--muted:#c6b99b;--line:#51472f;--head:#e7c782;--head-fg:#302716;--nav-soft:#453a23;--nav-path:#d5ad58;--nav-active:#77551f;--accent:#e7c782}
+
+/* Approved reference: original botanical artwork, framed through CSS viewports. */
+:root{--edge-position:left top;--floor-position:left bottom;--edge-opacity:.88}
+body[data-sector="apk"]{--edge-position:right top;--floor-position:right bottom;--edge-opacity:.88}
+body{background:radial-gradient(ellipse at 12% 14%,#dce9e180,transparent 52%),var(--bg)}
+body[data-sector="apk"]{background:radial-gradient(ellipse at 85% 14%,#f3dfaa60,transparent 55%),var(--bg)}
+.landscape{opacity:1;background:none;mix-blend-mode:multiply;z-index:-1}
+.landscape::before,.landscape::after{content:"";position:absolute;inset:0 auto 0 0;width:clamp(66px,8vw,136px);background-image:url('botanical-reference.webp');background-size:3303.2258% 100%;background-position:var(--edge-position);background-repeat:no-repeat;opacity:var(--edge-opacity);mask-image:linear-gradient(to right,#000 55%,#0009 82%,transparent)}
+.landscape::after{left:auto;right:0;transform:scaleX(-1);opacity:.4}
+body[data-sector="apk"] .landscape::before{left:auto;right:0;transform:none;mask-image:linear-gradient(to left,#000 55%,#0009 82%,transparent)}
+body[data-sector="apk"] .landscape::after{right:auto;left:0;transform:scaleX(-1);opacity:.35;mask-image:linear-gradient(to left,#000 55%,#0009 82%,transparent)}
+.landscape-floor{position:absolute;inset:auto 0 0;height:42px;background:url('botanical-reference.webp') var(--floor-position)/200% 3175% no-repeat;opacity:.6;mask-image:linear-gradient(to top,#000,transparent)}
+.wrap{max-width:1240px}
+.sector-heading{padding-block:24px 22px;text-align:center}
+.sector-heading h2{font:700 clamp(1.35rem,2.25vw,2rem)/1.25 var(--f-disp);color:var(--head);margin:0;letter-spacing:-.025em;text-wrap:balance}
+header.top{padding:0;background:none;border:0;box-shadow:none}
+header.top>.wrap{display:grid;grid-template-columns:minmax(250px,1fr) auto minmax(210px,1fr);align-items:center;gap:20px;padding:22px 28px 0;border:1px solid var(--line);border-bottom:0;background:var(--panel);border-radius:14px 14px 0 0;box-shadow:0 10px 45px #233d2a08}
+.brand{grid-column:1;gap:11px}.brand-icon{width:42px;height:49px}h1{font-size:1.65rem}.brand .sub{font-size:.62rem;letter-spacing:.035em}
+.sector{grid-column:2;grid-row:1;display:flex;gap:0;flex-wrap:nowrap;padding:4px;background:var(--bg);border:1px solid var(--line);border-radius:9px}
+.sector button{display:flex;align-items:center;justify-content:center;gap:5px;padding:7px 10px;min-height:38px;font-size:.76rem;border:0;border-radius:6px;white-space:nowrap;color:var(--muted)}
+.sector button svg{display:block;width:17px;height:20px;flex:none;color:currentColor}
+.sector button[aria-pressed="true"]{background:var(--head);color:var(--head-fg);box-shadow:0 2px 6px #0001}
+.sector button:hover{background:var(--nav-soft);color:var(--head)}
+.sector button[aria-pressed="true"]:hover{background:var(--head);color:var(--head-fg)}
+.search{grid-column:3;grid-row:1;min-width:0}.search input{font-size:.8rem;padding:10px 12px}
+.tabs{grid-column:1/-1;margin-top:0;gap:20px;padding-top:3px;border-top:1px solid var(--line)}
+main.wrap{background:var(--panel);border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;padding:0 28px 30px;box-shadow:0 20px 45px #233d2a06}
+.navbar{background:var(--panel)}
+.layout{gap:32px;grid-template-columns:minmax(0,1fr) 352px;padding-top:22px}
+.screen{border:0;padding:0 4px 20px;box-shadow:none;background:none;border-radius:0}
+.side{background:var(--bg);box-shadow:none;border-radius:12px}
+.nav-head{background:var(--bg);border-radius:12px 12px 0 0}
+.nav-actions button{background:var(--panel)}
+.tree-body{padding-block:14px}.tree-row.ancestor{background:var(--nav-soft)}
+.in-path>.tree-row>.tree-toggle{box-shadow:0 0 0 3px var(--bg)}
+body>.wrap:has(.foot){padding-inline:28px}.foot{margin-top:18px;padding-top:20px}
+@media(max-width:1100px){
+ header.top>.wrap{grid-template-columns:minmax(240px,1fr) auto;gap:16px 22px}.search{grid-column:1/-1;grid-row:2}.tabs{grid-row:3}
+ .layout{grid-template-columns:minmax(0,1fr) 330px;gap:24px}.wrap{max-width:calc(100% - 100px)}
+ .sector-heading{max-width:100%}.sector-heading h2{font-size:1.65rem}
+}
+@media(max-width:1000px){.layout{grid-template-columns:minmax(0,1fr)}.side{background:var(--panel)}.nav-head{background:var(--panel)}.landscape{opacity:1}}
+@media(max-width:700px){
+ .wrap{max-width:calc(100% - 32px)}.sector-heading{max-width:100%;padding:18px 18px 16px}.sector-heading h2{font-size:1.25rem}
+ header.top>.wrap{grid-template-columns:minmax(0,1fr);padding:18px 16px 0;gap:15px}.brand{grid-column:1;grid-row:1;justify-content:center}.brand-icon{width:35px;height:43px}h1{font-size:1.55rem}.brand .sub{font-size:.61rem}
+ .sector{grid-column:1;grid-row:2;justify-self:stretch;justify-content:space-between;gap:2px}.sector button{font-size:.7rem;padding:7px 7px;gap:4px}.sector button svg{width:15px;height:18px}.search{grid-column:1;grid-row:3}.tabs{grid-row:4;gap:16px}
+ main.wrap{padding:0 16px 20px}.layout{padding-top:16px}.screen{padding:0 0 10px}.screen h2{font-size:1.75rem}.screen p{font-size:1rem}
+ .landscape::before,.landscape::after{width:50px;opacity:.55}.landscape-floor{height:24px}body>.wrap:has(.foot){padding-inline:16px}
+ .foot{gap:14px}.side{width:min(420px,calc(100vw - 24px))}.tree-body{padding-inline:10px}
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .landscape{mix-blend-mode:screen;opacity:.2}}
+:root[data-theme="dark"] .landscape{mix-blend-mode:screen;opacity:.2}
+/* The forest emblem also uses the botanical drawing from the approved reference. */
+body[data-sector="lpk"] .brand-icon{background-image:url('botanical-reference.webp');background-repeat:no-repeat;background-size:4471.7391% 1441.5094%;background-position:4.425% 14.486%;mix-blend-mode:multiply}
+body[data-sector="lpk"] .brand-icon use{visibility:hidden}
+
+/* Two complementary sectors: forest and grain; a separate study palette. */
+body[data-sector="mix"]{--bg:#f4f5e9;--panel:#fffef8;--head:#465c35;--nav-path:#6b7d38;--nav-active:#4f6136;--nav-soft:#ecf0d9;background:linear-gradient(110deg,#e4eee3 0%,#f4f5e9 46%,#f9edcf 100%)}
+body[data-sector="mix"] .landscape{opacity:1}
+body[data-sector="mix"] .landscape::before{background-position:left top;opacity:.8}
+body[data-sector="mix"] .landscape::after{background-position:right top;transform:none;opacity:.8;mask-image:linear-gradient(to left,#000 55%,#0009 82%,transparent)}
+body[data-sector="mix"] .landscape-floor{background-image:url('botanical-reference.webp'),url('botanical-reference.webp');background-position:left bottom,right bottom;background-size:200% 3175%,200% 3175%;opacity:.35}
+body[data-sector="ref"]{--bg:#eef1f8;--panel:#fffefa;--fg:#303951;--muted:#68718a;--line:#dce0ee;--head:#475785;--head-fg:#fffefa;--nav-path:#6677aa;--nav-soft:#e9edf8;--nav-active:#475785;--accent:#897445;background:radial-gradient(ellipse at 10% 10%,#dce3f4 0%,transparent 55%),linear-gradient(135deg,#f0f3fa,#f7f3ed)}
+body[data-sector="ref"] .landscape{display:block;opacity:.35;background-image:linear-gradient(#8592b41a 1px,transparent 1px),linear-gradient(90deg,#8592b41a 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to right,#000,transparent 22%,transparent 78%,#000)}
+body[data-sector="ref"] .landscape::before,body[data-sector="ref"] .landscape::after,body[data-sector="ref"] .landscape-floor{display:none}
+body[data-sector="ref"] .brand-icon{padding:6px;border:1px solid var(--line);border-radius:10px;background:var(--nav-soft)}

@@ -155,9 +155,10 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <link rel="stylesheet" href="redesign.css">
 </head>
 <body data-sector="lpk">
-<div class="landscape" aria-hidden="true"></div>
+<div class="landscape" aria-hidden="true"><div class="landscape-floor"></div></div>
 <a class="skip-link" href="#panes">К материалам</a>
 
+<div class="sector-heading wrap"><h2 id="sector-heading">ЛПК · Лесопромышленный комплекс</h2></div>
 <header class="top"><div class="wrap">
   <div class="brand"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 64 64"><use id="brand-mark" href="theme-motifs.svg#forest"></use></svg><div><h1>Древо отраслей</h1><span class="sub">Ресурсы · Технологии · Производство</span></div><span class="sector-caption" id="sector-caption">Лесопромышленный комплекс</span></div>
   <div class="search"><input id="q" type="search" placeholder="Поиск по всем отраслям: сырьё, технологии, продукция…" aria-label="Поиск по справочнику" autocomplete="off"><div class="results" id="res" hidden></div></div>
@@ -275,14 +276,14 @@ const NODE_NUMBER={};
 SCH.forEach(s=>{const number=String(SCH.filter(x=>x.sec===s.sec).indexOf(s)+1);const walk=(id,n,seen)=>{if(seen.has(id)||!N[id])return;seen=new Set(seen);seen.add(id);if(!NODE_NUMBER[id])NODE_NUMBER[id]=n;(N[id].c||[]).forEach((c,i)=>walk(c,n+"."+(i+1),seen))};walk(s.root,number,new Set())});
 function compactNumber(id){const n=NODE_NUMBER[id]||"";return n.split(".").length>3?n.split(".").pop():n}
 function focusBranch(tab,id){treeOpen[tab]=new Set([...treePins[tab],...pathOf(id)]);treePins[tab].forEach(x=>pathOf(x).forEach(p=>treeOpen[tab].add(p)))}
-function setTheme(sec){document.body.dataset.sector=sec;document.getElementById("sector-caption").textContent=SECS[sec];document.getElementById("brand-mark").setAttribute("href","theme-motifs.svg#"+({lpk:"forest",apk:"wheat",mix:"branches",ref:"book"}[sec]||"branches"));document.querySelector('meta[name="theme-color"]').content=sec==="apk"?"#80591e":sec==="mix"?"#51665b":"#234c38"}
+function setTheme(sec){document.body.dataset.sector=sec;document.getElementById("sector-caption").textContent=SECS[sec];document.getElementById("sector-heading").textContent=({lpk:"ЛПК · Лесопромышленный комплекс",apk:"АПК · Агропромышленный комплекс",mix:"Межотраслевое взаимодействие",ref:"Словарь и тест"}[sec]||SECS[sec]);document.getElementById("brand-mark").setAttribute("href","theme-motifs.svg#"+({lpk:"forest",apk:"wheat",mix:"branches",ref:"book"}[sec]||"branches"));document.querySelector('meta[name="theme-color"]').content=sec==="apk"?"#80591e":sec==="mix"?"#465c35":sec==="ref"?"#475785":"#234c38"}
 function closeNavigator(){document.querySelectorAll(".side.open").forEach(x=>x.classList.remove("open"));document.querySelectorAll("[data-tree]").forEach(x=>x.setAttribute("aria-expanded","false"));document.body.classList.remove("navigator-open")}
 function revealCurrent(tab){const target=document.querySelector("#tr-"+tab+" [aria-current='page']");if(target){const side=document.getElementById("sd-"+tab),head=side.querySelector(".nav-head");side.scrollTop+=target.getBoundingClientRect().top-side.getBoundingClientRect().top-(head?head.offsetHeight:0)-side.clientHeight/3}}
 
 /* вкладки и панели */
 const tabs=document.getElementById("tabs"),panes=document.getElementById("panes");
 tabs.innerHTML=[...SCH,...EXTRA].map(s=>`<button role="tab" data-tab="${s.id}" ${s.sec?`data-sec="${s.sec}"`:""} aria-selected="${s.id===cur}" ${s.sec&&s.sec!==sector?"hidden":""}>${s.t}</button>`).join("");
-document.getElementById("sector").innerHTML=Object.entries(SECS).map(([k,v])=>`<button type="button" data-secsel="${k}" aria-pressed="${k===sector}"><span class="lg">${v}</span><span class="sm">${SECSH[k]}</span></button>`).join("");
+document.getElementById("sector").innerHTML=Object.entries(SECS).map(([k,v])=>`<button type="button" data-secsel="${k}" aria-pressed="${k===sector}" title="${v}" aria-label="${v}"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="theme-motifs.svg#${({lpk:"forest",apk:"wheat",mix:"branches",ref:"book"})[k]}"></use></svg><span>${({lpk:"ЛПК",apk:"АПК",mix:"Связи",ref:"Словарь и тест"})[k]}</span></button>`).join("");
 function setSector(sec){setTheme(sec);if(sec===sector)return;closeNavigator();sector=sec;document.querySelectorAll("#tabs button[data-sec]").forEach(b=>b.hidden=b.dataset.sec!==sec);document.querySelectorAll("#sector button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.secsel===sec))}
 panes.innerHTML=SCH.map(s=>`<section id="pane-${s.id}" ${s.id===cur?"":"hidden"}>
  <div class="navbar"><button type="button" class="back" data-back aria-label="На уровень выше" title="На уровень выше">↑</button><div class="crumbs" id="cr-${s.id}"></div><button type="button" class="treebtn" data-tree="${s.id}" aria-controls="sd-${s.id}" aria-expanded="false">☷ Древо</button></div>
