@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 1040" width="1136" height="1040" font-family="PT Sans, Arial, sans-serif">
+<defs>
+<marker id="mmain" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#3a3f45"/></marker>
+<marker id="myes" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2e6b3a"/></marker>
+<marker id="mno" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#a33a2a"/></marker>
+<marker id="mwaste" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#6e4a36"/></marker>
+<marker id="menergy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c8601e"/></marker>
+<marker id="mloop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#1f8a5a"/></marker>
+<marker id="mdata" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#5b3f86"/></marker>
+</defs>
+<rect width="1136" height="1040" fill="#fbfbf8"/>
+<text x="16" y="26" font-size="19" font-weight="700" fill="#1d2a22">Схема 2. В теории: агролесной биоперерабатывающий завод</text>
+<rect x="8" y="39.0" width="1120" height="202.0" rx="10" fill="#eef5ea" stroke="#d8dbd2"/>
+<text transform="translate(25,140.0) rotate(-90)" font-size="11.5" font-weight="700" fill="#6b7469" text-anchor="middle" letter-spacing=".6">СЫРЬЁ</text>
+<rect x="8" y="247.0" width="1120" height="306.0" rx="10" fill="#eaf0f7" stroke="#d8dbd2"/>
+<text transform="translate(25,400.0) rotate(-90)" font-size="11.5" font-weight="700" fill="#6b7469" text-anchor="middle" letter-spacing=".6">РАЗДЕЛЕНИЕ БИОМАССЫ</text>
+<rect x="8" y="559.0" width="1120" height="202.0" rx="10" fill="#fbf5e6" stroke="#d8dbd2"/>
+<text transform="translate(25,660.0) rotate(-90)" font-size="11.5" font-weight="700" fill="#6b7469" text-anchor="middle" letter-spacing=".6">ПРОДУКТЫ И ОБМЕН</text>
+<rect x="8" y="767.0" width="1120" height="202.0" rx="10" fill="#fdf0e6" stroke="#d8dbd2"/>
+<text transform="translate(25,868.0) rotate(-90)" font-size="11.5" font-weight="700" fill="#6b7469" text-anchor="middle" letter-spacing=".6">ЗАМЫКАНИЕ ЦИКЛА</text>
+<path d="M568,224 L568,264" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M568,328 L568,360" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M664,400 L696,400" fill="none" stroke="#2e6b3a" stroke-width="2.2" marker-end="url(#myes)" stroke-linejoin="round"/>
+<path d="M472,400 L440,400" fill="none" stroke="#a33a2a" stroke-width="2.2" marker-end="url(#mno)" stroke-linejoin="round"/>
+<path d="M1000,440 L1000,472" fill="none" stroke="#2e6b3a" stroke-width="2.2" marker-end="url(#myes)" stroke-linejoin="round"/>
+<path d="M568,536 L568,568" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M472,608 L440,608" fill="none" stroke="#2e6b3a" stroke-width="2.2" marker-end="url(#myes)" stroke-linejoin="round"/>
+<path d="M664,608 L696,608" fill="none" stroke="#2e6b3a" stroke-width="2.2" marker-end="url(#myes)" stroke-linejoin="round"/>
+<path d="M352,640 L352,680" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M136,856 L136,888" fill="none" stroke="#a33a2a" stroke-width="2.2" marker-end="url(#mno)" stroke-linejoin="round"/>
+<path d="M352,120 L352,136 L568,136 L568,160" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M784,120 L784,192 L656,192" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M784,432 L784,504 L656,504" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M352,432 L352,504 L480,504" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M264,712 L248,712 L248,608 L224,608" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M224,88 L248,88 L248,192 L480,192" fill="none" stroke="#3a3f45" stroke-width="2.2" marker-end="url(#mmain)" stroke-linejoin="round"/>
+<path d="M1000,328 L1000,360" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M784,640 L784,680" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M872,712 L912,712" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M352,848 L352,888" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M656,296 L912,296" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M264,920 L248,920 L248,816 L232,816" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M784,744 L784,768 L352,768 L352,784" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M136,640 L136,760 L240,760 L240,816 L264,816" fill="none" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#mwaste)" stroke-linejoin="round"/>
+<path d="M440,816 L480,816" fill="none" stroke="#c8601e" stroke-width="2.2" stroke-dasharray="3 4" marker-end="url(#menergy)" stroke-linejoin="round"/>
+<path d="M656,816 L672,816 L672,336 L464,336 L464,296 L480,296" fill="none" stroke="#c8601e" stroke-width="2.2" stroke-dasharray="3 4" marker-end="url(#menergy)" stroke-linejoin="round"/>
+<path d="M1096,400 L1112,400 L1112,864 L568,864 L568,848" fill="none" stroke="#c8601e" stroke-width="2.2" stroke-dasharray="3 4" marker-end="url(#menergy)" stroke-linejoin="round"/>
+<path d="M136,776 L136,760 L128,760 L128,648 L232,648 L232,136 L128,136 L128,120" fill="none" stroke="#1f8a5a" stroke-width="2.4" marker-end="url(#mloop)" stroke-linejoin="round"/>
+<path d="M224,920 L240,920 L240,856 L448,856 L448,512 L144,512 L144,120" fill="none" stroke="#1f8a5a" stroke-width="2.4" marker-end="url(#mloop)" stroke-linejoin="round"/>
+<path d="M1088,504 L1104,504 L1104,40 L136,40 L136,56" fill="none" stroke="#1f8a5a" stroke-width="2.4" marker-end="url(#mloop)" stroke-linejoin="round"/>
+<rect x="48.0" y="56.0" width="176" height="64" rx="32.0" fill="#d9efe9" stroke="#1f6f5c" stroke-width="2.2"/>
+<text x="136" y="84.7" font-size="14.5" text-anchor="middle" fill="#103a30" font-weight="700">Плантация тополя</text>
+<text x="136" y="101.7" font-size="14.5" text-anchor="middle" fill="#103a30" font-weight="700">и ивы (5–8 лет)</text>
+<rect x="264.0" y="56.0" width="176" height="64" rx="32.0" fill="#d9efe9" stroke="#1f6f5c" stroke-width="2.2"/>
+<text x="352" y="84.7" font-size="14.5" text-anchor="middle" fill="#103a30" font-weight="700">Опилки</text>
+<text x="352" y="101.7" font-size="14.5" text-anchor="middle" fill="#103a30" font-weight="700">лесопилок</text>
+<rect x="696.0" y="56.0" width="176" height="64" rx="32.0" fill="#d9efe9" stroke="#1f6f5c" stroke-width="2.2"/>
+<text x="784" y="84.7" font-size="14.5" text-anchor="middle" fill="#103a30" font-weight="700">Солома, лузга,</text>
+<text x="784" y="101.7" font-size="14.5" text-anchor="middle" fill="#103a30" font-weight="700">костра</text>
+<rect x="480.0" y="160.0" width="176" height="64" rx="6" fill="#e9e2f3" stroke="#5b3f86" stroke-width="2"/>
+<circle cx="490" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="510" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="529" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="548" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="568" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="588" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="607" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="626" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<circle cx="646" cy="218.0" r="3.4" fill="none" stroke="#5b3f86" stroke-width="1.3"/>
+<text x="568" y="183.7" font-size="14.5" text-anchor="middle" fill="#2d1f44">Приёмка</text>
+<text x="568" y="200.7" font-size="14.5" text-anchor="middle" fill="#2d1f44">и измельчение</text>
+<rect x="480.0" y="264.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="568" y="292.7" font-size="14.5" text-anchor="middle" fill="#14263a">Паровзрыв</text>
+<text x="568" y="309.7" font-size="14.5" text-anchor="middle" fill="#14263a">200 °C, сброс</text>
+<path d="M568,360.0 L664.0,400 L568,440.0 L472.0,400 Z" fill="#fff4cc" stroke="#a37b00" stroke-width="2"/>
+<text x="568" y="396.9" font-size="13.5" text-anchor="middle" fill="#3d2e00">Ферменты</text>
+<text x="568" y="412.9" font-size="13.5" text-anchor="middle" fill="#3d2e00">дешевле кислоты?</text>
+<rect x="696.0" y="368.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="784" y="396.7" font-size="14.5" text-anchor="middle" fill="#14263a">Ферментный</text>
+<text x="784" y="413.7" font-size="14.5" text-anchor="middle" fill="#14263a">гидролиз</text>
+<rect x="264.0" y="368.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="352" y="396.7" font-size="14.5" text-anchor="middle" fill="#14263a">Кислотный</text>
+<text x="352" y="413.7" font-size="14.5" text-anchor="middle" fill="#14263a">гидролиз</text>
+<path d="M480.0,480.0 Q568,466.0 656.0,480.0 L656.0,530.0 Q568,544.0 480.0,530.0 Z" fill="#eef0f3" stroke="#5b6470" stroke-width="2"/>
+<text x="568" y="500.7" font-size="14.5" text-anchor="middle" fill="#22262b">Сахара</text>
+<text x="568" y="517.7" font-size="14.5" text-anchor="middle" fill="#22262b">(глюкоза, ксилоза)</text>
+<rect x="912.0" y="264.0" width="176" height="64" rx="6" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 3"/>
+<text x="1000" y="301.2" font-size="14.5" text-anchor="middle" fill="#3b2a1e">Лигнин</text>
+<path d="M1000,360.0 L1096.0,400 L1000,440.0 L904.0,400 Z" fill="#fff4cc" stroke="#a37b00" stroke-width="2"/>
+<text x="1000" y="404.9" font-size="13.5" text-anchor="middle" fill="#3d2e00">Лигнин чистый?</text>
+<rect x="912.0" y="472.0" width="176" height="64" rx="14" fill="#e3efe0" stroke="#2e6b3a" stroke-width="2"/>
+<text x="1000" y="509.2" font-size="14.5" text-anchor="middle" fill="#173a1d">Гуматы для полей</text>
+<path d="M568,568.0 L664.0,608 L568,648.0 L472.0,608 Z" fill="#fff4cc" stroke="#a37b00" stroke-width="2"/>
+<text x="568" y="604.9" font-size="13.5" text-anchor="middle" fill="#3d2e00">Что выгоднее:</text>
+<text x="568" y="620.9" font-size="13.5" text-anchor="middle" fill="#3d2e00">белок или спирт?</text>
+<rect x="264.0" y="576.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="352" y="604.7" font-size="14.5" text-anchor="middle" fill="#14263a">Кормовые дрожжи,</text>
+<text x="352" y="621.7" font-size="14.5" text-anchor="middle" fill="#14263a">грибной белок</text>
+<rect x="696.0" y="576.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="784" y="613.2" font-size="14.5" text-anchor="middle" fill="#14263a">Биоэтанол</text>
+<rect x="264.0" y="680.0" width="176" height="64" rx="14" fill="#e3efe0" stroke="#2e6b3a" stroke-width="2"/>
+<text x="352" y="717.2" font-size="14.5" text-anchor="middle" fill="#173a1d">Белковый корм</text>
+<rect x="48.0" y="576.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="136" y="613.2" font-size="14.5" text-anchor="middle" fill="#14263a">Ферма</text>
+<rect x="696.0" y="680.0" width="176" height="64" rx="6" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 3"/>
+<text x="784" y="717.2" font-size="14.5" text-anchor="middle" fill="#3b2a1e">Барда, CO₂</text>
+<rect x="912.0" y="680.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="1000" y="717.2" font-size="14.5" text-anchor="middle" fill="#14263a">Теплица на CO₂</text>
+<rect x="264.0" y="784.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="352" y="821.2" font-size="14.5" text-anchor="middle" fill="#14263a">Метантенк</text>
+<path d="M490.0,784.0 L656.0,784.0 L646.0,848.0 L480.0,848.0 Z" fill="#fde3cf" stroke="#b5531c" stroke-width="2"/>
+<text x="568" y="812.7" font-size="14.5" text-anchor="middle" fill="#4a220a">Котёл и турбина:</text>
+<text x="568" y="829.7" font-size="14.5" text-anchor="middle" fill="#4a220a">пар на паровзрыв</text>
+<rect x="264.0" y="888.0" width="176" height="64" rx="6" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.8" stroke-dasharray="6 3"/>
+<text x="352" y="925.2" font-size="14.5" text-anchor="middle" fill="#3b2a1e">Дигестат</text>
+<path d="M136,776.0 L232.0,816 L136,856.0 L40.0,816 Z" fill="#fff4cc" stroke="#a37b00" stroke-width="2"/>
+<text x="136" y="812.9" font-size="13.5" text-anchor="middle" fill="#3d2e00">Нитраты в норме</text>
+<text x="136" y="828.9" font-size="13.5" text-anchor="middle" fill="#3d2e00">(&lt; 50 мг/л)?</text>
+<rect x="48.0" y="888.0" width="176" height="64" rx="5" fill="#dbe7f3" stroke="#23507a" stroke-width="2"/>
+<text x="136" y="916.7" font-size="14.5" text-anchor="middle" fill="#14263a">Щепной биореактор</text>
+<text x="136" y="933.7" font-size="14.5" text-anchor="middle" fill="#14263a">на дренаже</text>
+<rect x="670" y="381" width="23" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="681" y="394" font-size="12.5" font-weight="700" text-anchor="middle" fill="#2e6b3a">да</text>
+<rect x="476" y="382" width="30" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="491" y="394" font-size="12.5" font-weight="700" text-anchor="middle" fill="#a33a2a">нет</text>
+<rect x="1005" y="445" width="23" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="1016" y="458" font-size="12.5" font-weight="700" text-anchor="middle" fill="#2e6b3a">да</text>
+<rect x="476" y="590" width="44" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="498" y="602" font-size="12.5" font-weight="700" text-anchor="middle" fill="#2e6b3a">белок</text>
+<rect x="668" y="590" width="44" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="690" y="602" font-size="12.5" font-weight="700" text-anchor="middle" fill="#2e6b3a">спирт</text>
+<rect x="141" y="861" width="30" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="156" y="874" font-size="12.5" font-weight="700" text-anchor="middle" fill="#a33a2a">нет</text>
+<rect x="877" y="693" width="30" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="892" y="706" font-size="12.5" font-weight="700" text-anchor="middle" fill="#6e4a36">CO₂</text>
+<rect x="546" y="749" width="44" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="568" y="762" font-size="12.5" font-weight="700" text-anchor="middle" fill="#6e4a36">барда</text>
+<rect x="141" y="692" width="44" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="163" y="704" font-size="12.5" font-weight="700" text-anchor="middle" fill="#6e4a36">навоз</text>
+<rect x="444" y="798" width="52" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="470" y="810" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c8601e">биогаз</text>
+<rect x="677" y="640" width="30" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="692" y="652" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c8601e">пар</text>
+<rect x="1011" y="624" width="96" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="1059" y="636" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c8601e">нет: топливо</text>
+<rect x="141" y="755" width="125" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="203" y="768" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f8a5a">да: на плантацию</text>
+<rect x="245" y="870" width="88" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="289" y="883" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f8a5a">чистая вода</text>
+<rect x="590" y="43" width="59" height="16" rx="3" fill="#fbfbf8" opacity=".94"/>
+<text x="620" y="56" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f8a5a">в почву</text>
+<rect x="16" y="1015" width="22" height="14" rx="3" fill="#dbe7f3" stroke="#23507a" stroke-width="1.5"/><text x="44" y="1026" font-size="12.5" fill="#444">операция</text>
+<rect x="112" y="1015" width="22" height="14" rx="3" fill="#fff4cc" stroke="#a37b00" stroke-width="1.5"/><text x="140" y="1026" font-size="12.5" fill="#444">условие «если»</text>
+<rect x="250" y="1015" width="22" height="14" rx="3" fill="#e9e2f3" stroke="#5b3f86" stroke-width="1.5"/><text x="278" y="1026" font-size="12.5" fill="#444">конвейер</text>
+<rect x="346" y="1015" width="22" height="14" rx="3" fill="#e3efe0" stroke="#2e6b3a" stroke-width="1.5"/><text x="374" y="1026" font-size="12.5" fill="#444">продукт</text>
+<rect x="435" y="1015" width="22" height="14" rx="3" fill="#efe6dd" stroke="#6e4a36" stroke-width="1.5"/><text x="463" y="1026" font-size="12.5" fill="#444">отход, побочный</text>
+<rect x="580" y="1015" width="22" height="14" rx="3" fill="#fde3cf" stroke="#b5531c" stroke-width="1.5"/><text x="608" y="1026" font-size="12.5" fill="#444">энергия</text>
+<rect x="669" y="1015" width="22" height="14" rx="3" fill="#eef0f3" stroke="#5b6470" stroke-width="1.5"/><text x="697" y="1026" font-size="12.5" fill="#444">склад, накопитель</text>
+<rect x="828" y="1015" width="22" height="14" rx="3" fill="#f3e3f0" stroke="#8a2f7a" stroke-width="1.5"/><text x="856" y="1026" font-size="12.5" fill="#444">другая схема</text>
+</svg>

@@ -78,6 +78,7 @@ h1{font:700 1.7rem/1.1 var(--f-disp);margin:0}
 .how{border-left:3px solid var(--accent);padding-left:12px}
 .photo{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:6px 0 10px}
 .photo img{display:block;width:100%;height:auto}
+.flowbox{margin:6px 0 10px}.fscroll{overflow:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px;background:#fbfbf8;max-height:78vh}.fscroll .photo{border:0;border-radius:0;margin:0;max-width:none}
 .hs{position:absolute;border:2px dashed transparent;border-radius:10px;background:transparent;cursor:pointer;padding:0}
 .hs.term{border-bottom:2px dashed transparent}
 .hs:hover,.hs:focus-visible{border-color:#b8740f;background:rgba(184,116,15,.12);outline:none}
@@ -148,6 +149,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
   .side.open{display:block}
 }
 @media (min-width:1001px){.treebtn{display:none}}
+.mapbox{background:#f7f8f4;border:1px solid var(--line);border-radius:12px;padding:6px;margin:8px 0}.mapbox{overflow:auto;-webkit-overflow-scrolling:touch}.mapbox svg{height:auto;display:block;max-width:none}.mapzoom{display:flex;align-items:center;gap:8px;margin-top:6px}.mapzoom small{color:var(--muted,#666)}path.rg{stroke:#5b6158;stroke-width:.6;cursor:pointer}path.rg:hover{stroke:#000;stroke-width:1.4}path.rg.sel{stroke:#c0392b;stroke-width:2}.maplegend{display:flex;flex-wrap:wrap;gap:10px;font-size:.85rem;margin:4px 0 8px}.maplegend i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:5px;vertical-align:-2px;border:1px solid var(--line)}.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}.mapinfo{border-left:3px solid var(--accent);padding:4px 12px;margin:6px 0}
 </style>
 </head>
 <body>
@@ -183,6 +185,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script charset="utf-8" src="chains.js"></script>
 <script charset="utf-8" src="cycles.js"></script>
 <script charset="utf-8" src="structure.js"></script>
+<script charset="utf-8" src="regions.js"></script>
 <script charset="utf-8" src="photos.js"></script>
 <script charset="utf-8" src="assets2.js"></script>
 <script charset="utf-8" src="assets3.js"></script>
@@ -195,6 +198,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script charset="utf-8" src="assets10.js"></script>
 <script charset="utf-8" src="assets11.js"></script>
 <script charset="utf-8" src="assets12.js"></script>
+<script charset="utf-8" src="flows.js"></script>
 <script charset="utf-8" src="enrich.js"></script>
 <script>
 const K={forest:"Раздел",live:"Живое / целое",part:"Часть дерева",proc:"Процесс",prod:"Сырьё, полуфабрикат",final:"Готовая продукция",waste:"Остатки, побочное, риски",place:"Место, объект",idea:"Идея, в теории",doc:"Документы, право",info:"Справка",tech:"Техника"};
@@ -207,6 +211,7 @@ const SCH=[
  {id:"uis",t:"УИС",root:"u_root",sec:"lpk"},
  {id:"lfut",t:"Перспективы",root:"lf_root",sec:"lpk"},
  {id:"cyl",t:"Идеальный цикл",root:"il_root",sec:"lpk"},
+ {id:"lreg",t:"Регионы",root:"rg_lpk",sec:"lpk"},
  {id:"ares",t:"Ресурсы",root:"ga_res",sec:"apk"},
  {id:"aprod",t:"Производство",root:"ag_root",sec:"apk"},
  {id:"aproc",t:"Переработка",root:"ga_proc",sec:"apk"},
@@ -215,6 +220,7 @@ const SCH=[
  {id:"auis",t:"УИС",root:"au_root",sec:"apk"},
  {id:"afut",t:"Перспективы",root:"nt_root",sec:"apk"},
  {id:"cya",t:"Идеальный цикл",root:"ia_root",sec:"apk"},
+ {id:"areg",t:"Регионы",root:"rg_apk",sec:"apk"},
  {id:"mres",t:"Ресурсы",root:"mx_land",sec:"mix"},
  {id:"mprod",t:"Обмен продукцией",root:"mx_root",sec:"mix"},
  {id:"mproc",t:"Переработка",root:"gm_proc",sec:"mix"},
@@ -222,10 +228,11 @@ const SCH=[
  {id:"mmkt",t:"Экономика и риски",root:"gm_mkt",sec:"mix"},
  {id:"muis",t:"УИС",root:"mx_uis",sec:"mix"},
  {id:"mfut",t:"Перспективы",root:"mx_theory",sec:"mix"},
- {id:"mcyc",t:"Идеальный цикл",root:"im_root",sec:"mix"}
+ {id:"mcyc",t:"Идеальный цикл",root:"im_root",sec:"mix"},
+ {id:"mreg",t:"Регионы",root:"rg_mix",sec:"mix"}
 ];
-const SECS={lpk:"Лесопромышленный комплекс",apk:"Агропромышленный комплекс",mix:"Межотраслевое взаимодействие"};const SECSH={lpk:"ЛПК",apk:"АПК",mix:"Межотраслевое"};let sector="lpk";
-const EXTRA=[{id:"quiz",t:"Тест"},{id:"gloss",t:"Словарь"}];
+const SECS={lpk:"Лесопромышленный комплекс",apk:"Агропромышленный комплекс",mix:"Межотраслевое взаимодействие",ref:"Словарь и тест"};const SECSH={lpk:"ЛПК",apk:"АПК",mix:"Межотраслевое",ref:"Словарь и тест"};let sector="lpk";
+const EXTRA=[{id:"gloss",t:"Словарь",sec:"ref"},{id:"quiz",t:"Тест",sec:"ref"}];
 /* связи */
 const P={};Object.keys(N).forEach(id=>(N[id].c||[]).forEach(c=>{if(!P[c])P[c]=id}));
 const ROOTTAB={};SCH.forEach(s=>ROOTTAB[s.root]=s.id);
@@ -278,16 +285,55 @@ function hsBtn([i,x,y,w,hh]){const st=`style="left:${x}%;top:${y}%;width:${w}%;h
  if(i.startsWith("g:")){const k=i.slice(2);return G[k]?`<button type="button" class="hs term" data-t="${k}" ${st} aria-label="${k}"></button>`:""}
  if(i.startsWith("t_"))return T[i]?`<button type="button" class="hs" data-tool="${i}" ${st} aria-label="${T[i].t}"></button>`:"";
  return N[i]?`<button type="button" class="hs" data-go="${i}" ${st} aria-label="${plain(N[i].t)}"></button>`:""}
-function photoHtml(src,hs,alt){return `<div class="photo"><img src="${src}" alt="${alt||""}" loading="lazy">${(hs||[]).map(hsBtn).join("")}</div>`}
+let FZ=innerWidth<720?2.4:1;const FZS=[1,1.6,2.4,3.2,4];
+function photoHtml(src,hs,alt,z){const ph=`<div class="photo"${z?` style="width:${FZ*100}%"`:""}><img src="${src}" alt="${alt||""}" loading="lazy">${(hs||[]).map(hsBtn).join("")}</div>`;
+ if(!z)return ph;return `<div class="flowbox"><div class="fscroll">${ph}</div><div class="mapzoom"><button type="button" class="chip" data-fz="-1" aria-label="Уменьшить">−</button><button type="button" class="chip" data-fz="1" aria-label="Увеличить">+</button><small>Схему можно увеличить и листать пальцем</small></div></div>`}
+/* карта регионов */
+const LV4=(a)=>a;
+const MAPDEF={
+ lpk:{pal:["#e6ece2","#b7d2aa","#74a862","#2f6b2a"],layers:[
+  ["Лесистость",d=>d[1],["менее 15%","15–40%","40–65%","более 65%"]],
+  ["Заготовка древесины",d=>d[2],["почти нет","небольшая","значительная","лидеры"]],
+  ["Целлюлозно-бумажные комбинаты",d=>d[3]?d[3]+1:0,["нет","—","бумажное производство","крупные ЦБК"]],
+  ["Деревообработка, фанера, плиты",d=>d[4]?d[4]+1:0,["слабая","—","развита","крупные центры"]],
+  ["Лесные учреждения УИС",d=>d[5]?3:0,["не выделяются","","","исторически работают"]]]},
+ apk:{pal:["#f1ece0","#e8cf8f","#c99a3b","#8a5a12"],layers:[
+  ["Зерно",d=>d[6],["мало","есть","много","лидеры"]],
+  ["Подсолнечник, соя, рапс",d=>d[7],["мало","есть","много","лидеры"]],
+  ["Сахарная свёкла",d=>d[8],["нет","—","есть","лидеры"]],
+  ["Молоко",d=>d[9],["мало","есть","много","лидеры"]],
+  ["Мясо: свинина, птица, говядина",d=>d[10],["мало","есть","много","лидеры"]],
+  ["Сады, виноград, бахча",d=>d[11]?d[11]+1:0,["мало","—","есть","лидеры"]]]},
+ mix:{pal:["#ece9f2","#c6bddb","#8f7fb8","#54417f"],layers:[
+  ["Лес и сельское хозяйство рядом",d=>Math.min(d[1],Math.max(d[6],d[9],d[10])),["одна отрасль","слабое сочетание","заметное","сильное сочетание"]],
+  ["Потребность в лесополосах",d=>d[6]>=2&&d[1]==0?3:d[6]>=2&&d[1]==1?2:d[6]>=1&&d[1]<=1?1:0,["низкая","есть","высокая","очень высокая"]],
+  ["Отходы для биоэнергетики",d=>Math.min(3,Math.round((d[2]+d[4]+Math.max(d[9],d[10])+d[7])/2)),["мало","есть","много","очень много"]],
+  ["Лес, село и УИС вместе",d=>d[5]?(Math.max(d[6],d[9])>=1?3:2):0,["нет","—","лес без села","лес и село"]]]}
+};
+const MAPL={lpk:0,apk:0,mix:0},MAPZ={lpk:1,apk:1,mix:1};
+function mapHtml(sec){const m=MAPDEF[sec],L=m.layers[MAPL[sec]],g=window.RG;
+ let h=`<div class="chips maplayers">${m.layers.map((l,i)=>`<button type="button" class="chip${i===MAPL[sec]?" on":""}" data-maplayer="${sec}:${i}">${l[0]}</button>`).join("")}</div>`;
+ h+=`<div class="mapzoom"><button type="button" class="chip" data-mapzoom="${sec}:-1" aria-label="Уменьшить">−</button><span>${MAPZ[sec]}×</span><button type="button" class="chip" data-mapzoom="${sec}:1" aria-label="Увеличить">+</button><small>увеличьте карту и прокручивайте её пальцем</small></div><div class="mapbox"><svg style="width:${MAPZ[sec]*100}%" viewBox="0 0 ${g.w} ${g.h}" role="img" aria-label="Карта регионов: ${L[0]}">${Object.entries(g.p).map(([k,p])=>`<path class="rg" data-rg="${k}" data-sec="${sec}" d="${p}" fill="${m.pal[L[1](g.d[k])]}"><title>${g.d[k][0]}</title></path>`).join("")}</svg></div>`;
+ h+=`<div class="maplegend">${L[2].map((t,i)=>t&&t!=="—"?`<span><i style="background:${m.pal[i]}"></i>${t}</span>`:"").join("")}</div>`;
+ h+=`<div class="mapinfo" id="mapinfo-${sec}"><p class="note">Нажмите на регион, чтобы увидеть его профиль.</p></div>`;
+ h+=`<p class="note">Уровни ориентировочные, по открытым данным о специализации регионов; точные цифры — в данных Росстата, Рослесхоза, Минсельхоза. Контуры регионов: amCharts geodata. Крым показан по данным российской статистики.</p>`;
+ return h}
+const LVL=["низкий","средний","высокий","очень высокий"];
+function regionInfo(k){const g=window.RG,d=g.d[k];const lv=(arr,i)=>arr[i];
+ const l=[`лесистость: ${["менее 15%","15–40%","40–65%","более 65%"][d[1]]}`,`заготовка: ${["почти нет","небольшая","значительная","среди лидеров"][d[2]]}`];
+ if(d[3])l.push(d[3]==2?"крупные ЦБК":"бумажное производство");if(d[4])l.push(d[4]==2?"крупный центр деревообработки":"деревообработка");if(d[5])l.push("лесные учреждения УИС");
+ const a=[];const nm=["зерно","масличные","сахарная свёкла","молоко","мясо","сады и виноград"];[6,7,8,9,10,11].forEach((j,i)=>{if(d[j]>=2||(j==11&&d[j]>=1))a.push(nm[i]+(d[j]>=3||(j==11&&d[j]==2)?" (лидер)":""))});
+ return `<h3 class="sec">${d[0]}</h3><p><b>ЛПК:</b> ${l.join(", ")}.${g.nl[k]?" "+g.nl[k]:""}</p><p><b>АПК:</b> ${a.length?a.join(", ")+".":"сельское хозяйство развито слабо."}${g.na[k]?" "+g.na[k]:""}</p>`}
 function nodeScreen(id,tab){const n=N[id];let h="";SEEN=new Set();
  const isRoot=ROOTTAB[id];
  if(PHR[id]&&PH[PHR[id]]){h+=photoHtml(PH[PHR[id]],HSX[PHR[id]],"Иллюстрация к разделу")+`<p class="note">Нажимай на подписи и предметы на картинке.</p>`}
  h+=`<div class="kind">${K[n.k]||""}</div><h2>${rich(n.t,false)}</h2>`;
  if(n.s)h+=`<p class="lead">${n.s}</p>`;
  if(n.im&&!(n.pics&&n.pics.length))h+=`<img class="cimg" src="${n.im}" alt="${plain(n.t)}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('wide')">`;
- if(n.pics&&n.pics.length){const any=n.pics.some(p=>p.hs&&p.hs.length);h+=n.pics.map(p=>photoHtml(p.src,p.hs,plain(n.t))).join("");if(any)h+=`<p class="note">На картинке можно нажимать на подписи и плитки.</p>`}
+ if(n.pics&&n.pics.length){const any=n.pics.some(p=>p.hs&&p.hs.length);h+=n.pics.map(p=>photoHtml(p.src,p.hs,plain(n.t),p.z)).join("");if(any)h+=`<p class="note">На картинке можно нажимать на подписи и плитки.</p>`}
  if(n.n)h+=`<div class="names"><b>Как называют.</b> ${rich(n.n)}</div>`;
  if(n.w)h+=`<p>${rich(n.w)}</p>`;
+ if(n.map)h+=mapHtml(n.map);
  if(n.h)h+=`<h3 class="sec">Как получают / как делают</h3><p class="how">${rich(n.h)}</p>`;
  if(n.f)h+=`<h3 class="sec">Подробности</h3><ul>${n.f.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
  if(n.y)h+=`<h3 class="sec">${n.c?"Ещё":"Что из этого получают"}</h3><ul>${n.y.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
@@ -325,7 +371,7 @@ function renderTree(tab,sel){const s=SCH.find(x=>x.id===tab),open=treeOpen[tab],
 function snapshot(){return {tab:cur,st:ST[cur]?ST[cur].slice():null}}
 const hkey=s=>s?s.tab+"|"+(s.st||[]).join("/"):"";
 function pushHist(){try{const prev=hkey(history.state),now=snapshot();if(hkey(now)===prev)return;history.pushState(Object.assign(now,{prev}),"")}catch(e){}}
-function openTab(t,push=true){const sx=SCH.find(x=>x.id===t);if(sx)setSector(sx.sec);cur=t;document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));[...SCH,...EXTRA].forEach(s=>document.getElementById("pane-"+s.id).hidden=s.id!==t);
+function openTab(t,push=true){const sx=[...SCH,...EXTRA].find(x=>x.id===t);if(sx)setSector(sx.sec);cur=t;document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));[...SCH,...EXTRA].forEach(s=>document.getElementById("pane-"+s.id).hidden=s.id!==t);
  const b=document.querySelector(`#tabs button[data-tab="${t}"]`);if(b)b.scrollIntoView({inline:"nearest",block:"nearest"});if(ST[t])render(t,false);if(push)pushHist()}
 function go(id){const t=tabOf(id);if(!t)return;ST[t]=pathOf(id);if(t!==cur)openTab(t,false);render(t);pushHist()}
 function nav(id){const st=ST[cur];if(st[st.length-1].startsWith("t:")){ST[cur]=pathOf(id);if(tabOf(id)!==cur){go(id);return}}else if(P[id]===st[st.length-1])st.push(id);else{go(id);return}render(cur);pushHist()}
@@ -364,7 +410,11 @@ document.addEventListener("click",e=>{
  if(!e.target.closest("#pop"))pop.hidden=true;
  if(!e.target.closest(".search"))res.hidden=true;
  const inRes=!!e.target.closest("[data-res]");if(inRes){res.hidden=true;q.blur()}
- const sb=e.target.closest("[data-secsel]");if(sb){const f=SCH.find(x=>x.sec===sb.dataset.secsel);if(sb.dataset.secsel!==sector)openTab(f.id);return}
+ const sb=e.target.closest("[data-secsel]");if(sb){const f=[...SCH,...EXTRA].find(x=>x.sec===sb.dataset.secsel);if(sb.dataset.secsel!==sector)openTab(f.id);return}
+ const mz=e.target.closest("[data-mapzoom]");if(mz){const [sc,d]=mz.dataset.mapzoom.split(":");MAPZ[sc]=Math.max(1,Math.min(4,MAPZ[sc]+(+d)));render(cur,false);return}
+ const fz=e.target.closest("[data-fz]");if(fz){const i=FZS.indexOf(FZ),j=Math.max(0,Math.min(FZS.length-1,(i<0?0:i)+(+fz.dataset.fz)));const sc=fz.closest(".flowbox").querySelector(".fscroll"),cx=(sc.scrollLeft+sc.clientWidth/2)/sc.scrollWidth,cy=(sc.scrollTop+sc.clientHeight/2)/sc.scrollHeight;FZ=FZS[j];document.querySelectorAll(".fscroll .photo").forEach(p=>p.style.width=FZ*100+"%");requestAnimationFrame(()=>{sc.scrollLeft=cx*sc.scrollWidth-sc.clientWidth/2;sc.scrollTop=cy*sc.scrollHeight-sc.clientHeight/2});return}
+ const ml=e.target.closest("[data-maplayer]");if(ml){const [sc,i]=ml.dataset.maplayer.split(":");MAPL[sc]=+i;render(cur,false);return}
+ const rgp=e.target.closest("path.rg");if(rgp){const box=document.getElementById("mapinfo-"+rgp.dataset.sec);document.querySelectorAll("path.rg.sel").forEach(x=>x.classList.remove("sel"));rgp.classList.add("sel");if(box){box.innerHTML=rich(regionInfo(rgp.dataset.rg));box.scrollIntoView({block:"nearest",behavior:"smooth"})}return}
  const tab=e.target.closest("#tabs button");if(tab){openTab(tab.dataset.tab);return}
  if(e.target.closest("[data-back]")){if(ST[cur]&&ST[cur].length>1){const want=hkey({tab:cur,st:ST[cur].slice(0,-1)});let hs=null;try{hs=history.state}catch(x){}if(hs&&hs.prev===want){history.back()}else{ST[cur].pop();render(cur);try{history.replaceState(Object.assign(snapshot(),{prev:hs&&hs.prev}),"")}catch(x){}}}return}
  const cr=e.target.closest("[data-crumb]");if(cr){ST[cur]=ST[cur].slice(0,+cr.dataset.crumb+1);render(cur);pushHist();return}
