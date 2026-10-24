@@ -1,7 +1,7 @@
 {
   "date": "2026-10-24",
-  "positions": 1256,
-  "unique_images": 1210,
+  "positions": 1283,
+  "unique_images": 1237,
   "visual_review": {
     "positions_reviewed": 1256,
     "method": "Reviewed all 79 contact sheets against queue captions; inspected corrections at full size",
@@ -102,7 +102,7 @@
     "changed_files_checked": 129,
     "http_and_byte_comparison_errors": []
   },
-  "status": "complete",
+  "status": "Supplement prepared, live validation pending",
   "file_validation": {
     "unique_images": 1210,
     "position_sequence_ok": true,
@@ -122,5 +122,29 @@
     ],
     "result": "Images loaded with visible full captions; final two cards checked after corrected deployment",
     "note": "Browser extension metadata errors were excluded from application errors"
-  }
+  },
+  "supplements": [
+    {
+      "id": "2026-10-24-new-sections",
+      "positions": 27,
+      "source_commit": "abf03e89a54907007a88ab0073b5d8efdc475455",
+      "canvases": 8,
+      "visual_review": "All 27 source illustrations and captions reviewed; long cover caption checked after cropping",
+      "file_validation": {
+        "files": 27,
+        "errors": []
+      },
+      "runtime_validation": {
+        "positions": 1283,
+        "detail_screens_checked": 1283,
+        "item_screens_checked": 1283,
+        "errors": []
+      },
+      "javascript_syntax": {
+        "files_checked": 36,
+        "errors": []
+      },
+      "deployment_verification": "pending"
+    }
+  ]
 }

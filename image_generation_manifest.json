@@ -2,8 +2,8 @@
   "project": "Древо сосны",
   "source_queue": "NO_PICTURES(1).md",
   "source_queue_sha256": "654d257bf67b249aec5d2bc23beee9bbdf907ee17997bead2516f3f9e1677c71",
-  "generated": 363,
-  "integrated": 1256,
+  "generated": 371,
+  "integrated": 1283,
   "remaining": 0,
   "next_queue_position": null,
   "next_title": null,
@@ -32746,10 +32746,685 @@
       "bytes": 261614,
       "review_status": "visually_reviewed_and_runtime_verified",
       "reviewed_at": "2026-10-24"
+    },
+    {
+      "supplement_position": 1,
+      "card_id": "lf_root",
+      "title": "Перспективы ЛПК",
+      "image": "a_lf_root.webp",
+      "queue_position": 1257,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 1,
+      "source_png_name": "exec-bd566dc3-d9b2-4392-a6ae-214a7b6d6cd8.png",
+      "source_png_sha256": "3711ebffb385f839740d13efc267cf27128e7c550d2a4eb941ecc51b57496d86",
+      "source_canvas_cards": 1,
+      "crop_px": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "webp_sha256": "5eaf4c7bc0b1aa17cd01809596cacc44ce8451081d710f81414dd9b2ef7a7653",
+      "git_blob_sha": "ce90938fdbf00f0c5502617747e6bae0bb81393e",
+      "bytes": 447016,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 2,
+      "card_id": "lf_wood",
+      "title": "Деревянное многоэтажное строительство",
+      "image": "a_lf_wood.webp",
+      "queue_position": 1258,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 2,
+      "source_png_name": "exec-a014700e-2b8c-4041-8297-0c1fdea57f73.png",
+      "source_png_sha256": "a105d58477361b3c4d458fff0f06305b4b27083d4f5e992f66706f11c3df2d20",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        0,
+        765,
+        509
+      ],
+      "width": 765,
+      "height": 509,
+      "webp_sha256": "3399b68b1707968acc83065a6a936c470b1beab74bbc257fd552a2f6565ed0ba",
+      "git_blob_sha": "888247c7135f46138274cd9bd10008fffa48e1d3",
+      "bytes": 94246,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 3,
+      "card_id": "lf_bioref",
+      "title": "Биорефайнинг: химия вместо топлива",
+      "image": "a_lf_bioref.webp",
+      "queue_position": 1259,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 2,
+      "source_png_name": "exec-a014700e-2b8c-4041-8297-0c1fdea57f73.png",
+      "source_png_sha256": "a105d58477361b3c4d458fff0f06305b4b27083d4f5e992f66706f11c3df2d20",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        771,
+        0,
+        1536,
+        509
+      ],
+      "width": 765,
+      "height": 509,
+      "webp_sha256": "2ac1bf4e1b2b7b9d0444aec80b58f29ca9ab2f885fbef8b5473e6839f96082d5",
+      "git_blob_sha": "f31c468c052c25498a40543b45276ad239956d45",
+      "bytes": 91554,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 4,
+      "card_id": "lf_nano",
+      "title": "Наноцеллюлоза и новые материалы",
+      "image": "a_lf_nano.webp",
+      "queue_position": 1260,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 2,
+      "source_png_name": "exec-a014700e-2b8c-4041-8297-0c1fdea57f73.png",
+      "source_png_sha256": "a105d58477361b3c4d458fff0f06305b4b27083d4f5e992f66706f11c3df2d20",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        514,
+        765,
+        1024
+      ],
+      "width": 765,
+      "height": 510,
+      "webp_sha256": "fe39e13326880deac0822ef836bed522117bfe3e077ab41d299a90f05fa65889",
+      "git_blob_sha": "fc14f6fc0ff55a2061329f0c5532f6f55247c82e",
+      "bytes": 53614,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 5,
+      "card_id": "lf_digital",
+      "title": "Цифровой лес",
+      "image": "a_lf_digital.webp",
+      "queue_position": 1261,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 2,
+      "source_png_name": "exec-a014700e-2b8c-4041-8297-0c1fdea57f73.png",
+      "source_png_sha256": "a105d58477361b3c4d458fff0f06305b4b27083d4f5e992f66706f11c3df2d20",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        771,
+        514,
+        1536,
+        1024
+      ],
+      "width": 765,
+      "height": 510,
+      "webp_sha256": "51ee126144dcd3e3f68acdae043a6cac669513eb57c5f074497df9e7d95af608",
+      "git_blob_sha": "2f1408b3ea4a8104741f0d71e0164dbf04f5cf07",
+      "bytes": 112534,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 6,
+      "card_id": "lf_plant",
+      "title": "Плантационное лесовыращивание и генетика",
+      "image": "a_lf_plant.webp",
+      "queue_position": 1262,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 3,
+      "source_png_name": "exec-bf913854-727d-4289-a155-60c7acb51154.png",
+      "source_png_sha256": "a9bcec5a3a8bd1457ec06517a7dd0c4e690c40ace322b69c3b99c565506064fe",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        0,
+        765,
+        498
+      ],
+      "width": 765,
+      "height": 498,
+      "webp_sha256": "fecf12f12c4ff18fa2f7e315802d745d14d870de8c29bddb4c44b5b6c0d52188",
+      "git_blob_sha": "35f4e8c0cfa8d1f6c35e8cdbfa7a8e394ea4c3c9",
+      "bytes": 146828,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 7,
+      "card_id": "lf_energy",
+      "title": "Биоэнергетика нового поколения",
+      "image": "a_lf_energy.webp",
+      "queue_position": 1263,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 3,
+      "source_png_name": "exec-bf913854-727d-4289-a155-60c7acb51154.png",
+      "source_png_sha256": "a9bcec5a3a8bd1457ec06517a7dd0c4e690c40ace322b69c3b99c565506064fe",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        771,
+        0,
+        1536,
+        498
+      ],
+      "width": 765,
+      "height": 498,
+      "webp_sha256": "fbca2b712289e7073cc74fbb715cca732b37083d36cec2bc9ec35db6d1db8ae1",
+      "git_blob_sha": "ff2652e00532617632b775b1acee902ee5f65eee",
+      "bytes": 120010,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 8,
+      "card_id": "lf_climate",
+      "title": "Климатические проекты и углерод",
+      "image": "a_lf_climate.webp",
+      "queue_position": 1264,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 3,
+      "source_png_name": "exec-bf913854-727d-4289-a155-60c7acb51154.png",
+      "source_png_sha256": "a9bcec5a3a8bd1457ec06517a7dd0c4e690c40ace322b69c3b99c565506064fe",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        503,
+        765,
+        1024
+      ],
+      "width": 765,
+      "height": 521,
+      "webp_sha256": "482f23df409e8f6d0ddb7c13f20d2fd75a024d47078f1668a451a3c3b723d077",
+      "git_blob_sha": "280cd4f2ef0dbda05731ef9d0dd9a21ce1f7b693",
+      "bytes": 155074,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 9,
+      "card_id": "lf_robot",
+      "title": "Автоматизация заготовки и переработки",
+      "image": "a_lf_robot.webp",
+      "queue_position": 1265,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 3,
+      "source_png_name": "exec-bf913854-727d-4289-a155-60c7acb51154.png",
+      "source_png_sha256": "a9bcec5a3a8bd1457ec06517a7dd0c4e690c40ace322b69c3b99c565506064fe",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        771,
+        503,
+        1536,
+        1024
+      ],
+      "width": 765,
+      "height": 521,
+      "webp_sha256": "6ae7f16c26cfa2ed33dd9d35c2a11a8fb5fd5e5aaef879bab90a8cd764368c35",
+      "git_blob_sha": "38da58db6b0cdd8418d62aa70fca327f035cc730",
+      "bytes": 109946,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 10,
+      "card_id": "im_1",
+      "title": "1. Земля: лес и поле рядом",
+      "image": "a_im_1.webp",
+      "queue_position": 1266,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 4,
+      "source_png_name": "exec-71d9afb1-a2a4-48a0-bb8e-436eff3f8516.png",
+      "source_png_sha256": "1b409f01fe6fed6bbc1694ea10778839f9800f46620d7938a3487731dc154a03",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        0,
+        766,
+        507
+      ],
+      "width": 766,
+      "height": 507,
+      "webp_sha256": "7491e183226616f9a4ed4129d49b9a60a314b0576c2973e3be8689d290349e51",
+      "git_blob_sha": "3e3001cfee38dec0f523ff60763f8b28c3f575c3",
+      "bytes": 116338,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 11,
+      "card_id": "im_2",
+      "title": "2. Заготовка и уборка",
+      "image": "a_im_2.webp",
+      "queue_position": 1267,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 4,
+      "source_png_name": "exec-71d9afb1-a2a4-48a0-bb8e-436eff3f8516.png",
+      "source_png_sha256": "1b409f01fe6fed6bbc1694ea10778839f9800f46620d7938a3487731dc154a03",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        770,
+        0,
+        1536,
+        507
+      ],
+      "width": 766,
+      "height": 507,
+      "webp_sha256": "271c6dd6d4f87d6be15c4220f8dcdd30810291590dc8712282a48472d79dc356",
+      "git_blob_sha": "d641469bde35b22a9842e2e643792d6d419568e9",
+      "bytes": 124230,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 12,
+      "card_id": "im_3",
+      "title": "3. Лесопиление и деревообработка",
+      "image": "a_im_3.webp",
+      "queue_position": 1268,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 4,
+      "source_png_name": "exec-71d9afb1-a2a4-48a0-bb8e-436eff3f8516.png",
+      "source_png_sha256": "1b409f01fe6fed6bbc1694ea10778839f9800f46620d7938a3487731dc154a03",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        512,
+        766,
+        1024
+      ],
+      "width": 766,
+      "height": 512,
+      "webp_sha256": "7f65a1416f8320693121ec7645e976c6f143f0aabc848f77568ffc21158eb5b9",
+      "git_blob_sha": "f5f9b185557ae448821fefa86c244e60fb51409f",
+      "bytes": 130534,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 13,
+      "card_id": "im_4",
+      "title": "4. Фермы",
+      "image": "a_im_4.webp",
+      "queue_position": 1269,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 4,
+      "source_png_name": "exec-71d9afb1-a2a4-48a0-bb8e-436eff3f8516.png",
+      "source_png_sha256": "1b409f01fe6fed6bbc1694ea10778839f9800f46620d7938a3487731dc154a03",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        770,
+        512,
+        1536,
+        1024
+      ],
+      "width": 766,
+      "height": 512,
+      "webp_sha256": "c24fd58633c239bf909ff8f399985594fcdfe1236f70177ae4bd074c5d9a4666",
+      "git_blob_sha": "f83c2ad8ad7cd6bba762c98bfe14f8e58d094277",
+      "bytes": 117002,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 14,
+      "card_id": "im_5",
+      "title": "5. Корма",
+      "image": "a_im_5.webp",
+      "queue_position": 1270,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 5,
+      "source_png_name": "exec-52671ef8-e54a-41eb-bfae-1c81df08d6eb.png",
+      "source_png_sha256": "39b413116f65787c25d88e19fd8676d8dbe61e7fc2008f176f59f821cb6e4a0e",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        0,
+        764,
+        502
+      ],
+      "width": 764,
+      "height": 502,
+      "webp_sha256": "6953d4034f9bfcc9b2531b7a9aa241dc491c2c322b339ee87bf668b5da71e5d4",
+      "git_blob_sha": "01515083421335aeadeba03be3830bb83056a2b8",
+      "bytes": 110396,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 15,
+      "card_id": "im_6",
+      "title": "6. Переработка сельхозсырья",
+      "image": "a_im_6.webp",
+      "queue_position": 1271,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 5,
+      "source_png_name": "exec-52671ef8-e54a-41eb-bfae-1c81df08d6eb.png",
+      "source_png_sha256": "39b413116f65787c25d88e19fd8676d8dbe61e7fc2008f176f59f821cb6e4a0e",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        772,
+        0,
+        1536,
+        502
+      ],
+      "width": 764,
+      "height": 502,
+      "webp_sha256": "873fc276b996cc049c8a4f16f719885cee65a4b3a4e3274e2a37600aee51c64b",
+      "git_blob_sha": "725039788a77ad47715b77ee78bd2ea9308a0d43",
+      "bytes": 102374,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 16,
+      "card_id": "im_7",
+      "title": "7. ЦБК и плитный завод",
+      "image": "a_im_7.webp",
+      "queue_position": 1272,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 5,
+      "source_png_name": "exec-52671ef8-e54a-41eb-bfae-1c81df08d6eb.png",
+      "source_png_sha256": "39b413116f65787c25d88e19fd8676d8dbe61e7fc2008f176f59f821cb6e4a0e",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        510,
+        764,
+        1024
+      ],
+      "width": 764,
+      "height": 514,
+      "webp_sha256": "7f94a42bde142618d7c0c8da49189eeeef3ecc94447dcaa555c167f86a2b5375",
+      "git_blob_sha": "b087fc30613da17252dacfb803d9ea45097ccab5",
+      "bytes": 118286,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 17,
+      "card_id": "im_8",
+      "title": "8. Общий энергоцентр",
+      "image": "a_im_8.webp",
+      "queue_position": 1273,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 5,
+      "source_png_name": "exec-52671ef8-e54a-41eb-bfae-1c81df08d6eb.png",
+      "source_png_sha256": "39b413116f65787c25d88e19fd8676d8dbe61e7fc2008f176f59f821cb6e4a0e",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        772,
+        510,
+        1536,
+        1024
+      ],
+      "width": 764,
+      "height": 514,
+      "webp_sha256": "48b6e949da56c56133c6b646453be2f345587b639ffbd7e83059e9f61d76d3e0",
+      "git_blob_sha": "2c8309ed5068c9cef4c973f03e695c70572dfb1d",
+      "bytes": 133096,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 18,
+      "card_id": "im_9",
+      "title": "9. Возврат в почву и лес",
+      "image": "a_im_9.webp",
+      "queue_position": 1274,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 6,
+      "source_png_name": "exec-eab67329-b3c5-49fc-bd41-6295ad0074aa.png",
+      "source_png_sha256": "66f16aa75fbdc40e22987a4aa196bd8d67d550df4d256b81ae9d80ded8e315c7",
+      "source_canvas_cards": 2,
+      "crop_px": [
+        0,
+        0,
+        1086,
+        720
+      ],
+      "width": 1086,
+      "height": 720,
+      "webp_sha256": "c851de8eb4b4acf4df66786c19a6fbd3e5dcfcf0cb1e27d0517eb534a52c35f1",
+      "git_blob_sha": "9bac675fa00cacbfd4d500ef8f3847bfb46a2286",
+      "bytes": 250906,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 19,
+      "card_id": "im_10",
+      "title": "10. Продукция кластера",
+      "image": "a_im_10.webp",
+      "queue_position": 1275,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 6,
+      "source_png_name": "exec-eab67329-b3c5-49fc-bd41-6295ad0074aa.png",
+      "source_png_sha256": "66f16aa75fbdc40e22987a4aa196bd8d67d550df4d256b81ae9d80ded8e315c7",
+      "source_canvas_cards": 2,
+      "crop_px": [
+        0,
+        726,
+        1086,
+        1448
+      ],
+      "width": 1086,
+      "height": 722,
+      "webp_sha256": "170da36b46be0bbd59bfcc5edd1d7edc0b1b559b9934c0e402db3a84781b22ff",
+      "git_blob_sha": "35109b6e15f2e91fbfbaec297dda9144d9b4f58a",
+      "bytes": 161862,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 20,
+      "card_id": "gl_res",
+      "title": "Ресурсы ЛПК: лес и древесные породы",
+      "image": "a_gl_res.webp",
+      "queue_position": 1276,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 7,
+      "source_png_name": "exec-f743f1be-6722-4786-a911-43d747c8a359.png",
+      "source_png_sha256": "48bd52d7faeb38ddec48bc608272b8378e6af3b5925865c9da4f7357791b5418",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        0,
+        765,
+        492
+      ],
+      "width": 765,
+      "height": 492,
+      "webp_sha256": "3252b7abad2ad1f7feffd3aa9eb76413dcbc98a23b1dfef64ba9520f05b47efd",
+      "git_blob_sha": "d096e726bd2694051c361407e143076a815bd984",
+      "bytes": 157892,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 21,
+      "card_id": "gl_prod",
+      "title": "Производство сырья: от отвода до восстановления",
+      "image": "a_gl_prod.webp",
+      "queue_position": 1277,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 7,
+      "source_png_name": "exec-f743f1be-6722-4786-a911-43d747c8a359.png",
+      "source_png_sha256": "48bd52d7faeb38ddec48bc608272b8378e6af3b5925865c9da4f7357791b5418",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        771,
+        0,
+        1536,
+        492
+      ],
+      "width": 765,
+      "height": 492,
+      "webp_sha256": "0ca80f56ce0bfc17cbd9b9066e4f1080f1f433f4881c28869a3f3c52666b9283",
+      "git_blob_sha": "73c2630b445fadb0645c329feb81d28deaed878e",
+      "bytes": 131720,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 22,
+      "card_id": "gl_proc",
+      "title": "Переработка древесины",
+      "image": "a_gl_proc.webp",
+      "queue_position": 1278,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 7,
+      "source_png_name": "exec-f743f1be-6722-4786-a911-43d747c8a359.png",
+      "source_png_sha256": "48bd52d7faeb38ddec48bc608272b8378e6af3b5925865c9da4f7357791b5418",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        497,
+        765,
+        1024
+      ],
+      "width": 765,
+      "height": 527,
+      "webp_sha256": "a8f803eca60e3eee5cd2a5f73c9809ab05346b883cd134ef87ef95db90c55fe7",
+      "git_blob_sha": "1b7b7d4c15f8111fd267ba9a42ac1b168cc24c42",
+      "bytes": 106986,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 23,
+      "card_id": "ga_res",
+      "title": "Ресурсы АПК: культуры и животные",
+      "image": "a_ga_res.webp",
+      "queue_position": 1279,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 7,
+      "source_png_name": "exec-f743f1be-6722-4786-a911-43d747c8a359.png",
+      "source_png_sha256": "48bd52d7faeb38ddec48bc608272b8378e6af3b5925865c9da4f7357791b5418",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        771,
+        497,
+        1536,
+        1024
+      ],
+      "width": 765,
+      "height": 527,
+      "webp_sha256": "fad2d5bfe2486cbde8901d5373812a991b4d19b18ab6884f97754af4219423cf",
+      "git_blob_sha": "44f30571049469427dbbec93db323c75ae526db1",
+      "bytes": 152370,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 24,
+      "card_id": "ga_proc",
+      "title": "Переработка сельхозсырья",
+      "image": "a_ga_proc.webp",
+      "queue_position": 1280,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 8,
+      "source_png_name": "exec-f54189f1-f507-4bfb-ad2d-f3c3aae2bf32.png",
+      "source_png_sha256": "fe0742bc1967e309ffa2f9aa30e956564e297fd8dd075b216cf31700971569ee",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        0,
+        764,
+        507
+      ],
+      "width": 764,
+      "height": 507,
+      "webp_sha256": "17bd39d28d1c7066b894034b737a3807d7ff9a68ff874a645a6eb2d7a1079cc6",
+      "git_blob_sha": "6126f5100fd9095c50314849e934ad497df5cd58",
+      "bytes": 103370,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 25,
+      "card_id": "gm_proc",
+      "title": "Совместная переработка",
+      "image": "a_gm_proc.webp",
+      "queue_position": 1281,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 8,
+      "source_png_name": "exec-f54189f1-f507-4bfb-ad2d-f3c3aae2bf32.png",
+      "source_png_sha256": "fe0742bc1967e309ffa2f9aa30e956564e297fd8dd075b216cf31700971569ee",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        772,
+        0,
+        1536,
+        507
+      ],
+      "width": 764,
+      "height": 507,
+      "webp_sha256": "6ca6b2f20a1dcba3c1c8dbb50e0d336207e95c12c77ae378aa6b54e781deb2d4",
+      "git_blob_sha": "0563c13da2b3501c78b241e54757d95e3947221d",
+      "bytes": 113374,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 26,
+      "card_id": "gm_tech",
+      "title": "Общая техника и энергетика",
+      "image": "a_gm_tech.webp",
+      "queue_position": 1282,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 8,
+      "source_png_name": "exec-f54189f1-f507-4bfb-ad2d-f3c3aae2bf32.png",
+      "source_png_sha256": "fe0742bc1967e309ffa2f9aa30e956564e297fd8dd075b216cf31700971569ee",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        0,
+        514,
+        764,
+        1024
+      ],
+      "width": 764,
+      "height": 510,
+      "webp_sha256": "e78fd02a139f575be0ec9f59e054a3b4b65a8cc6d41c521718e1c840d1e9df84",
+      "git_blob_sha": "9e04a1c72448e33d1e3811b75b175fb515e88ab0",
+      "bytes": 137166,
+      "review_status": "visually_reviewed"
+    },
+    {
+      "supplement_position": 27,
+      "card_id": "gm_mkt",
+      "title": "Экономика, риски и организация",
+      "image": "a_gm_mkt.webp",
+      "queue_position": 1283,
+      "kind": "n",
+      "supplement": "2026-10-24-new-sections",
+      "generation": 8,
+      "source_png_name": "exec-f54189f1-f507-4bfb-ad2d-f3c3aae2bf32.png",
+      "source_png_sha256": "fe0742bc1967e309ffa2f9aa30e956564e297fd8dd075b216cf31700971569ee",
+      "source_canvas_cards": 4,
+      "crop_px": [
+        772,
+        514,
+        1536,
+        1024
+      ],
+      "width": 764,
+      "height": 510,
+      "webp_sha256": "ca1fa815b6d9c26f4f76bd5ce260d247687b479745d2c0ad3b469c5d6060c330",
+      "git_blob_sha": "d072b61a093401157f7da44d7159d0d0fe5b8109",
+      "bytes": 102968,
+      "review_status": "visually_reviewed"
     }
   ],
-  "generated_canvases": 363,
-  "review_status": "Complete: all 1256 positions visually reviewed, integrated and verified on the published site",
+  "generated_canvases": 371,
+  "review_status": "Original 1256 verified; 27 supplementary illustrations visually reviewed, publication pending",
   "format_version": 2,
   "canvases": [
     {
@@ -35175,6 +35850,158 @@
       "source_png_sha256": "4955fd352f80230454dc659caa89b5126d06e7466b5d991529a08d188a3d3efc",
       "cards": 2,
       "prompt": "Полотно 1536×1024, ровно две самостоятельные вертикальные карточки одинаковой ширины, слева и справа, белый вертикальный разделитель 6px. Фотореализм, естественный свет, высокая детализация, Россия. На самом нижнем крае КАЖДОЙ карточки красивая тёмно-зелёная плашка и крупный чёткий белый текст. Никаких других надписей, стрелок, чисел, логотипов. Карточки не смешиваются.\nЛЕВАЯ карточка, точный текст «Безопасность на валке». Профессиональный лесоруб в полном защитном снаряжении — каска с опущенной сеткой, наушники, перчатки, защитная куртка и брюки, крепкие ботинки — ДО НАЧАЛА валки расчищает пеший путь отхода от основания ещё целого вертикально стоящего дерева: отодвигает лежащую сухую ветку с тропы. Бензопила ВЫКЛЮЧЕНА, закрыта защитным чехлом и лежит в стороне. Видно свободное пространство и расчищенная тропа, на фоне ровно стоящий лес без людей. Категорически никаких падающих или наклонённых деревьев, никаких людей под падающим деревом, никаких схем опасных траекторий.\nПРАВАЯ карточка, точный текст «Азотное голодание». Крупный план чахлого растения томата в огородной почве с большим количеством свежих светлых опилок. Нижние и старые листья равномерно явно бледно-жёлтые, верхние светло-зелёные, рост слабый. Покажи характерную общую хлорозную желтизну старых листьев от недостатка азота, без пятен инфекции, без засохшей коричневой гнили. На дальнем размытом фоне небольшой здоровый зелёный куст как ненавязчивый контраст. НЕ изображать полностью здоровый ярко-зелёный куст как главный предмет. Важны пожелтевшие листья и свежие опилки вокруг стебля."
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 1,
+      "ids": [
+        "lf_root"
+      ],
+      "layout": [
+        1,
+        1
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-bd566dc3-d9b2-4392-a6ae-214a7b6d6cd8.png",
+      "prompt": "Use case: photorealistic-natural. Create a finished landscape 3:2 illustration for Russian educational forestry app, 1536x1024 or higher. ONE unified photorealistic scene, no grid. Subject: near-future Russian timber industry, elevated view across a working modern forestry technology campus at the edge of a mixed conifer and birch forest: foreground detailed engineered timber building framework with CLT panels and glulam beams, midground clean modern wood processing and biorefinery buildings, nursery rows and managed forest beyond; a small surveying drone in the sky. Credible contemporary technology, no science-fiction, no smoke pollution, no fake charts or numerical claims. Natural clear daylight, high material detail, balanced educational composition. Bottom 16 percent is an elegant solid dark forest-green caption bar, large white highly legible Cyrillic sans serif EXACT text: \"Перспективы ЛПК\". No other text, no logos or watermark. Keep full caption safely inside the image.",
+      "source_png_sha256": "3711ebffb385f839740d13efc267cf27128e7c550d2a4eb941ecc51b57496d86",
+      "source_png_name": "exec-bd566dc3-d9b2-4392-a6ae-214a7b6d6cd8.png"
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 2,
+      "ids": [
+        "lf_wood",
+        "lf_bioref",
+        "lf_nano",
+        "lf_digital"
+      ],
+      "layout": [
+        2,
+        2
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-a014700e-2b8c-4041-8297-0c1fdea57f73.png",
+      "prompt": "Use case: scientific-educational, photorealistic scenes. Generate ONE production asset sheet of FOUR independent Russian forestry educational illustrations, strict 2 columns x 2 rows, each tile landscape 3:2, overall landscape 3:2, preferably 3072x2048. Equal tiles, thin straight white gutters, no outer border. Each tile has its own full-width dark forest-green bottom caption band occupying 18 percent, large white bold Cyrillic text EXACT below; long titles wrapped into two lines with safe margins. No shared heading, no labels or text elsewhere, no brands, no fake numerical data, no watermarks. High photorealistic detail, credible present-day Russian setting, natural daylight, distinct meaningful scenes, no arrows or charts. Reading order:\nTOP LEFT: contemporary 8-storey engineered timber residential building under construction, clearly visible glulam post-beam structure and CLT floor/wall panels, crane lifting a panel, safe exclusion zone beneath load, people only safely distant. Caption \"Деревянное многоэтажное строительство\".\nTOP RIGHT: wood biorefinery pilot plant with stainless fractionation vessels and piping; foreground laboratory table with separate cellulose pulp, brown lignin powder, pale sugar solution and a spool of cellulose textile fiber, wood chips in a tray. Show chemical products rather than burning fuel. Caption \"Биорефайнинг: химия вместо топлива\".\nBOTTOM LEFT: materials research laboratory, transparent cellulose film held with gloved hands, white nanocellulose hydrogel in a clear dish, light porous cellulose aerogel cube, paper filter sheet and microscope in background. Nanofibers themselves not depicted as macroscopic ropes. Caption \"Наноцеллюлоза и новые материалы\".\nBOTTOM RIGHT: forest survey specialist in a pine-birch stand using a rugged tablet showing a plausible text-free colored 3D tree point cloud, small lidar drone flying above clearing. No holograms. Caption \"Цифровой лес\".",
+      "source_png_sha256": "a105d58477361b3c4d458fff0f06305b4b27083d4f5e992f66706f11c3df2d20",
+      "source_png_name": "exec-a014700e-2b8c-4041-8297-0c1fdea57f73.png"
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 3,
+      "ids": [
+        "lf_plant",
+        "lf_energy",
+        "lf_climate",
+        "lf_robot"
+      ],
+      "layout": [
+        2,
+        2
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-bf913854-727d-4289-a155-60c7acb51154.png",
+      "prompt": "Use case: scientific-educational. Production sheet of FOUR independent photorealistic Russian forestry educational pictures, strict 2 columns x 2 rows. Each tile landscape 3:2, equal size, overall 3:2, preferably 3072x2048. Thin straight white gutters, no outer border. Natural daylight, crisp detailed credible present-day equipment. Every tile has a full-width solid dark forest-green bottom band, large white bold readable Cyrillic EXACT caption specified; long captions on two lines as needed. No other text, no brands, fake figures or charts, no science fiction. Reading order:\nTOP LEFT: orderly forest nursery with seedling trays and rows of vigorous young pine trees, foreground forestry researcher inspecting healthy seedling roots with a tray of selected cones and seeds; mature seed orchard beyond. Show selective breeding and nursery practice, no magical DNA. Caption \"Плантационное лесовыращивание и генетика\".\nTOP RIGHT: modern pilot biomass gasification and pyrolysis plant: wood chips feeding enclosed reactor and insulated pipes, foreground samples of black torrefied pellets and sealed transparent glass vessel containing dark bio-oil. Clean realistic industrial setting, no uncontrolled flames. Caption \"Биоэнергетика нового поколения\".\nBOTTOM LEFT: forest carbon monitoring field station in young regenerating mixed woodland, researcher measuring a tree diameter, soil sample tubes and portable soil respiration chamber in foreground, flux monitoring mast in distant clearing. No invented credits, prices or emissions figures. Caption \"Климатические проекты и углерод\".\nBOTTOM RIGHT: automated sawmill hall, log passing through enclosed optical scanner, robot arm stacking sawn boards behind a safety fence, operator watching from protected control station; precise plausible industrial machinery, no humanoid robots. Caption \"Автоматизация заготовки и переработки\".",
+      "source_png_sha256": "a9bcec5a3a8bd1457ec06517a7dd0c4e690c40ace322b69c3b99c565506064fe",
+      "source_png_name": "exec-bf913854-727d-4289-a155-60c7acb51154.png"
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 4,
+      "ids": [
+        "im_1",
+        "im_2",
+        "im_3",
+        "im_4"
+      ],
+      "layout": [
+        2,
+        2
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-71d9afb1-a2a4-48a0-bb8e-436eff3f8516.png",
+      "prompt": "Use case: scientific-educational, photorealistic scenes for agroforestry cluster teaching app. Create FOUR independent illustrations in a strict 2x2 grid, equal landscape 3:2 tiles, overall 3:2 image, preferably 3072x2048. Thin white gutters, no outer border, every tile complete and separately croppable. Each tile has a dark forest-green caption band across its bottom with large white bold Cyrillic text EXACT specified, safely padded. No shared title or any other words/numbers/logos. Natural daylight, realistic Russian rural and industrial surroundings, no fantasy machinery, high texture detail. Reading order:\nTOP LEFT: elevated panoramic view of adjacent managed mixed forest and golden wheat fields divided by green shelterbelts, visible small willow plantation on marginal land and farm access road. Show land-use coexistence. Caption \"1. Земля: лес и поле рядом\".\nTOP RIGHT: broad landscape at boundary of forest and field: forestry forwarder carrying short logs on forest road to left, grain combine harvesting mature wheat to right, round straw bales behind in harvested field. Machines in separate appropriate work areas, no chainsaws near people. Caption \"2. Заготовка и уборка\".\nBOTTOM LEFT: working sawmill processing logs into sawn boards, neat lumber stacks, clean sawdust and wood shavings collected separately in bins for farm bedding, covered mill in background. Not burning waste. Caption \"3. Лесопиление и деревообработка\".\nBOTTOM RIGHT: bright clean dairy barn with healthy black-white cows on dry wood-shaving bedding, feed alley, daylight through large openings, enclosed manure collection channel distant. Clearly a farm receiving wood bedding, no wood waste in feed trough. Caption \"4. Фермы\".",
+      "source_png_sha256": "1b409f01fe6fed6bbc1694ea10778839f9800f46620d7938a3487731dc154a03",
+      "source_png_name": "exec-71d9afb1-a2a4-48a0-bb8e-436eff3f8516.png"
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 5,
+      "ids": [
+        "im_5",
+        "im_6",
+        "im_7",
+        "im_8"
+      ],
+      "layout": [
+        2,
+        2
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-52671ef8-e54a-41eb-bfae-1c81df08d6eb.png",
+      "prompt": "Use case: scientific-educational. FOUR independent photorealistic educational pictures about an agroforestry industrial cluster, strict 2 columns x 2 rows, equal landscape 3:2 tiles, overall 3:2 canvas preferably 3072x2048. Thin white gutters, no outer border, no shared headings. Natural daylight, real Russian contemporary industry, detailed plausible equipment. Every tile has full-width dark forest-green bottom caption bar, white large bold legible Cyrillic EXACT caption below. No other text or logos or numerical data. Keep processes comprehensible and distinct. Reading order:\nTOP LEFT: feed mill clean mixing and pelletizing hall. Foreground distinct small trays of grain, bran, green conifer vitamin meal, pale feed yeast powder and finished brown feed pellets; mixer and pellet press behind, bagged feed on pallet. NO raw wood chips or sawdust in feed. Caption \"5. Корма\".\nTOP RIGHT: agricultural raw materials processing for industrial inputs: clean starch and vegetable oil processing hall with stainless separators and tanks, foreground covered samples of fine white starch, soybeans and golden linseed oil in glass, plywood and paper samples at the far side showing intended use without arrows. Not just food shop. Caption \"6. Переработка сельхозсырья\".\nBOTTOM LEFT: pulp paper and wood panel production, spacious industrial hall with large paper roll winding machine and stacked particleboard panels visible; feedstock wood chips and straw in separate prepared bins at side, finished corrugated boxes and molded fiber egg trays in foreground. Credible production layout. Caption \"7. ЦБК и плитный завод\".\nBOTTOM RIGHT: common biomass and biogas energy center serving neighboring sawmill, farm and greenhouses; elevated exterior view of compact chip boiler house with chip bunker, covered biomass conveyor, two green biogas digesters, insulated district-heating pipes leading to greenhouse. No giant smokestacks or fossil fuel imagery. Caption \"8. Общий энергоцентр\".",
+      "source_png_sha256": "39b413116f65787c25d88e19fd8676d8dbe61e7fc2008f176f59f821cb6e4a0e",
+      "source_png_name": "exec-52671ef8-e54a-41eb-bfae-1c81df08d6eb.png"
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 6,
+      "ids": [
+        "im_9",
+        "im_10"
+      ],
+      "layout": [
+        1,
+        2
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-eab67329-b3c5-49fc-bd41-6295ad0074aa.png",
+      "prompt": "Use case: photorealistic-natural, educational agroforestry. Generate TWO independent landscape 3:2 illustrations stacked VERTICALLY in one portrait 3:4 canvas, ideally 1536x2048. One column, exactly two equal tiles, thin straight white horizontal gutter, no outer frame, no shared title. Each tile full image then full-width solid dark forest-green bottom caption bar with large white bold Cyrillic text EXACT as below. Natural Russian rural daylight, detailed credible materials, no other text, labels, arrows, logos or numerical claims.\nTOP TILE: return of prepared organic material to soil and forest: tractor with compost spreader applying mature dark crumbly compost on a harvested field beside young forest nursery rows; foreground gloved hand holds finished compost over rich soil with a healthy young pine seedling growing nearby, compost windrows at safe distance beyond. Do not show untreated manure dumped in natural forest, raw sludge or excessive ash. Caption \"9. Возврат в почву и лес\".\nBOTTOM TILE: broad, elegant realistic product display in an agroforestry cluster shipping warehouse with open doors to rural landscape. Wood boards, plywood panels, kraft paper roll, sacks of pellets, crates of wheat and greenhouse tomatoes, milk in clear glass bottles, mushrooms, jar of honey, bag of finished compost placed separately from foods. Distinct items clean and naturally arranged, no labels or logos, no fake packaging writing. Convey diverse forestry plus agricultural outputs. Caption \"10. Продукция кластера\".",
+      "source_png_sha256": "66f16aa75fbdc40e22987a4aa196bd8d67d550df4d256b81ae9d80ded8e315c7",
+      "source_png_name": "exec-eab67329-b3c5-49fc-bd41-6295ad0074aa.png"
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 7,
+      "ids": [
+        "gl_res",
+        "gl_prod",
+        "gl_proc",
+        "ga_res"
+      ],
+      "layout": [
+        2,
+        2
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-f743f1be-6722-4786-a911-43d747c8a359.png",
+      "prompt": "Use case: photorealistic-natural educational section covers. FOUR independent detailed photographs/realistic editorial compositions in strict 2x2 equal tile grid. Each tile landscape 3:2, whole image 3:2 preferably 3072x2048. Thin white gutters, no outer border, every tile own full-width dark forest-green bottom title bar with exact large white bold Cyrillic captions below. Long captions wrap into two lines, no omitted words, generous padding. No text elsewhere, no logos or fake figures. Russian setting, natural light. Reading order:\nTOP LEFT: diverse Russian forest resource base, mature pine and spruce stand adjoining birch and oak, foreground neatly arranged identifiable pine cone, spruce cone, birch leaf and oak leaf with acorn, a few clean wood cross-section samples on wooden survey table. Diverse species not all identical conifers. Caption \"Ресурсы ЛПК: лес и древесные породы\".\nTOP RIGHT: coherent wide landscape with successive forest management areas at different stages: foreground forester in safety vest with survey map marking a standing boundary tree, midground managed logging compartment with forwarder on designated road, adjoining young restored conifer plantation clearly visible to right; no workers beside active felling. Illustrates survey, harvest and regeneration in one landscape, no arrows. Caption \"Производство сырья: от отвода до восстановления\".\nBOTTOM LEFT: spacious contemporary wood processing workshop with log-to-board sawline in background, kiln doors to side, foreground lumber, plywood, planed moldings and wooden furniture components neatly arranged. Clear real wood textures. Caption \"Переработка древесины\".\nBOTTOM RIGHT: realistic broad farm landscape wheat and sunflower fields behind a barn, small healthy group of dairy cows, sheep and hens in separated appropriate paddocks; foreground crates of potato, wheat ears and sunflower heads. Convey crop and livestock resource diversity, natural proportions, no oversized animals. Caption \"Ресурсы АПК: культуры и животные\".",
+      "source_png_sha256": "48bd52d7faeb38ddec48bc608272b8378e6af3b5925865c9da4f7357791b5418",
+      "source_png_name": "exec-f743f1be-6722-4786-a911-43d747c8a359.png"
+    },
+    {
+      "supplement": "2026-10-24-new-sections",
+      "generation": 8,
+      "ids": [
+        "ga_proc",
+        "gm_proc",
+        "gm_tech",
+        "gm_mkt"
+      ],
+      "layout": [
+        2,
+        2
+      ],
+      "source": "/workspace/scratch/ae2f773d4703/generated_images/exec-f54189f1-f507-4bfb-ad2d-f3c3aae2bf32.png",
+      "prompt": "Use case: photorealistic-natural educational section covers. FOUR independent meaningful illustrations in strict 2 columns x 2 rows, equal landscape 3:2 tiles, whole canvas 3:2 preferably 3072x2048. Thin white gutters, no outer frame. Each tile has own dark forest-green full-width bottom title band, white large bold legible Cyrillic caption EXACT specified, at least 5 percent side padding and wrap long text to two lines if needed. No shared title, no other text, no fake numbers, branding or watermarks. Contemporary credible Russian settings, natural daylight and highly detailed materials. Reading order:\nTOP LEFT: overview of agricultural processing food factory with stainless dairy and food tanks in clean hall; foreground tidy product table with flour in bowl, bottled milk, cheese, vegetable oil, bread and preserved vegetable jars, grains and raw potatoes as smaller inputs. No writing on packaging. Broad food and raw material processing. Caption \"Переработка сельхозсырья\".\nTOP RIGHT: joint processing of wood and agricultural residues, realistic bio-composite workshop, separately collected sawdust, wood fibers and chopped straw on workbench, finished pressed composite board samples and paper packaging, enclosed hot press and mixing equipment behind. Clearly combines agricultural and forest materials rather than only a log sawmill. Caption \"Совместная переработка\".\nBOTTOM LEFT: shared agroforestry equipment and energy yard: wheeled agricultural tractor with forestry log trailer and grapple parked safely, compact wood chipper separately, biomass boiler house with conveyor and insulated heating pipes, farm and forest in background. No hybrid impossible machine. Caption \"Общая техника и энергетика\".\nBOTTOM RIGHT: organizational planning and economics of local agroforestry cluster: three professionals, forestry manager and farmer with logistics specialist, discussing paper site map and unbranded laptop at a clean wooden table overlooking farm and sawmill; clipboard, calculator, small samples of grain and wood pellets show costs, logistics and agreements. Screens/maps contain only unlabeled shapes without invented prices or figures, no handshakes or currency piles. Caption \"Экономика, риски и организация\".",
+      "source_png_sha256": "fe0742bc1967e309ffa2f9aa30e956564e297fd8dd075b216cf31700971569ee",
+      "source_png_name": "exec-f54189f1-f507-4bfb-ad2d-f3c3aae2bf32.png"
+    }
+  ],
+  "supplemental_queues": [
+    {
+      "id": "2026-10-24-new-sections",
+      "source": "User request: 9 forestry prospects, 10 cluster stages, 8 section covers",
+      "source_commit": "abf03e89a54907007a88ab0073b5d8efdc475455",
+      "positions": 27,
+      "queue_range": [
+        1257,
+        1283
+      ],
+      "canvases": 8
     }
   ]
 }
