@@ -44,7 +44,7 @@ def run():
             for j,key in enumerate(keys):
                 log("Printing",group,j+1,"/",len(keys),key)
                 page.locator('[data-chapter="'+key+'"]').click(timeout=60000)
-                page.wait_for_function("(key)=>document.body.dataset.activeChapter===key",key,timeout=30000)
+                page.wait_for_function("(key)=>document.body.dataset.activeChapter===key",arg=key,timeout=30000)
                 page.evaluate("""() => {document.querySelectorAll('img').forEach(i=>{i.loading='eager';i.decoding='sync'});window.scrollTo(0,0)}""")
                 nimgs=page.locator("#chapters img").count()
                 # Decode loaded figures in batches, even if lazy attributes existed previously.
@@ -63,7 +63,7 @@ def run():
                          margin={"top":"15mm","right":"15mm","bottom":"17mm","left":"15mm"},
                          display_header_footer=True,header_template="<span></span>",
                          footer_template='<div style="font-size:8px; width:100%;text-align:right;padding:0 15mm;color:#667266"><span class="pageNumber"></span></div>',
-                         timeout=180000)
+                         )
                 n=PdfReader(file)
                 files.append(file)
                 log(" Done",len(n.pages),"pages,",nimgs,"images,",round(file.stat().st_size/1024/1024,2),"MiB")
