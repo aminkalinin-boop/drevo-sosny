@@ -198,3 +198,29 @@ body[data-sector="apk"] .landscape::before,body[data-sector="apk"] .landscape::a
 body[data-sector="mix"] .landscape::before,body[data-sector="mix"] .landscape::after,body[data-sector="mix"] .landscape-floor{display:none}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body:not([data-sector="ref"]) .landscape{opacity:.16}}
 :root[data-theme="dark"] body:not([data-sector="ref"]) .landscape{opacity:.16}
+
+/* Новые отрасли: палитры и фон */
+body[data-sector="lgt"]{--bg:#f6f3f8;--panel:#fffeff;--fg:#352c3f;--muted:#6f6579;--line:#e3dcea;--head:#5b3f7a;--head-fg:#fff;--accent:#8a5a9a;--hl:#efe7f5;--nav-path:#7a5a9c;--nav-soft:#efe7f5;--nav-active:#4f346d;background:linear-gradient(160deg,#f3eef7 0%,#f8f5f9 55%,#efe6f2 100%);background-attachment:fixed}
+body[data-sector="fod"]{--bg:#faf3ef;--panel:#fffdfb;--fg:#40291f;--muted:#7a6155;--line:#ecdcd3;--head:#8a3d22;--head-fg:#fff;--accent:#a8562f;--hl:#f6e6dc;--nav-path:#ad5a36;--nav-soft:#f6e6dc;--nav-active:#73311a;background:linear-gradient(160deg,#f9ece4 0%,#fbf6f2 55%,#f4e3d6 100%);background-attachment:fixed}
+body[data-sector="fsh"]{--bg:#eff5f7;--panel:#fcfeff;--fg:#1f3540;--muted:#5d7380;--line:#d4e3ea;--head:#1f5f7a;--head-fg:#fff;--accent:#2f7f9c;--hl:#e1eef3;--nav-path:#2f7f9c;--nav-soft:#e1eef3;--nav-active:#174b61;background:linear-gradient(170deg,#e6f1f5 0%,#f2f7f9 50%,#dcebf1 100%);background-attachment:fixed}
+body[data-sector="nrg"]{--bg:#f8f3ec;--panel:#fffdf9;--fg:#3c2c19;--muted:#76644d;--line:#eaddc9;--head:#7a4a14;--head-fg:#fff;--accent:#b0661c;--hl:#f5e7d2;--nav-path:#a8661f;--nav-soft:#f5e7d2;--nav-active:#653c0f;background:linear-gradient(160deg,#f6ead9 0%,#faf6f0 55%,#efe3d2 100%);background-attachment:fixed}
+body[data-sector="wld"]{--bg:#f7f1f2;--panel:#fffdfd;--fg:#3b2529;--muted:#765f64;--line:#eadadd;--head:#6b2f3f;--head-fg:#fff;--accent:#9a4a5e;--hl:#f3e4e8;--nav-path:#94475b;--nav-soft:#f3e4e8;--nav-active:#592534;background:linear-gradient(160deg,#f3e6ea 0%,#f9f5f5 55%,#e9eee3 100%);background-attachment:fixed}
+body[data-sector="lgt"] .landscape,body[data-sector="fod"] .landscape,body[data-sector="fsh"] .landscape,body[data-sector="nrg"] .landscape,body[data-sector="wld"] .landscape{display:none}
+
+/* Тёмная тема новых отраслей */
+@media(prefers-color-scheme:dark){
+:root:not([data-theme="light"]) body[data-sector="lgt"]{--bg:#211c27;--panel:#2a2332;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#c9b3e3;--head-fg:#1d171b;--nav-soft:#2a2332;--nav-path:#8e6bb5;--nav-active:#8e6bb5;--accent:#c9b3e3;--hl:#3a3036;background:var(--bg)}
+:root:not([data-theme="light"]) body[data-sector="fod"]{--bg:#261d18;--panel:#30251f;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#efb69a;--head-fg:#1d171b;--nav-soft:#30251f;--nav-path:#c0714b;--nav-active:#c0714b;--accent:#efb69a;--hl:#3a3036;background:var(--bg)}
+:root:not([data-theme="light"]) body[data-sector="fsh"]{--bg:#16222a;--panel:#1c2b34;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#9fd0e6;--head-fg:#1d171b;--nav-soft:#1c2b34;--nav-path:#4f9bbd;--nav-active:#4f9bbd;--accent:#9fd0e6;--hl:#3a3036;background:var(--bg)}
+:root:not([data-theme="light"]) body[data-sector="nrg"]{--bg:#251f17;--panel:#2f271d;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#ecc48c;--head-fg:#1d171b;--nav-soft:#2f271d;--nav-path:#c08436;--nav-active:#c08436;--accent:#ecc48c;--hl:#3a3036;background:var(--bg)}
+:root:not([data-theme="light"]) body[data-sector="wld"]{--bg:#251a1d;--panel:#2f2225;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#e6aab9;--head-fg:#1d171b;--nav-soft:#2f2225;--nav-path:#b36378;--nav-active:#b36378;--accent:#e6aab9;--hl:#3a3036;background:var(--bg)}
+}
+:root[data-theme="dark"] body[data-sector="lgt"]{--bg:#211c27;--panel:#2a2332;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#c9b3e3;--head-fg:#1d171b;--nav-soft:#2a2332;--nav-path:#8e6bb5;--nav-active:#8e6bb5;--accent:#c9b3e3;--hl:#3a3036;background:var(--bg)}
+:root[data-theme="dark"] body[data-sector="fod"]{--bg:#261d18;--panel:#30251f;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#efb69a;--head-fg:#1d171b;--nav-soft:#30251f;--nav-path:#c0714b;--nav-active:#c0714b;--accent:#efb69a;--hl:#3a3036;background:var(--bg)}
+:root[data-theme="dark"] body[data-sector="fsh"]{--bg:#16222a;--panel:#1c2b34;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#9fd0e6;--head-fg:#1d171b;--nav-soft:#1c2b34;--nav-path:#4f9bbd;--nav-active:#4f9bbd;--accent:#9fd0e6;--hl:#3a3036;background:var(--bg)}
+:root[data-theme="dark"] body[data-sector="nrg"]{--bg:#251f17;--panel:#2f271d;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#ecc48c;--head-fg:#1d171b;--nav-soft:#2f271d;--nav-path:#c08436;--nav-active:#c08436;--accent:#ecc48c;--hl:#3a3036;background:var(--bg)}
+:root[data-theme="dark"] body[data-sector="wld"]{--bg:#251a1d;--panel:#2f2225;--fg:#ece6ea;--muted:#b8adb3;--line:#4a4048;--head:#e6aab9;--head-fg:#1d171b;--nav-soft:#2f2225;--nav-path:#b36378;--nav-active:#b36378;--accent:#e6aab9;--hl:#3a3036;background:var(--bg)}
+
+/* Девять блоков в шапке: переключатель занимает отдельную строку и переносится */
+header.top .sector{grid-column:1/-1;grid-row:auto;flex-wrap:wrap;gap:2px;justify-content:flex-start}
+@media(max-width:700px){header.top .sector button{padding:7px 8px;font-size:.74rem}}
