@@ -12,7 +12,7 @@ R = {
    notes={'RU-IVA': 'Иваново — исторический «ситцевый край», центр хлопчатобумажной промышленности и швейного производства.',
           'RU-TVE': 'Тверская область — главный льноводческий регион.', 'RU-STA': 'Ставрополье — центр тонкорунного овцеводства.'}),
  'fod': dict(pal=['#f3ebe7', '#e3b8a6', '#c06f4f', '#8a3d22'], layers=[
-   ['Пищевая промышленность в целом', LEG, L('MOW=3 MOS=3 KDA=3 BEL=3 SPE=2 LEN=2 VOR=2 ROS=2 TA=2 BA=2 KRS=2 LIP=2 BRY=2 TAM=1 NVS=1 SVE=1 NIZ=1 SAM=1 KLU=1 TUL=1 ALT=1 OMS=1 CHE=1 PNZ=1 ORL=1 STA=1 KGD=1 SAR=1 VGG=1')],
+   ['Всё производство', LEG, L('MOW=3 MOS=3 KDA=3 BEL=3 SPE=2 LEN=2 VOR=2 ROS=2 TA=2 BA=2 KRS=2 LIP=2 BRY=2 TAM=1 NVS=1 SVE=1 NIZ=1 SAM=1 KLU=1 TUL=1 ALT=1 OMS=1 CHE=1 PNZ=1 ORL=1 STA=1 KGD=1 SAR=1 VGG=1')],
    ['Масложировая', LEG, L('KDA=3 ROS=3 BEL=2 VOR=2 SAR=2 SAM=2 KGD=2 AMU=2 VGG=1 STA=1 ALT=1 ORE=1 NVS=1 KRS=1 TAM=1 LIP=1 PNZ=1')],
    ['Сахарная', LEG, L('KRS=3 LIP=3 TAM=3 VOR=3 KDA=3 BEL=2 ORL=2 PNZ=2 TA=2 BA=2 BRY=1 STA=1 ALT=1 MO=1 ULY=1')],
    ['Мука, крупы, хлеб', LEG, L('ALT=3 ROS=2 KDA=2 MOW=2 MOS=2 OMS=2 NVS=2 SAR=2 STA=2 VGG=1 ORE=1 KGN=1 CHE=1 SAM=1 TA=1 VOR=1')],
@@ -41,6 +41,19 @@ R = {
    ['Оленеводство', LEG, L('YAN=3 NEN=3 CHU=3 SA=3 MUR=2 KAM=2 MAG=2 KYA=2 KHM=1 KO=1 TY=1 BU=1 KHA=1 ZAB=1')]],
    notes={'RU-YAN': 'Ямал — крупнейшее в мире стадо домашних северных оленей.', 'RU-TOM': 'Томская область — один из центров заготовки кедрового ореха, ягод и грибов.'}),
 }
+# перестройка: пищевая и рыба → АПК, дикоросы и охота → ЛПК (оленеводство → АПК), биоэнергетика → межотраслевой блок
+def take(sec, prefix, skip=()):
+    out=[]
+    for nm, leg, lv in R[sec]['layers']:
+        if nm in skip: continue
+        out.append([prefix + nm[0].lower() + nm[1:], leg, lv])
+    return out
+deer=[l for l in R['wld']['layers'] if l[0]=='Оленеводство']
+NEW={'lgt': R['lgt'],
+ 'apk': dict(layers=take('fod','Пищевая: ')+take('fsh','Рыба: ')+deer, notes={**R['fod']['notes'],**R['fsh']['notes'],'RU-YAN':R['wld']['notes']['RU-YAN']}),
+ 'lpk': dict(layers=take('wld','Дикоросы и охота: ',('Оленеводство',)), notes={'RU-TOM':R['wld']['notes']['RU-TOM']}),
+ 'mix': dict(layers=take('nrg','Биоэнергетика: '), notes=R['nrg']['notes'])}
+R=NEW
 for s in R.values():
     for l in s['layers']: l[1] = LEG
 js = '/* Сгенерировано data_src/regions2.py — слои карты «Регионы» для новых отраслей */\nwindow.RG2=' + json.dumps(R, ensure_ascii=False) + ';\n'

@@ -9,7 +9,7 @@
 <marker id="mdata" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#5b3f86"/></marker>
 </defs>
 <rect width="1568" height="832" fill="#fbfbf8"/>
-<text x="16" y="26" font-size="19" font-weight="700" fill="#1d2a22">Связи семи отраслей: кто чем снабжает соседей</text>
+<text x="16" y="26" font-size="19" font-weight="700" fill="#1d2a22">Как связаны отрасли: кто чем снабжает соседей</text>
 <rect x="8" y="39.0" width="1552" height="202.0" rx="10" fill="#eef5ea" stroke="#d8dbd2"/>
 <text transform="translate(25,140.0) rotate(-90)" font-size="11.5" font-weight="700" fill="#6b7469" text-anchor="middle" letter-spacing=".6">СЫРЬЕВЫЕ ОТРАСЛИ</text>
 <rect x="8" y="247.0" width="1552" height="306.0" rx="10" fill="#eaf0f7" stroke="#d8dbd2"/>
