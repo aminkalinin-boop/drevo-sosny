@@ -16,3 +16,15 @@ var d=N.an_deer;if(d){d.c=d.c||[];["wl_deer","wl_p_herd"].forEach(function(k){if
 /* карты: тексты регионов переносятся в карты ЛПК, АПК и межотраслевого блока */
 [["rg_fod","rg_apk"],["rg_fsh","rg_apk"],["rg_wld","rg_lpk"],["rg_nrg","rg_tek"]].forEach(function(x){var a=N[x[0]],b=N[x[1]];if(a&&b)b.f=(b.f||[]).concat(a.f||[]);delete N[x[0]]});
 })();
+
+/* «Связи»: разделы пар отраслей собирают ранее описанные карточки */
+(function(){var N=window.N;function put(sec,ids,front){var p=N[sec];if(!p)return;p.c=p.c||[];ids.forEach(function(k){if(!N[k])return;Object.keys(N).forEach(function(q){var c=N[q].c;if(q!==sec&&c){var i=c.indexOf(k);if(i>=0)c.splice(i,1)}});if(p.c.indexOf(k)<0){front?p.c.unshift(k):p.c.push(k)}})}
+put("mx_ka_now",["mx_land","mx_root","gm_proc","gm_tech","gm_mkt","mx_n_pack"]);
+put("mx_p_ka",["mx_theory"]);if(N.mx_theory)N.mx_theory.t="В теории";
+put("mx_ll_now",["mx_n_tannin","mx_n_visc"],true);
+put("mx_tl_now",["mx_n_peat","mx_n_berryplant"]);
+put("mx_la_now",["mx_n_fur","mx_n_agrotex","mx_n_flax"],true);
+put("mx_ta_now",["mx_n_foodwaste","mx_n_heat"]);
+put("mx_cmp",["mx_all"],true);
+if(N.mx_uis)N.mx_uis.ln=(N.mx_uis.ln||[]).concat(["tl_uis","te_uis","pf_uis"].filter(function(k){return N[k]}));
+})();
