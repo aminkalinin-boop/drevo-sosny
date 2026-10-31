@@ -28,7 +28,8 @@ def parse(path):
             if k == 'g':
                 t, _, d = v.partition(' = ')
                 assert d, f'{path}:{no} словарь без «=»'
-                G[t.strip().lower()] = d.strip()
+                d = d.strip(); d = d[0].upper() + d[1:]
+                G[t.strip().lower()] = d if d.endswith('.') else d + '.'
                 continue
             assert last, f'{path}:{no} свойство без узла'
             n = N[last]
