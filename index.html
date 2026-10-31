@@ -152,7 +152,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 @media (min-width:1001px){.treebtn{display:none}}
 .mapbox{background:#f7f8f4;border:1px solid var(--line);border-radius:12px;padding:6px;margin:8px 0}.mapbox{overflow:auto;-webkit-overflow-scrolling:touch}.mapbox svg{height:auto;display:block;max-width:none}.mapzoom{display:flex;align-items:center;gap:8px;margin-top:6px}.mapzoom small{color:var(--muted,#666)}path.rg{stroke:#5b6158;stroke-width:.6;cursor:pointer}path.rg:hover{stroke:#000;stroke-width:1.4}path.rg.sel{stroke:#c0392b;stroke-width:2}.maplegend{display:flex;flex-wrap:wrap;gap:10px;font-size:.85rem;margin:4px 0 8px}.maplegend i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:5px;vertical-align:-2px;border:1px solid var(--line)}.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}.mapinfo{border-left:3px solid var(--accent);padding:4px 12px;margin:6px 0}
 </style>
-<link rel="stylesheet" href="redesign.css?v=32">
+<link rel="stylesheet" href="redesign.css?v=33">
 <style>/* Footer credits and notes use black in every sector. */
 .foot,.foot *{color:#000!important}
 </style>
@@ -215,10 +215,13 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script charset="utf-8" src="ind_nrg.js"></script>
 <script charset="utf-8" src="ind_wld.js"></script>
 <script charset="utf-8" src="mix_extra.js"></script>
-<script charset="utf-8" src="flows2.js"></script>
 <script charset="utf-8" src="cal.js"></script>
-<script charset="utf-8" src="calpics.js"></script>
 <script charset="utf-8" src="assets13.js"></script>
+<script charset="utf-8" src="ind_tek.js"></script>
+<script charset="utf-8" src="mix_pairs.js"></script>
+<script charset="utf-8" src="cmppics.js"></script>
+<script charset="utf-8" src="flows2.js"></script>
+<script charset="utf-8" src="calpics.js"></script>
 <script charset="utf-8" src="flows.js"></script>
 <script charset="utf-8" src="merge.js"></script>
 <script charset="utf-8" src="enrich.js"></script>
@@ -264,6 +267,20 @@ const SCH=[
  {id:"lgtfut",t:"Перспективы",root:"tl_fut",sec:"lgt"},
  {id:"lgtcyc",t:"Идеальный цикл",root:"tl_cyc",sec:"lgt"},
  {id:"lgtreg",t:"Регионы",root:"rg_lgt",sec:"lgt"},
+ {id:"tekres",t:"Ресурсы",root:"te_res",sec:"tek"},
+ {id:"tekprod",t:"Производство",root:"te_prod",sec:"tek"},
+ {id:"tekcal",t:"Календарь",root:"te_cal",sec:"tek"},
+ {id:"tekproc",t:"Переработка",root:"te_proc",sec:"tek"},
+ {id:"tektech",t:"Техника",root:"te_tech",sec:"tek"},
+ {id:"tekmkt",t:"Рынок",root:"te_mkt",sec:"tek"},
+ {id:"teklaw",t:"Право",root:"te_law",sec:"tek"},
+ {id:"tekkad",t:"Кадры",root:"te_kad",sec:"tek"},
+ {id:"tekuis",t:"УИС",root:"te_uis",sec:"tek"},
+ {id:"tekeco",t:"Экология и риски",root:"te_eco",sec:"tek"},
+ {id:"tekfut",t:"Перспективы",root:"te_fut",sec:"tek"},
+ {id:"tekcyc",t:"Идеальный цикл",root:"te_cyc",sec:"tek"},
+ {id:"tekreg",t:"Регионы",root:"rg_tek",sec:"tek"},
+ {id:"mcmp",t:"Сравнение отраслей",root:"mx_cmp",sec:"mix"},
  {id:"mres",t:"Ресурсы",root:"mx_land",sec:"mix"},
  {id:"mprod",t:"Обмен продукцией",root:"mx_root",sec:"mix"},
  {id:"mproc",t:"Переработка",root:"gm_proc",sec:"mix"},
@@ -274,8 +291,8 @@ const SCH=[
  {id:"mcyc",t:"Идеальный цикл",root:"im_root",sec:"mix"},
  {id:"mreg",t:"Регионы",root:"rg_mix",sec:"mix"}
 ];
-const SECS={lpk:"Лесопромышленный комплекс",apk:"Агропромышленный комплекс",lgt:"Лёгкая промышленность",mix:"Межотраслевое взаимодействие",ref:"Словарь и тест"};const SECSH={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая промышленность",mix:"Межотраслевое",ref:"Словарь и тест"};
-const SECICON={lpk:"forest",apk:"wheat",lgt:"spool",mix:"branches",ref:"book"},SECSHORT={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая",mix:"Связи",ref:"Словарь и тест"},SECCOL={lpk:"#234c38",apk:"#80591e",lgt:"#5b3f7a",mix:"#465c35",ref:"#475785"};let sector="lpk";
+const SECS={lpk:"Лесопромышленный комплекс",apk:"Агропромышленный комплекс",lgt:"Лёгкая промышленность",tek:"Топливно-энергетический комплекс",mix:"Межотраслевое взаимодействие",ref:"Словарь и тест"};const SECSH={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая промышленность",tek:"ТЭК",mix:"Межотраслевое",ref:"Словарь и тест"};
+const SECICON={lpk:"forest",apk:"wheat",lgt:"spool",tek:"bolt",mix:"branches",ref:"book"},SECSHORT={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая",tek:"ТЭК",mix:"Связи",ref:"Словарь и тест"},SECCOL={lpk:"#234c38",apk:"#80591e",lgt:"#5b3f7a",tek:"#2f4858",mix:"#465c35",ref:"#475785"};let sector="lpk";
 const EXTRA=[{id:"gloss",t:"Словарь",sec:"ref"},{id:"quiz",t:"Тест",sec:"ref"}];
 /* связи */
 const P={};Object.keys(N).forEach(id=>(N[id].c||[]).forEach(c=>{if(!P[c])P[c]=id}));
