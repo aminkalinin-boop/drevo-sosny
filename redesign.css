@@ -224,3 +224,10 @@ body[data-sector="lgt"] .landscape,body[data-sector="fod"] .landscape,body[data-
 /* Девять блоков в шапке: переключатель занимает отдельную строку и переносится */
 header.top .sector{grid-column:1/-1;grid-row:auto;flex-wrap:wrap;gap:2px;justify-content:flex-start}
 @media(max-width:700px){header.top .sector button{padding:7px 8px;font-size:.74rem}}
+
+/* Акварельный фон лёгкой промышленности */
+body[data-sector="lgt"] .landscape{display:block;background:url('bg_lgt.webp') center bottom/cover no-repeat;mix-blend-mode:normal;opacity:1;mask-image:none}
+body[data-sector="lgt"] .landscape::before,body[data-sector="lgt"] .landscape::after,body[data-sector="lgt"] .landscape-floor{display:none}
+body[data-sector="lgt"]{background:var(--bg)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body[data-sector="lgt"] .landscape{opacity:.16}}
+:root[data-theme="dark"] body[data-sector="lgt"] .landscape{opacity:.16}
