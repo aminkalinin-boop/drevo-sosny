@@ -237,3 +237,17 @@ body[data-sector="tek"]{--bg:#f1f4f6;--panel:#fdfefe;--fg:#22303a;--muted:#5d6b7
 body[data-sector="tek"] .landscape{display:none}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body[data-sector="tek"]{--bg:#161d22;--panel:#1d262c;--fg:#e6ebee;--muted:#a9b5bd;--line:#3c4a54;--head:#a9c6d8;--head-fg:#14202a;--nav-soft:#1d262c;--nav-path:#d99a45;--nav-active:#d99a45;--accent:#d99a45;--hl:#2a3740;background:var(--bg)}}
 :root[data-theme="dark"] body[data-sector="tek"]{--bg:#161d22;--panel:#1d262c;--fg:#e6ebee;--muted:#a9b5bd;--line:#3c4a54;--head:#a9c6d8;--head-fg:#14202a;--nav-soft:#1d262c;--nav-path:#d99a45;--nav-active:#d99a45;--accent:#d99a45;--hl:#2a3740;background:var(--bg)}
+
+/* Стрелки древа: рисуются линиями, а не символами шрифта — ровно по центру при любом шрифте */
+.tree-toggle{width:20px;height:20px;font-size:0!important;line-height:0;padding:0;margin:0 2px}
+.tree-toggle:not(.empty)::before{content:"";width:5px;height:5px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateX(-1px) rotate(-45deg);transition:transform .15s}
+.tree-toggle[aria-expanded="true"]::before{transform:translateY(-1px) rotate(45deg)}
+.tree-toggle.empty{width:7px;height:7px;margin-inline:8.5px;border:0;background:var(--line)}
+.tree-row.selected>.tree-toggle.empty{background:var(--nav-text)}
+
+/* Акварельный фон ТЭК */
+body[data-sector="tek"] .landscape{display:block;background:url('bg_tek.webp') center bottom/cover no-repeat;mix-blend-mode:normal;opacity:1;mask-image:none}
+body[data-sector="tek"] .landscape::before,body[data-sector="tek"] .landscape::after,body[data-sector="tek"] .landscape-floor{display:none}
+body[data-sector="tek"]{background:var(--bg)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body[data-sector="tek"] .landscape{opacity:.16}}
+:root[data-theme="dark"] body[data-sector="tek"] .landscape{opacity:.16}
