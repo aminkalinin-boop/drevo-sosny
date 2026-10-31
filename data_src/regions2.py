@@ -52,7 +52,14 @@ deer=[l for l in R['wld']['layers'] if l[0]=='Оленеводство']
 NEW={'lgt': R['lgt'],
  'apk': dict(layers=take('fod','Пищевая: ')+take('fsh','Рыба: ')+deer, notes={**R['fod']['notes'],**R['fsh']['notes'],'RU-YAN':R['wld']['notes']['RU-YAN']}),
  'lpk': dict(layers=take('wld','Дикоросы и охота: ',('Оленеводство',)), notes={'RU-TOM':R['wld']['notes']['RU-TOM']}),
- 'mix': dict(layers=take('nrg','Биоэнергетика: '), notes=R['nrg']['notes'])}
+ 'tek': dict(pal=['#e9eef1', '#b7c7d1', '#6f8fa3', '#2f4858'], layers=[
+   ['Нефть', LEG, L('KHM=3 YAN=2 TA=2 BA=1 ORE=2 SAM=1 TYU=1 TOM=1 IRK=2 SA=2 KYA=2 NEN=2 KO=2 PER=2 UD=2 SAK=2 AST=1 VGG=1 KGD=1 CE=1 SAR=1 KDA=1 STA=1')],
+   ['Газ', LEG, L('YAN=3 KHM=1 ORE=2 AST=2 SA=1 IRK=1 SAK=2 TOM=1 KO=1 KYA=1 KDA=1 VGG=1')],
+   ['Уголь', LEG, L('KEM=3 KYA=2 SA=2 KHA=1 ZAB=2 BU=1 KK=2 IRK=1 AMU=1 PRI=1 ROS=1 KO=1 TY=1 CHU=1 SAK=1 NVS=1')],
+   ['Крупные электростанции: АЭС, ГЭС, ГРЭС', LEG, L('LEN=3 VOR=2 KRS=2 ROS=2 TVE=2 SMO=2 SAR=2 SVE=2 MUR=2 CHU=1 KYA=3 IRK=3 KK=3 SAM=2 VGG=2 AMU=2 KHM=2 MOW=2 MOS=1 TA=1 PER=1 KOS=2 RYA=1 KGD=1')],
+   ['Нефтепереработка', LEG, L('OMS=3 BA=3 LEN=2 NIZ=2 TA=2 SAM=2 PER=2 VGG=2 KDA=2 IRK=2 KHA=2 RYA=2 MOW=2 YAR=1 ROS=1 KO=1 ORE=1 SAR=1 TYU=1 KYA=1')]]
+   + take('nrg','Биоэнергетика: '),
+   notes={**R['nrg']['notes'], 'RU-KHM':'Югра — главный нефтедобывающий регион России, здесь же крупнейшие тепловые электростанции (Сургутские ГРЭС).', 'RU-YAN':'Ямал — основная добыча газа и центр производства СПГ.', 'RU-KEM':'Кузбасс — около половины добычи угля в России.', 'RU-KK':'Хакасия — Саяно-Шушенская ГЭС, крупнейшая электростанция России.', 'RU-OMS':'Омский НПЗ — один из крупнейших нефтеперерабатывающих заводов страны.'})}
 R=NEW
 for s in R.values():
     for l in s['layers']: l[1] = LEG

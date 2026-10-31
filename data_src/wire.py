@@ -6,7 +6,7 @@ def main(files):
     for f in files:
         tag = f'<script charset="utf-8" src="{f}"></script>'
         if tag not in s:
-            s = s.replace('<script charset="utf-8" src="flows.js"></script>', tag + '\n<script charset="utf-8" src="flows.js"></script>', 1)
+            s = s.replace('<script charset="utf-8" src="flows2.js"></script>', tag + '\n<script charset="utf-8" src="flows2.js"></script>', 1)
     open(p, 'w', encoding='utf-8').write(s)
     p = os.path.join(R, 'sw.js'); w = open(p, encoding='utf-8').read()
     for f in files:

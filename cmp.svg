@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 696" width="1180" height="696" font-family="PT Sans, Arial, sans-serif">
+<rect width="1180" height="696" fill="#fbfbf8"/>
+<text x="16" y="30" font-size="20" font-weight="700" fill="#1d2a22">Сравнение отраслей</text>
+<text x="16" y="52" font-size="13" fill="#666">Чем насыщеннее цвет ячейки, тем сильнее выражен признак</text>
+<rect x="213" y="60" width="232" height="24" rx="5" fill="#2f6b3a"/><text x="329" y="77" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">ЛПК</text>
+<rect x="450" y="60" width="232" height="24" rx="5" fill="#8a5a12"/><text x="566" y="77" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">АПК</text>
+<rect x="688" y="60" width="232" height="24" rx="5" fill="#5b3f7a"/><text x="804" y="77" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">Лёгкая промышленность</text>
+<rect x="926" y="60" width="232" height="24" rx="5" fill="#2f4858"/><text x="1041" y="77" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">ТЭК</text>
+<rect x="10" y="88" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="120" font-size="13.5" font-weight="700" fill="#333">Что производит</text>
+<rect x="213" y="88" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="329" y="112" font-size="13" fill="#222" text-anchor="middle">древесина, бумага, плиты,</text>
+<text x="329" y="128" font-size="13" fill="#222" text-anchor="middle">лесохимия</text>
+<rect x="450" y="88" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="566" y="120" font-size="13" fill="#222" text-anchor="middle">продовольствие, корма, сырьё</text>
+<rect x="688" y="88" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="804" y="120" font-size="13" fill="#222" text-anchor="middle">ткани, одежда, обувь, кожа</text>
+<rect x="926" y="88" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="1041" y="112" font-size="13" fill="#222" text-anchor="middle">топливо, электроэнергия,</text>
+<text x="1041" y="128" font-size="13" fill="#222" text-anchor="middle">тепло</text>
+<rect x="10" y="146" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="178" font-size="13.5" font-weight="700" fill="#333">Сырьё</text>
+<rect x="213" y="146" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="329" y="170" font-size="13" fill="#222" text-anchor="middle">возобновляемое, растёт</text>
+<text x="329" y="186" font-size="13" fill="#222" text-anchor="middle">60–100 лет</text>
+<rect x="450" y="146" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="566" y="178" font-size="13" fill="#222" text-anchor="middle">возобновляемое, каждый год</text>
+<rect x="688" y="146" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="804" y="178" font-size="13" fill="#222" text-anchor="middle">берёт у АПК, ЛПК и ТЭК</text>
+<rect x="926" y="146" width="232" height="54" rx="5" fill="#f6f6f2"/>
+<text x="1041" y="178" font-size="13" fill="#222" text-anchor="middle">в основном невозобновляемое</text>
+<rect x="10" y="204" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="236" font-size="13.5" font-weight="700" fill="#333">Капиталоёмкость</text>
+<rect x="213" y="204" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="329" y="236" font-size="13" fill="#222" text-anchor="middle">высокая (ЦБК, плиты)</text>
+<rect x="450" y="204" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="566" y="236" font-size="13" fill="#222" text-anchor="middle">средняя</text>
+<rect x="688" y="204" width="232" height="54" rx="5" fill="#f6f6f2"/>
+<text x="804" y="236" font-size="13" fill="#222" text-anchor="middle">низкая</text>
+<rect x="926" y="204" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="1041" y="236" font-size="13" fill="#222" text-anchor="middle">очень высокая</text>
+<rect x="10" y="262" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="294" font-size="13.5" font-weight="700" fill="#333">Трудоёмкость</text>
+<rect x="213" y="262" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="329" y="294" font-size="13" fill="#222" text-anchor="middle">средняя</text>
+<rect x="450" y="262" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="566" y="294" font-size="13" fill="#222" text-anchor="middle">высокая</text>
+<rect x="688" y="262" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="804" y="294" font-size="13" fill="#222" text-anchor="middle">очень высокая</text>
+<rect x="926" y="262" width="232" height="54" rx="5" fill="#f6f6f2"/>
+<text x="1041" y="294" font-size="13" fill="#222" text-anchor="middle">низкая на единицу продукции</text>
+<rect x="10" y="320" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="352" font-size="13.5" font-weight="700" fill="#333">Сезонность</text>
+<rect x="213" y="320" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="329" y="344" font-size="13" fill="#222" text-anchor="middle">сильная: зимняя заготовка,</text>
+<text x="329" y="360" font-size="13" fill="#222" text-anchor="middle">распутица</text>
+<rect x="450" y="320" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="566" y="344" font-size="13" fill="#222" text-anchor="middle">очень сильная: посевная,</text>
+<text x="566" y="360" font-size="13" fill="#222" text-anchor="middle">уборка</text>
+<rect x="688" y="320" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="804" y="352" font-size="13" fill="#222" text-anchor="middle">слабая: сезоны спроса</text>
+<rect x="926" y="320" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="1041" y="352" font-size="13" fill="#222" text-anchor="middle">зимний пик потребления</text>
+<rect x="10" y="378" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="410" font-size="13.5" font-weight="700" fill="#333">Ориентация на экспорт</text>
+<rect x="213" y="378" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="329" y="410" font-size="13" fill="#222" text-anchor="middle">высокая</text>
+<rect x="450" y="378" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="566" y="410" font-size="13" fill="#222" text-anchor="middle">растущая: зерно, масло, рыба</text>
+<rect x="688" y="378" width="232" height="54" rx="5" fill="#f6f6f2"/>
+<text x="804" y="410" font-size="13" fill="#222" text-anchor="middle">низкая, рынок занят импортом</text>
+<rect x="926" y="378" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="1041" y="410" font-size="13" fill="#222" text-anchor="middle">очень высокая</text>
+<rect x="10" y="436" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="468" font-size="13.5" font-weight="700" fill="#333">Роль в доходах бюджета</text>
+<rect x="213" y="436" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="329" y="468" font-size="13" fill="#222" text-anchor="middle">умеренная</text>
+<rect x="450" y="436" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="566" y="468" font-size="13" fill="#222" text-anchor="middle">умеренная</text>
+<rect x="688" y="436" width="232" height="54" rx="5" fill="#f6f6f2"/>
+<text x="804" y="468" font-size="13" fill="#222" text-anchor="middle">малая</text>
+<rect x="926" y="436" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="1041" y="468" font-size="13" fill="#222" text-anchor="middle">ключевая</text>
+<rect x="10" y="494" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="526" font-size="13.5" font-weight="700" fill="#333">Главные риски</text>
+<rect x="213" y="494" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="329" y="518" font-size="13" fill="#222" text-anchor="middle">пожары, вредители, истощение</text>
+<text x="329" y="534" font-size="13" fill="#222" text-anchor="middle">доступных лесов</text>
+<rect x="450" y="494" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="566" y="526" font-size="13" fill="#222" text-anchor="middle">погода, болезни, цены</text>
+<rect x="688" y="494" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="804" y="526" font-size="13" fill="#222" text-anchor="middle">импорт, контрафакт, кадры</text>
+<rect x="926" y="494" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="1041" y="518" font-size="13" fill="#222" text-anchor="middle">цены на нефть, санкции,</text>
+<text x="1041" y="534" font-size="13" fill="#222" text-anchor="middle">аварии</text>
+<rect x="10" y="552" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="584" font-size="13.5" font-weight="700" fill="#333">Нагрузка на природу</text>
+<rect x="213" y="552" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="329" y="584" font-size="13" fill="#222" text-anchor="middle">рубки, стоки ЦБК</text>
+<rect x="450" y="552" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="566" y="584" font-size="13" fill="#222" text-anchor="middle">почвы, вода, метан</text>
+<rect x="688" y="552" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="804" y="576" font-size="13" fill="#222" text-anchor="middle">стоки крашения, отходы</text>
+<text x="804" y="592" font-size="13" fill="#222" text-anchor="middle">одежды</text>
+<rect x="926" y="552" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="1041" y="584" font-size="13" fill="#222" text-anchor="middle">выбросы CO₂, разливы, отвалы</text>
+<rect x="10" y="610" width="196" height="54" rx="5" fill="#eceee8"/>
+<text x="20" y="642" font-size="13.5" font-weight="700" fill="#333">Место в УИС</text>
+<rect x="213" y="610" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="329" y="634" font-size="13" fill="#222" text-anchor="middle">основное производство лесных</text>
+<text x="329" y="650" font-size="13" fill="#222" text-anchor="middle">колоний</text>
+<rect x="450" y="610" width="232" height="54" rx="5" fill="#dfe9d6"/>
+<text x="566" y="642" font-size="13" fill="#222" text-anchor="middle">подсобные хозяйства, питание</text>
+<rect x="688" y="610" width="232" height="54" rx="5" fill="#cfdfc2"/>
+<text x="804" y="634" font-size="13" fill="#222" text-anchor="middle">швейные цеха — главное</text>
+<text x="804" y="650" font-size="13" fill="#222" text-anchor="middle">направление труда</text>
+<rect x="926" y="610" width="232" height="54" rx="5" fill="#eef3e8"/>
+<text x="1041" y="634" font-size="13" fill="#222" text-anchor="middle">котельные и расходы на</text>
+<text x="1041" y="650" font-size="13" fill="#222" text-anchor="middle">энергию</text>
+</svg>

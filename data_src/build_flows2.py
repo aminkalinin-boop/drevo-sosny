@@ -3,7 +3,7 @@ import json, os, sys
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.join(D, '..')
 sys.path.insert(0, D)
 import schemes_new as S
-MAP = {'tl_cyc': S.T0, 'pf_cyc': S.P0, 'rb_cyc': S.R0, 'nr_cyc': S.N0, 'wl_cyc': S.W0, 'mx_all': S.X0}
+MAP = {'tl_cyc': S.T0, 'pf_cyc': S.P0, 'rb_cyc': S.R0, 'nr_cyc': S.N0, 'wl_cyc': S.W0, 'mx_all': S.X0, 'te_cyc': S.E0}
 HOW = ('Как читать схему: прямоугольник — операция, ромб — условие «если», полоса с роликами — конвейер, '
        'пунктирная рамка — отход, скошенная рамка — энергия, двойная рамка — переход в другую отрасль. '
        'Зелёная стрелка «да», красная «нет», толстая зелёная — возврат в цикл. Нажмите на блок, чтобы открыть карточку.')

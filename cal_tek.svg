@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 526" width="1100" height="526" font-family="PT Sans, Arial, sans-serif">
+<rect width="1100" height="526" fill="#fbfbf8"/>
+<text x="16" y="28" font-size="19" font-weight="700" fill="#1d2a22">Годовой круг ТЭК</text>
+<rect x="420.0" y="46" width="110.0" height="440" fill="#eef3f8"/>
+<rect x="530.0" y="46" width="165.0" height="440" fill="#eef6ea"/>
+<rect x="695.0" y="46" width="165.0" height="440" fill="#fbf5e4"/>
+<rect x="860.0" y="46" width="165.0" height="440" fill="#f8efe6"/>
+<rect x="1025.0" y="46" width="55.0" height="440" fill="#eef3f8"/>
+<text x="447.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">янв</text>
+<line x1="420.0" y1="46" x2="420.0" y2="486" stroke="#dcdcd4"/>
+<text x="502.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">фев</text>
+<line x1="475.0" y1="46" x2="475.0" y2="486" stroke="#dcdcd4"/>
+<text x="557.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">мар</text>
+<line x1="530.0" y1="46" x2="530.0" y2="486" stroke="#dcdcd4"/>
+<text x="612.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">апр</text>
+<line x1="585.0" y1="46" x2="585.0" y2="486" stroke="#dcdcd4"/>
+<text x="667.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">май</text>
+<line x1="640.0" y1="46" x2="640.0" y2="486" stroke="#dcdcd4"/>
+<text x="722.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июн</text>
+<line x1="695.0" y1="46" x2="695.0" y2="486" stroke="#dcdcd4"/>
+<text x="777.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июл</text>
+<line x1="750.0" y1="46" x2="750.0" y2="486" stroke="#dcdcd4"/>
+<text x="832.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">авг</text>
+<line x1="805.0" y1="46" x2="805.0" y2="486" stroke="#dcdcd4"/>
+<text x="887.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">сен</text>
+<line x1="860.0" y1="46" x2="860.0" y2="486" stroke="#dcdcd4"/>
+<text x="942.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">окт</text>
+<line x1="915.0" y1="46" x2="915.0" y2="486" stroke="#dcdcd4"/>
+<text x="997.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">ноя</text>
+<line x1="970.0" y1="46" x2="970.0" y2="486" stroke="#dcdcd4"/>
+<text x="1052.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">дек</text>
+<line x1="1025.0" y1="46" x2="1025.0" y2="486" stroke="#dcdcd4"/>
+<text x="16" y="87" font-size="12.5" fill="#333">Отопительный сезон</text>
+<rect x="917.0" y="75" width="161.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<rect x="422.0" y="75" width="216.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<rect x="10" y="96" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="113" font-size="12.5" fill="#333">Пик нагрузки энергосистемы</text>
+<rect x="1027.0" y="101" width="51.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<rect x="422.0" y="101" width="106.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<text x="16" y="139" font-size="12.5" fill="#333">Ремонт котлов, турбин, тепловых сетей</text>
+<rect x="642.0" y="127" width="271.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<rect x="10" y="148" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="165" font-size="12.5" fill="#333">Гидравлические испытания теплосетей (отключения горячей воды)</text>
+<rect x="642.0" y="153" width="216.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<text x="16" y="191" font-size="12.5" fill="#333">Половодье: ГЭС наполняют водохранилища</text>
+<rect x="587.0" y="179" width="161.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<rect x="10" y="200" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="217" font-size="12.5" fill="#333">Подготовка к зиме, паспорта готовности</text>
+<rect x="807.0" y="205" width="161.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<line x1="10" y1="226" x2="1090" y2="226" stroke="#b9bdb3"/>
+<text x="16" y="243" font-size="12.5" fill="#333">Отбор газа из подземных хранилищ</text>
+<rect x="972.0" y="231" width="106.0" height="16" rx="5" fill="#2f4858" opacity=".85"/>
+<rect x="422.0" y="231" width="161.0" height="16" rx="5" fill="#2f4858" opacity=".85"/>
+<rect x="10" y="252" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="269" font-size="12.5" fill="#333">Закачка газа в подземные хранилища</text>
+<rect x="587.0" y="257" width="381.0" height="16" rx="5" fill="#2f4858" opacity=".85"/>
+<text x="16" y="295" font-size="12.5" fill="#333">Бурение и добыча — круглый год</text>
+<rect x="422.0" y="283" width="656.0" height="16" rx="5" fill="#2f4858" opacity=".85"/>
+<rect x="10" y="304" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="321" font-size="12.5" fill="#333">Пик спроса на бензин (отпуска, дачный сезон)</text>
+<rect x="697.0" y="309" width="161.0" height="16" rx="5" fill="#2f4858" opacity=".85"/>
+<text x="16" y="347" font-size="12.5" fill="#333">Пик спроса на дизель в сельском хозяйстве</text>
+<rect x="587.0" y="335" width="106.0" height="16" rx="5" fill="#2f4858" opacity=".85"/>
+<rect x="807.0" y="335" width="106.0" height="16" rx="5" fill="#2f4858" opacity=".85"/>
+<line x1="10" y1="356" x2="1090" y2="356" stroke="#b9bdb3"/>
+<rect x="10" y="356" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="373" font-size="12.5" fill="#333">Накопление запасов угля на станциях и в котельных</text>
+<rect x="697.0" y="361" width="216.0" height="16" rx="5" fill="#555555" opacity=".85"/>
+<text x="16" y="399" font-size="12.5" fill="#333">Пик спроса на энергетический уголь</text>
+<rect x="972.0" y="387" width="106.0" height="16" rx="5" fill="#555555" opacity=".85"/>
+<rect x="422.0" y="387" width="106.0" height="16" rx="5" fill="#555555" opacity=".85"/>
+<line x1="10" y1="408" x2="1090" y2="408" stroke="#b9bdb3"/>
+<rect x="10" y="408" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="425" font-size="12.5" fill="#333">Зимники к северным месторождениям</text>
+<rect x="1027.0" y="413" width="51.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="422.0" y="413" width="216.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<text x="16" y="451" font-size="12.5" fill="#333">Северный завоз топлива по рекам</text>
+<rect x="697.0" y="439" width="216.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="10" y="460" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="477" font-size="12.5" fill="#333">Летне-осенняя навигация по Северному морскому пути</text>
+<rect x="752.0" y="465" width="271.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="16" y="501" width="22" height="13" rx="3" fill="#b5531c" opacity=".85"/><text x="44" y="512" font-size="12.5" fill="#444">Тепло и электричество</text>
+<rect x="207" y="501" width="22" height="13" rx="3" fill="#2f4858" opacity=".85"/><text x="235" y="512" font-size="12.5" fill="#444">Нефть и газ</text>
+<rect x="328" y="501" width="22" height="13" rx="3" fill="#555555" opacity=".85"/><text x="356" y="512" font-size="12.5" fill="#444">Уголь</text>
+<rect x="407" y="501" width="22" height="13" rx="3" fill="#3d6a8f" opacity=".85"/><text x="435" y="512" font-size="12.5" fill="#444">Север и Арктика</text>
+</svg>
