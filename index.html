@@ -216,13 +216,17 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script charset="utf-8" src="ind_wld.js"></script>
 <script charset="utf-8" src="mix_extra.js"></script>
 <script charset="utf-8" src="flows2.js"></script>
+<script charset="utf-8" src="cal.js"></script>
+<script charset="utf-8" src="calpics.js"></script>
 <script charset="utf-8" src="flows.js"></script>
+<script charset="utf-8" src="merge.js"></script>
 <script charset="utf-8" src="enrich.js"></script>
 <script>
 const K={forest:"Раздел",live:"Живое / целое",part:"Часть дерева",proc:"Процесс",prod:"Сырьё, полуфабрикат",final:"Готовая продукция",waste:"Остатки, побочное, риски",place:"Место, объект",idea:"Идея, в теории",doc:"Документы, право",info:"Справка",tech:"Техника"};
 const SCH=[
  {id:"lres",t:"Ресурсы",root:"gl_res",sec:"lpk"},
  {id:"lprod",t:"Производство",root:"gl_prod",sec:"lpk"},
+ {id:"lcal",t:"Календарь",root:"lc_root",sec:"lpk"},
  {id:"lproc",t:"Переработка",root:"gl_proc",sec:"lpk"},
  {id:"tech",t:"Техника",root:"tech_root",sec:"lpk"},
  {id:"real",t:"Рынок",root:"r_root",sec:"lpk"},
@@ -235,6 +239,7 @@ const SCH=[
  {id:"lreg",t:"Регионы",root:"rg_lpk",sec:"lpk"},
  {id:"ares",t:"Ресурсы",root:"ga_res",sec:"apk"},
  {id:"aprod",t:"Производство",root:"ag_root",sec:"apk"},
+ {id:"acal",t:"Календарь",root:"ac_root",sec:"apk"},
  {id:"aproc",t:"Переработка",root:"ga_proc",sec:"apk"},
  {id:"atech",t:"Техника",root:"at_root",sec:"apk"},
  {id:"econ",t:"Рынок",root:"ec_root",sec:"apk"},
@@ -247,6 +252,7 @@ const SCH=[
  {id:"areg",t:"Регионы",root:"rg_apk",sec:"apk"},
  {id:"lgtres",t:"Ресурсы",root:"tl_res",sec:"lgt"},
  {id:"lgtprod",t:"Производство",root:"tl_prod",sec:"lgt"},
+ {id:"lgtcal",t:"Календарь",root:"tc_root",sec:"lgt"},
  {id:"lgtproc",t:"Переработка",root:"tl_proc",sec:"lgt"},
  {id:"lgttech",t:"Техника",root:"tl_tech",sec:"lgt"},
  {id:"lgtmkt",t:"Рынок",root:"tl_mkt",sec:"lgt"},
@@ -257,54 +263,6 @@ const SCH=[
  {id:"lgtfut",t:"Перспективы",root:"tl_fut",sec:"lgt"},
  {id:"lgtcyc",t:"Идеальный цикл",root:"tl_cyc",sec:"lgt"},
  {id:"lgtreg",t:"Регионы",root:"rg_lgt",sec:"lgt"},
- {id:"fodres",t:"Ресурсы",root:"pf_res",sec:"fod"},
- {id:"fodprod",t:"Производство",root:"pf_prod",sec:"fod"},
- {id:"fodproc",t:"Переработка",root:"pf_proc",sec:"fod"},
- {id:"fodtech",t:"Техника",root:"pf_tech",sec:"fod"},
- {id:"fodmkt",t:"Рынок",root:"pf_mkt",sec:"fod"},
- {id:"fodlaw",t:"Право",root:"pf_law",sec:"fod"},
- {id:"fodkad",t:"Кадры",root:"pf_kad",sec:"fod"},
- {id:"foduis",t:"УИС",root:"pf_uis",sec:"fod"},
- {id:"fodeco",t:"Экология и риски",root:"pf_eco",sec:"fod"},
- {id:"fodfut",t:"Перспективы",root:"pf_fut",sec:"fod"},
- {id:"fodcyc",t:"Идеальный цикл",root:"pf_cyc",sec:"fod"},
- {id:"fodreg",t:"Регионы",root:"rg_fod",sec:"fod"},
- {id:"fshres",t:"Ресурсы",root:"rb_res",sec:"fsh"},
- {id:"fshprod",t:"Производство",root:"rb_prod",sec:"fsh"},
- {id:"fshproc",t:"Переработка",root:"rb_proc",sec:"fsh"},
- {id:"fshtech",t:"Техника",root:"rb_tech",sec:"fsh"},
- {id:"fshmkt",t:"Рынок",root:"rb_mkt",sec:"fsh"},
- {id:"fshlaw",t:"Право",root:"rb_law",sec:"fsh"},
- {id:"fshkad",t:"Кадры",root:"rb_kad",sec:"fsh"},
- {id:"fshuis",t:"УИС",root:"rb_uis",sec:"fsh"},
- {id:"fsheco",t:"Экология и риски",root:"rb_eco",sec:"fsh"},
- {id:"fshfut",t:"Перспективы",root:"rb_fut",sec:"fsh"},
- {id:"fshcyc",t:"Идеальный цикл",root:"rb_cyc",sec:"fsh"},
- {id:"fshreg",t:"Регионы",root:"rg_fsh",sec:"fsh"},
- {id:"nrgres",t:"Ресурсы",root:"nr_res",sec:"nrg"},
- {id:"nrgprod",t:"Производство",root:"nr_prod",sec:"nrg"},
- {id:"nrgproc",t:"Переработка",root:"nr_proc",sec:"nrg"},
- {id:"nrgtech",t:"Техника",root:"nr_tech",sec:"nrg"},
- {id:"nrgmkt",t:"Рынок",root:"nr_mkt",sec:"nrg"},
- {id:"nrglaw",t:"Право",root:"nr_law",sec:"nrg"},
- {id:"nrgkad",t:"Кадры",root:"nr_kad",sec:"nrg"},
- {id:"nrguis",t:"УИС",root:"nr_uis",sec:"nrg"},
- {id:"nrgeco",t:"Экология и риски",root:"nr_eco",sec:"nrg"},
- {id:"nrgfut",t:"Перспективы",root:"nr_fut",sec:"nrg"},
- {id:"nrgcyc",t:"Идеальный цикл",root:"nr_cyc",sec:"nrg"},
- {id:"nrgreg",t:"Регионы",root:"rg_nrg",sec:"nrg"},
- {id:"wldres",t:"Ресурсы",root:"wl_res",sec:"wld"},
- {id:"wldprod",t:"Производство",root:"wl_prod",sec:"wld"},
- {id:"wldproc",t:"Переработка",root:"wl_proc",sec:"wld"},
- {id:"wldtech",t:"Техника",root:"wl_tech",sec:"wld"},
- {id:"wldmkt",t:"Рынок",root:"wl_mkt",sec:"wld"},
- {id:"wldlaw",t:"Право",root:"wl_law",sec:"wld"},
- {id:"wldkad",t:"Кадры",root:"wl_kad",sec:"wld"},
- {id:"wlduis",t:"УИС",root:"wl_uis",sec:"wld"},
- {id:"wldeco",t:"Экология и риски",root:"wl_eco",sec:"wld"},
- {id:"wldfut",t:"Перспективы",root:"wl_fut",sec:"wld"},
- {id:"wldcyc",t:"Идеальный цикл",root:"wl_cyc",sec:"wld"},
- {id:"wldreg",t:"Регионы",root:"rg_wld",sec:"wld"},
  {id:"mres",t:"Ресурсы",root:"mx_land",sec:"mix"},
  {id:"mprod",t:"Обмен продукцией",root:"mx_root",sec:"mix"},
  {id:"mproc",t:"Переработка",root:"gm_proc",sec:"mix"},
@@ -315,8 +273,8 @@ const SCH=[
  {id:"mcyc",t:"Идеальный цикл",root:"im_root",sec:"mix"},
  {id:"mreg",t:"Регионы",root:"rg_mix",sec:"mix"}
 ];
-const SECS={lpk:"Лесопромышленный комплекс",apk:"Агропромышленный комплекс",lgt:"Лёгкая промышленность",fod:"Пищевая промышленность",fsh:"Рыбохозяйственный комплекс",nrg:"Биоэнергетика и торф",wld:"Дикоросы и охота",mix:"Межотраслевое взаимодействие",ref:"Словарь и тест"};const SECSH={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая промышленность",fod:"Пищевая промышленность",fsh:"Рыбохозяйственный комплекс",nrg:"Биоэнергетика и торф",wld:"Дикоросы и охота",mix:"Межотраслевое",ref:"Словарь и тест"};
-const SECICON={lpk:"forest",apk:"wheat",lgt:"spool",fod:"bread",fsh:"fish",nrg:"flame",wld:"berry",mix:"branches",ref:"book"},SECSHORT={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая",fod:"Пищевая",fsh:"Рыба",nrg:"Энергия",wld:"Дикоросы",mix:"Связи",ref:"Словарь и тест"},SECCOL={lpk:"#234c38",apk:"#80591e",lgt:"#5b3f7a",fod:"#8a3d22",fsh:"#1f5f7a",nrg:"#7a4a14",wld:"#6b2f3f",mix:"#465c35",ref:"#475785"};let sector="lpk";
+const SECS={lpk:"Лесопромышленный комплекс",apk:"Агропромышленный комплекс",lgt:"Лёгкая промышленность",mix:"Межотраслевое взаимодействие",ref:"Словарь и тест"};const SECSH={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая промышленность",mix:"Межотраслевое",ref:"Словарь и тест"};
+const SECICON={lpk:"forest",apk:"wheat",lgt:"spool",mix:"branches",ref:"book"},SECSHORT={lpk:"ЛПК",apk:"АПК",lgt:"Лёгкая",mix:"Связи",ref:"Словарь и тест"},SECCOL={lpk:"#234c38",apk:"#80591e",lgt:"#5b3f7a",mix:"#465c35",ref:"#475785"};let sector="lpk";
 const EXTRA=[{id:"gloss",t:"Словарь",sec:"ref"},{id:"quiz",t:"Тест",sec:"ref"}];
 /* связи */
 const P={};Object.keys(N).forEach(id=>(N[id].c||[]).forEach(c=>{if(!P[c])P[c]=id}));
@@ -406,7 +364,7 @@ const MAPDEF={
   ["Лес, село и УИС вместе",d=>d[5]?(Math.max(d[6],d[9])>=1?3:2):0,["нет","—","лес без села","лес и село"]]]}
 };
 /* слои новых отраслей — из regions2.js (window.RG2) */
-if(window.RG2)Object.entries(RG2).forEach(([sec,o])=>{MAPDEF[sec]={pal:o.pal,layers:o.layers.map(([nm,leg,lv])=>[nm,(d,k)=>lv[k]||0,leg])}});
+if(window.RG2)Object.entries(RG2).forEach(([sec,o])=>{const ls=o.layers.map(([nm,leg,lv])=>[nm,(d,k)=>lv[k]||0,leg]);if(MAPDEF[sec])MAPDEF[sec].layers.push(...ls);else MAPDEF[sec]={pal:o.pal,layers:ls}});
 const MAPL={},MAPZ={};Object.keys(MAPDEF).forEach(k=>{MAPL[k]=0;MAPZ[k]=1});
 function mapHtml(sec){const m=MAPDEF[sec],L=m.layers[MAPL[sec]],g=window.RG;
  let h=`<div class="chips maplayers">${m.layers.map((l,i)=>`<button type="button" class="chip${i===MAPL[sec]?" on":""}" data-maplayer="${sec}:${i}">${l[0]}</button>`).join("")}</div>`;
@@ -417,11 +375,12 @@ function mapHtml(sec){const m=MAPDEF[sec],L=m.layers[MAPL[sec]],g=window.RG;
  return h}
 const LVL=["низкий","средний","высокий","очень высокий"];
 function regionInfo(k,sec){const g=window.RG,d=g.d[k];
- if(window.RG2&&RG2[sec]){const o=RG2[sec],L=["","заметно","развито","среди лидеров"];const a=o.layers.map(([nm,leg,lv])=>lv[k]?`${nm.toLowerCase()}: ${leg[lv[k]]}`:"").filter(Boolean);return `<h3 class="sec">${d[0]}</h3><p><b>${SECS[sec]}:</b> ${a.length?a.join("; ")+".":"отрасль в регионе заметно не развита."}${o.notes&&o.notes[k]?" "+o.notes[k]:""}</p>`}const lv=(arr,i)=>arr[i];
+ if(window.RG2&&RG2[sec]&&RG2[sec].pal){const o=RG2[sec];const a=o.layers.map(([nm,leg,lv])=>lv[k]?`${nm.toLowerCase()}: ${leg[lv[k]]}`:"").filter(Boolean);return `<h3 class="sec">${d[0]}</h3><p><b>${SECS[sec]}:</b> ${a.length?a.join("; ")+".":"отрасль в регионе заметно не развита."}${o.notes&&o.notes[k]?" "+o.notes[k]:""}</p>`}const lv=(arr,i)=>arr[i];
  const l=[`лесистость: ${["менее 15%","15–40%","40–65%","более 65%"][d[1]]}`,`заготовка: ${["почти нет","небольшая","значительная","среди лидеров"][d[2]]}`];
  if(d[3])l.push(d[3]==2?"крупные ЦБК":"бумажное производство");if(d[4])l.push(d[4]==2?"крупный центр деревообработки":"деревообработка");if(d[5])l.push("лесные учреждения УИС");
  const a=[];const nm=["зерно","масличные","сахарная свёкла","молоко","мясо","сады и виноград"];[6,7,8,9,10,11].forEach((j,i)=>{if(d[j]>=2||(j==11&&d[j]>=1))a.push(nm[i]+(d[j]>=3||(j==11&&d[j]==2)?" (лидер)":""))});
- return `<h3 class="sec">${d[0]}</h3><p><b>ЛПК:</b> ${l.join(", ")}.${g.nl[k]?" "+g.nl[k]:""}</p><p><b>АПК:</b> ${a.length?a.join(", ")+".":"сельское хозяйство развито слабо."}${g.na[k]?" "+g.na[k]:""}</p>`}
+ const ex=(window.RG2&&RG2[sec]&&!RG2[sec].pal)?RG2[sec].layers.map(([nm,leg,lv])=>lv[k]?`${nm.toLowerCase()} — ${leg[lv[k]]}`:"").filter(Boolean):[];const exn=(window.RG2&&RG2[sec]&&RG2[sec].notes&&RG2[sec].notes[k])||"";
+ return `<h3 class="sec">${d[0]}</h3>${ex.length||exn?`<p><b>Дополнительно:</b> ${ex.join("; ")}${ex.length?".":""} ${exn}</p>`:""}<p><b>ЛПК:</b> ${l.join(", ")}.${g.nl[k]?" "+g.nl[k]:""}</p><p><b>АПК:</b> ${a.length?a.join(", ")+".":"сельское хозяйство развито слабо."}${g.na[k]?" "+g.na[k]:""}</p>`}
 function nodeScreen(id,tab){const n=N[id];let h="";SEEN=new Set();
  const isRoot=ROOTTAB[id];
  if(PHR[id]&&PH[PHR[id]]){h+=photoHtml(PH[PHR[id]],HSX[PHR[id]],"Иллюстрация к разделу")+`<p class="note">Нажимай на подписи и предметы на картинке.</p>`}

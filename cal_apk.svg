@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 942" width="1100" height="942" font-family="PT Sans, Arial, sans-serif">
+<rect width="1100" height="942" fill="#fbfbf8"/>
+<text x="16" y="28" font-size="19" font-weight="700" fill="#1d2a22">Годовой круг работ АПК (средняя полоса, юг; рыба — Дальний Восток)</text>
+<rect x="420.0" y="46" width="110.0" height="856" fill="#eef3f8"/>
+<rect x="530.0" y="46" width="165.0" height="856" fill="#eef6ea"/>
+<rect x="695.0" y="46" width="165.0" height="856" fill="#fbf5e4"/>
+<rect x="860.0" y="46" width="165.0" height="856" fill="#f8efe6"/>
+<rect x="1025.0" y="46" width="55.0" height="856" fill="#eef3f8"/>
+<text x="447.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">янв</text>
+<line x1="420.0" y1="46" x2="420.0" y2="902" stroke="#dcdcd4"/>
+<text x="502.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">фев</text>
+<line x1="475.0" y1="46" x2="475.0" y2="902" stroke="#dcdcd4"/>
+<text x="557.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">мар</text>
+<line x1="530.0" y1="46" x2="530.0" y2="902" stroke="#dcdcd4"/>
+<text x="612.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">апр</text>
+<line x1="585.0" y1="46" x2="585.0" y2="902" stroke="#dcdcd4"/>
+<text x="667.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">май</text>
+<line x1="640.0" y1="46" x2="640.0" y2="902" stroke="#dcdcd4"/>
+<text x="722.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июн</text>
+<line x1="695.0" y1="46" x2="695.0" y2="902" stroke="#dcdcd4"/>
+<text x="777.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июл</text>
+<line x1="750.0" y1="46" x2="750.0" y2="902" stroke="#dcdcd4"/>
+<text x="832.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">авг</text>
+<line x1="805.0" y1="46" x2="805.0" y2="902" stroke="#dcdcd4"/>
+<text x="887.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">сен</text>
+<line x1="860.0" y1="46" x2="860.0" y2="902" stroke="#dcdcd4"/>
+<text x="942.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">окт</text>
+<line x1="915.0" y1="46" x2="915.0" y2="902" stroke="#dcdcd4"/>
+<text x="997.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">ноя</text>
+<line x1="970.0" y1="46" x2="970.0" y2="902" stroke="#dcdcd4"/>
+<text x="1052.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">дек</text>
+<line x1="1025.0" y1="46" x2="1025.0" y2="902" stroke="#dcdcd4"/>
+<text x="16" y="87" font-size="12.5" fill="#333">Ремонт техники, закупка семян и удобрений</text>
+<rect x="1027.0" y="75" width="51.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="422.0" y="75" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="10" y="96" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="113" font-size="12.5" fill="#333">Снегозадержание (степные районы)</text>
+<rect x="1027.0" y="101" width="51.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="422.0" y="101" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<text x="16" y="139" font-size="12.5" fill="#333">Подкормка озимых азотом</text>
+<rect x="532.0" y="127" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="10" y="148" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="165" font-size="12.5" fill="#333">Боронование, закрытие влаги</text>
+<rect x="587.0" y="153" width="51.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<text x="16" y="191" font-size="12.5" fill="#333">Сев ранних яровых: пшеница, ячмень, овёс</text>
+<rect x="587.0" y="179" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="10" y="200" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="217" font-size="12.5" fill="#333">Сев поздних: кукуруза, подсолнечник, соя</text>
+<rect x="642.0" y="205" width="51.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<text x="16" y="243" font-size="12.5" fill="#333">Посадка картофеля</text>
+<rect x="642.0" y="231" width="51.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="10" y="252" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="269" font-size="12.5" fill="#333">Защита растений: гербициды, инсектициды, фунгициды</text>
+<rect x="642.0" y="257" width="161.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<text x="16" y="295" font-size="12.5" fill="#333">Уборка озимых и ранних зерновых</text>
+<rect x="752.0" y="283" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="10" y="304" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="321" font-size="12.5" fill="#333">Сев озимых</text>
+<rect x="807.0" y="309" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<text x="16" y="347" font-size="12.5" fill="#333">Уборка подсолнечника, кукурузы, свёклы, картофеля</text>
+<rect x="862.0" y="335" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<rect x="10" y="356" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="373" font-size="12.5" fill="#333">Зяблевая вспашка, внесение удобрений и извести</text>
+<rect x="862.0" y="361" width="161.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<text x="16" y="399" font-size="12.5" fill="#333">Теребление льна, вылежка тресты</text>
+<rect x="807.0" y="387" width="106.0" height="16" rx="5" fill="#a3801f" opacity=".85"/>
+<line x1="10" y1="408" x2="1090" y2="408" stroke="#b9bdb3"/>
+<rect x="10" y="408" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="425" font-size="12.5" fill="#333">Стойловое содержание скота</text>
+<rect x="972.0" y="413" width="106.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<rect x="422.0" y="413" width="216.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<text x="16" y="451" font-size="12.5" fill="#333">Пастбищный сезон</text>
+<rect x="642.0" y="439" width="326.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<rect x="10" y="460" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="477" font-size="12.5" fill="#333">Заготовка сенажа, силоса, сена</text>
+<rect x="697.0" y="465" width="161.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<text x="16" y="503" font-size="12.5" fill="#333">Стрижка овец</text>
+<rect x="642.0" y="491" width="106.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<rect x="10" y="512" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="529" font-size="12.5" fill="#333">«Большое молоко»: пик надоев</text>
+<rect x="642.0" y="517" width="161.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<text x="16" y="555" font-size="12.5" fill="#333">Медосбор</text>
+<rect x="697.0" y="543" width="161.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<rect x="10" y="564" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="581" font-size="12.5" fill="#333">Оленеводство: корализация и убой</text>
+<rect x="972.0" y="569" width="106.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<rect x="422.0" y="569" width="51.0" height="16" rx="5" fill="#8a5a2a" opacity=".85"/>
+<line x1="10" y1="590" x2="1090" y2="590" stroke="#b9bdb3"/>
+<text x="16" y="607" font-size="12.5" fill="#333">Минтаевая путина (Охотское море)</text>
+<rect x="422.0" y="595" width="216.0" height="16" rx="5" fill="#2f7f9c" opacity=".85"/>
+<rect x="10" y="616" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="633" font-size="12.5" fill="#333">Лососёвая путина (Дальний Восток)</text>
+<rect x="752.0" y="621" width="161.0" height="16" rx="5" fill="#2f7f9c" opacity=".85"/>
+<text x="16" y="659" font-size="12.5" fill="#333">Нерестовый запрет на внутренних водоёмах</text>
+<rect x="587.0" y="647" width="161.0" height="16" rx="5" fill="#2f7f9c" opacity=".85"/>
+<rect x="10" y="668" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="685" font-size="12.5" fill="#333">Зарыбление прудов</text>
+<rect x="587.0" y="673" width="106.0" height="16" rx="5" fill="#2f7f9c" opacity=".85"/>
+<text x="16" y="711" font-size="12.5" fill="#333">Осенний облов прудов</text>
+<rect x="862.0" y="699" width="106.0" height="16" rx="5" fill="#2f7f9c" opacity=".85"/>
+<line x1="10" y1="720" x2="1090" y2="720" stroke="#b9bdb3"/>
+<rect x="10" y="720" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="737" font-size="12.5" fill="#333">Сахарные заводы: переработка свёклы</text>
+<rect x="862.0" y="725" width="216.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="422.0" y="725" width="51.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<text x="16" y="763" font-size="12.5" fill="#333">Консервирование овощей и фруктов</text>
+<rect x="752.0" y="751" width="216.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="10" y="772" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="789" font-size="12.5" fill="#333">Элеваторы: приёмка и сушка зерна</text>
+<rect x="752.0" y="777" width="216.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<text x="16" y="815" font-size="12.5" fill="#333">Мельницы, молочные и мясные заводы — круглый год</text>
+<rect x="422.0" y="803" width="656.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<line x1="10" y1="824" x2="1090" y2="824" stroke="#b9bdb3"/>
+<rect x="10" y="824" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="841" font-size="12.5" fill="#333">Пик спроса на напитки и мороженое</text>
+<rect x="642.0" y="829" width="216.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<text x="16" y="867" font-size="12.5" fill="#333">Пик спроса на кондитерские изделия, мясо, рыбу</text>
+<rect x="972.0" y="855" width="106.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="10" y="876" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="893" font-size="12.5" fill="#333">Продажа нового урожая, экспорт зерна</text>
+<rect x="752.0" y="881" width="326.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="16" y="917" width="22" height="13" rx="3" fill="#a3801f" opacity=".85"/><text x="44" y="928" font-size="12.5" fill="#444">Поле</text>
+<rect x="88" y="917" width="22" height="13" rx="3" fill="#8a5a2a" opacity=".85"/><text x="116" y="928" font-size="12.5" fill="#444">Ферма</text>
+<rect x="167" y="917" width="22" height="13" rx="3" fill="#2f7f9c" opacity=".85"/><text x="195" y="928" font-size="12.5" fill="#444">Рыба</text>
+<rect x="239" y="917" width="22" height="13" rx="3" fill="#3d6a8f" opacity=".85"/><text x="267" y="928" font-size="12.5" fill="#444">Переработка</text>
+<rect x="360" y="917" width="22" height="13" rx="3" fill="#7a5a9c" opacity=".85"/><text x="388" y="928" font-size="12.5" fill="#444">Рынок</text>
+</svg>

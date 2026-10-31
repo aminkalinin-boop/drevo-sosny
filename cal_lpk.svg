@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 812" width="1100" height="812" font-family="PT Sans, Arial, sans-serif">
+<rect width="1100" height="812" fill="#fbfbf8"/>
+<text x="16" y="28" font-size="19" font-weight="700" fill="#1d2a22">Годовой круг работ ЛПК (средняя полоса и Север)</text>
+<rect x="420.0" y="46" width="110.0" height="726" fill="#eef3f8"/>
+<rect x="530.0" y="46" width="165.0" height="726" fill="#eef6ea"/>
+<rect x="695.0" y="46" width="165.0" height="726" fill="#fbf5e4"/>
+<rect x="860.0" y="46" width="165.0" height="726" fill="#f8efe6"/>
+<rect x="1025.0" y="46" width="55.0" height="726" fill="#eef3f8"/>
+<text x="447.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">янв</text>
+<line x1="420.0" y1="46" x2="420.0" y2="772" stroke="#dcdcd4"/>
+<text x="502.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">фев</text>
+<line x1="475.0" y1="46" x2="475.0" y2="772" stroke="#dcdcd4"/>
+<text x="557.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">мар</text>
+<line x1="530.0" y1="46" x2="530.0" y2="772" stroke="#dcdcd4"/>
+<text x="612.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">апр</text>
+<line x1="585.0" y1="46" x2="585.0" y2="772" stroke="#dcdcd4"/>
+<text x="667.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">май</text>
+<line x1="640.0" y1="46" x2="640.0" y2="772" stroke="#dcdcd4"/>
+<text x="722.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июн</text>
+<line x1="695.0" y1="46" x2="695.0" y2="772" stroke="#dcdcd4"/>
+<text x="777.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июл</text>
+<line x1="750.0" y1="46" x2="750.0" y2="772" stroke="#dcdcd4"/>
+<text x="832.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">авг</text>
+<line x1="805.0" y1="46" x2="805.0" y2="772" stroke="#dcdcd4"/>
+<text x="887.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">сен</text>
+<line x1="860.0" y1="46" x2="860.0" y2="772" stroke="#dcdcd4"/>
+<text x="942.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">окт</text>
+<line x1="915.0" y1="46" x2="915.0" y2="772" stroke="#dcdcd4"/>
+<text x="997.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">ноя</text>
+<line x1="970.0" y1="46" x2="970.0" y2="772" stroke="#dcdcd4"/>
+<text x="1052.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">дек</text>
+<line x1="1025.0" y1="46" x2="1025.0" y2="772" stroke="#dcdcd4"/>
+<text x="16" y="87" font-size="12.5" fill="#333">Заготовка на зимних лесосеках (болота, мёрзлый грунт)</text>
+<rect x="1027.0" y="75" width="51.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="422.0" y="75" width="161.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="10" y="96" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="113" font-size="12.5" fill="#333">Вывозка по зимникам</text>
+<rect x="1027.0" y="101" width="51.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="422.0" y="101" width="161.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<text x="16" y="139" font-size="12.5" fill="#333">Заготовка на летних (сухих) лесосеках</text>
+<rect x="697.0" y="127" width="216.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="10" y="148" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="165" font-size="12.5" fill="#333">Сбор шишек и заготовка семян</text>
+<rect x="972.0" y="153" width="106.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="422.0" y="153" width="161.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<text x="16" y="191" font-size="12.5" fill="#333">Посев в теплицах питомника</text>
+<rect x="532.0" y="179" width="106.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="10" y="200" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="217" font-size="12.5" fill="#333">Посадка леса: весенняя и осенняя</text>
+<rect x="642.0" y="205" width="51.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="862.0" y="205" width="106.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<text x="16" y="243" font-size="12.5" fill="#333">Агротехнический уход за лесными культурами</text>
+<rect x="697.0" y="231" width="161.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="10" y="252" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="269" font-size="12.5" fill="#333">Рубки ухода в молодняках</text>
+<rect x="697.0" y="257" width="216.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<text x="16" y="295" font-size="12.5" fill="#333">Лесоустройство, таксация, отвод лесосек</text>
+<rect x="697.0" y="283" width="271.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<rect x="10" y="304" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="321" font-size="12.5" fill="#333">Подсочка сосны (живица)</text>
+<rect x="642.0" y="309" width="271.0" height="16" rx="5" fill="#3f7a4a" opacity=".85"/>
+<line x1="10" y1="330" x2="1090" y2="330" stroke="#b9bdb3"/>
+<text x="16" y="347" font-size="12.5" fill="#333">Распутица: вывозка остановлена</text>
+<rect x="587.0" y="335" width="106.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<rect x="917.0" y="335" width="106.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<rect x="10" y="356" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="373" font-size="12.5" fill="#333">Пожароопасный сезон</text>
+<rect x="587.0" y="361" width="381.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<text x="16" y="399" font-size="12.5" fill="#333">Борьба с вредителями, лесопатологические обследования</text>
+<rect x="642.0" y="387" width="216.0" height="16" rx="5" fill="#b5531c" opacity=".85"/>
+<line x1="10" y1="408" x2="1090" y2="408" stroke="#b9bdb3"/>
+<rect x="10" y="408" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="425" font-size="12.5" fill="#333">Берёзовый сок</text>
+<rect x="532.0" y="413" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<text x="16" y="451" font-size="12.5" fill="#333">Ягоды: черника, морошка, малина</text>
+<rect x="752.0" y="439" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<rect x="10" y="460" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="477" font-size="12.5" fill="#333">Грибы</text>
+<rect x="807.0" y="465" width="161.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<text x="16" y="503" font-size="12.5" fill="#333">Брусника, клюква</text>
+<rect x="862.0" y="491" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<rect x="10" y="512" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="529" font-size="12.5" fill="#333">Кедровый орех</text>
+<rect x="807.0" y="517" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<text x="16" y="555" font-size="12.5" fill="#333">Весенняя охота на птицу</text>
+<rect x="587.0" y="543" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<rect x="10" y="564" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="581" font-size="12.5" fill="#333">Охота на копытных</text>
+<rect x="917.0" y="569" width="161.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<rect x="422.0" y="569" width="51.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<text x="16" y="607" font-size="12.5" fill="#333">Промысел пушнины (соболь)</text>
+<rect x="972.0" y="595" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<rect x="422.0" y="595" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<rect x="10" y="616" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="633" font-size="12.5" fill="#333">Зимний маршрутный учёт зверей</text>
+<rect x="422.0" y="621" width="106.0" height="16" rx="5" fill="#9a4a5e" opacity=".85"/>
+<line x1="10" y1="642" x2="1090" y2="642" stroke="#b9bdb3"/>
+<text x="16" y="659" font-size="12.5" fill="#333">Лесопиление, сушка, плиты, ЦБК — круглый год</text>
+<rect x="422.0" y="647" width="656.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="10" y="668" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="685" font-size="12.5" fill="#333">Запас сырья на складе на время распутицы</text>
+<rect x="477.0" y="673" width="216.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<line x1="10" y1="694" x2="1090" y2="694" stroke="#b9bdb3"/>
+<text x="16" y="711" font-size="12.5" fill="#333">Пик спроса на пиломатериалы (стройсезон)</text>
+<rect x="587.0" y="699" width="326.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="10" y="720" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="737" font-size="12.5" fill="#333">Пик спроса на дрова и пеллеты</text>
+<rect x="862.0" y="725" width="216.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="422.0" y="725" width="106.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<text x="16" y="763" font-size="12.5" fill="#333">Лесная декларация и планирование на год</text>
+<rect x="972.0" y="751" width="106.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="16" y="787" width="22" height="13" rx="3" fill="#3f7a4a" opacity=".85"/><text x="44" y="798" font-size="12.5" fill="#444">Лес</text>
+<rect x="81" y="787" width="22" height="13" rx="3" fill="#b5531c" opacity=".85"/><text x="109" y="798" font-size="12.5" fill="#444">Риски</text>
+<rect x="160" y="787" width="22" height="13" rx="3" fill="#9a4a5e" opacity=".85"/><text x="188" y="798" font-size="12.5" fill="#444">Дикоросы и охота</text>
+<rect x="316" y="787" width="22" height="13" rx="3" fill="#3d6a8f" opacity=".85"/><text x="344" y="798" font-size="12.5" fill="#444">Завод</text>
+<rect x="395" y="787" width="22" height="13" rx="3" fill="#7a5a9c" opacity=".85"/><text x="423" y="798" font-size="12.5" fill="#444">Рынок</text>
+</svg>

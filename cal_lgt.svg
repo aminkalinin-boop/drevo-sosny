@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 396" width="1100" height="396" font-family="PT Sans, Arial, sans-serif">
+<rect width="1100" height="396" fill="#fbfbf8"/>
+<text x="16" y="28" font-size="19" font-weight="700" fill="#1d2a22">Годовой круг лёгкой промышленности</text>
+<rect x="420.0" y="46" width="110.0" height="310" fill="#eef3f8"/>
+<rect x="530.0" y="46" width="165.0" height="310" fill="#eef6ea"/>
+<rect x="695.0" y="46" width="165.0" height="310" fill="#fbf5e4"/>
+<rect x="860.0" y="46" width="165.0" height="310" fill="#f8efe6"/>
+<rect x="1025.0" y="46" width="55.0" height="310" fill="#eef3f8"/>
+<text x="447.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">янв</text>
+<line x1="420.0" y1="46" x2="420.0" y2="356" stroke="#dcdcd4"/>
+<text x="502.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">фев</text>
+<line x1="475.0" y1="46" x2="475.0" y2="356" stroke="#dcdcd4"/>
+<text x="557.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">мар</text>
+<line x1="530.0" y1="46" x2="530.0" y2="356" stroke="#dcdcd4"/>
+<text x="612.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">апр</text>
+<line x1="585.0" y1="46" x2="585.0" y2="356" stroke="#dcdcd4"/>
+<text x="667.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">май</text>
+<line x1="640.0" y1="46" x2="640.0" y2="356" stroke="#dcdcd4"/>
+<text x="722.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июн</text>
+<line x1="695.0" y1="46" x2="695.0" y2="356" stroke="#dcdcd4"/>
+<text x="777.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">июл</text>
+<line x1="750.0" y1="46" x2="750.0" y2="356" stroke="#dcdcd4"/>
+<text x="832.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">авг</text>
+<line x1="805.0" y1="46" x2="805.0" y2="356" stroke="#dcdcd4"/>
+<text x="887.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">сен</text>
+<line x1="860.0" y1="46" x2="860.0" y2="356" stroke="#dcdcd4"/>
+<text x="942.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">окт</text>
+<line x1="915.0" y1="46" x2="915.0" y2="356" stroke="#dcdcd4"/>
+<text x="997.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">ноя</text>
+<line x1="970.0" y1="46" x2="970.0" y2="356" stroke="#dcdcd4"/>
+<text x="1052.5" y="62" font-size="13" text-anchor="middle" fill="#555" font-weight="700">дек</text>
+<line x1="1025.0" y1="46" x2="1025.0" y2="356" stroke="#dcdcd4"/>
+<text x="16" y="87" font-size="12.5" fill="#333">Стрижка овец, сдача шерсти</text>
+<rect x="642.0" y="75" width="106.0" height="16" rx="5" fill="#6b8f3a" opacity=".85"/>
+<rect x="10" y="96" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="113" font-size="12.5" fill="#333">Уборка льна и вылежка тресты</text>
+<rect x="807.0" y="101" width="106.0" height="16" rx="5" fill="#6b8f3a" opacity=".85"/>
+<text x="16" y="139" font-size="12.5" fill="#333">Переработка тресты на льнозаводах</text>
+<rect x="917.0" y="127" width="161.0" height="16" rx="5" fill="#6b8f3a" opacity=".85"/>
+<rect x="422.0" y="127" width="216.0" height="16" rx="5" fill="#6b8f3a" opacity=".85"/>
+<rect x="10" y="148" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="165" font-size="12.5" fill="#333">Массовый убой скота: больше шкур</text>
+<rect x="917.0" y="153" width="161.0" height="16" rx="5" fill="#6b8f3a" opacity=".85"/>
+<line x1="10" y1="174" x2="1090" y2="174" stroke="#b9bdb3"/>
+<text x="16" y="191" font-size="12.5" fill="#333">Пошив весенне-летней коллекции</text>
+<rect x="862.0" y="179" width="216.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="422.0" y="179" width="106.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<rect x="10" y="200" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="217" font-size="12.5" fill="#333">Пошив осенне-зимней коллекции</text>
+<rect x="532.0" y="205" width="326.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<text x="16" y="243" font-size="12.5" fill="#333">Исполнение госзаказов на форму и спецодежду</text>
+<rect x="477.0" y="231" width="546.0" height="16" rx="5" fill="#3d6a8f" opacity=".85"/>
+<line x1="10" y1="252" x2="1090" y2="252" stroke="#b9bdb3"/>
+<rect x="10" y="252" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="269" font-size="12.5" fill="#333">Закупки по госзаказу (торги)</text>
+<rect x="422.0" y="257" width="216.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<text x="16" y="295" font-size="12.5" fill="#333">Школьная форма и одежда к учебному году</text>
+<rect x="752.0" y="283" width="106.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="10" y="304" width="406" height="26" fill="#f2f2ec"/>
+<text x="16" y="321" font-size="12.5" fill="#333">Пик продаж зимней одежды и обуви</text>
+<rect x="917.0" y="309" width="161.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<text x="16" y="347" font-size="12.5" fill="#333">Распродажи конца сезона</text>
+<rect x="422.0" y="335" width="106.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="752.0" y="335" width="51.0" height="16" rx="5" fill="#7a5a9c" opacity=".85"/>
+<rect x="16" y="371" width="22" height="13" rx="3" fill="#6b8f3a" opacity=".85"/><text x="44" y="382" font-size="12.5" fill="#444">Сырьё</text>
+<rect x="95" y="371" width="22" height="13" rx="3" fill="#3d6a8f" opacity=".85"/><text x="123" y="382" font-size="12.5" fill="#444">Производство</text>
+<rect x="223" y="371" width="22" height="13" rx="3" fill="#7a5a9c" opacity=".85"/><text x="251" y="382" font-size="12.5" fill="#444">Рынок</text>
+</svg>
