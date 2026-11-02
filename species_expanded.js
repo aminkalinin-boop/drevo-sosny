@@ -65,7 +65,7 @@ const IMAGE_SOURCES={
 for(const [key,items] of Object.entries(IMAGE_SOURCES)){
  for(const [kind,from] of Object.entries(items)){
   const target=N["sx_"+key+"_"+kind],source=N[from];
-  if(target&&source&&source.im)target.im=source.im;
+  if(target&&source)target.im=source.im||("a_"+from+".webp");
  }
 }
 const DETAIL_PHOTOS={
