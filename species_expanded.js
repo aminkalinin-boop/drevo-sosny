@@ -45,5 +45,58 @@ const GENERA={
  lp_root:{t:"Липа",s:"род Tilia: медонос и мягкая древесина",n:"Род липа (Tilia): несколько видов европейской России и Дальнего Востока.",w:"Липы важны как медоносы и источник мягкой древесины, луба и цветочного сырья; отдельные виды имеют локальные ареалы."}
 };
 for(const [id,x] of Object.entries(GENERA))if(N[id])Object.assign(N[id],x);
+/* Подключаем уже существующие фотореалистичные иллюстрации к новым группам.
+   Изображения отдельных видов не подменяем фотографиями иных видов. */
+const IMAGE_SOURCES={
+ el:{species:"el_root",parts:"el_crown",uses:"el_lumber",pests:"el_enemy"},
+ lv:{species:"lv_root",parts:"lv_needles",uses:"lv_wood",pests:"le_pests"},
+ kd:{species:"kd_root",parts:"kd_cones",uses:"kd_wood",pests:"le_pests"},
+ ph:{species:"ph_root",parts:"ph_green",uses:"ph_wood",pests:"ph_enemy"},
+ bz:{species:"bz_root",parts:"bz_crown",uses:"bz_wood",pests:"le_pests"},
+ os:{species:"os_root",parts:"os_bark",uses:"os_match",pests:"le_pests"},
+ db:{species:"db_root",parts:"db_bark",uses:"db_wood",pests:"le_pests"},
+ lp:{species:"lp_root",parts:"lp_flower",uses:"lp_carve",pests:"le_pests"},
+ ol:{species:"ol_root",parts:"ol_cones",uses:"ol_smoke",pests:"le_pests"},
+ ys:{species:"ys_root",parts:"ys_root",uses:"ys_furn",pests:"le_pests"},
+ bk:{species:"bk_root",parts:"bk_root",uses:"bk_furn",pests:"le_pests"},
+ kl:{species:"kl_root",parts:"kl_root",uses:"kl_music",pests:"le_pests"},
+ tp:{species:"tp_root",parts:"tp_root",uses:"tp_prod",pests:"le_pests"}
+};
+for(const [key,items] of Object.entries(IMAGE_SOURCES)){
+ for(const [kind,from] of Object.entries(items)){
+  const target=N["sx_"+key+"_"+kind],source=N[from];
+  if(target&&source&&source.im)target.im=source.im;
+ }
+}
+const DETAIL_PHOTOS={
+ sx_el_parts_1:"el_green",sx_el_parts_2:"el_cones",sx_el_uses_1:"el_lumber",sx_el_uses_2:"el_pulp",
+ sx_lv_parts_1:"lv_needles",sx_lv_uses_1:"lv_wood",
+ sx_kd_parts_2:"kd_cones",sx_kd_uses_1:"kd_nut",
+ sx_ph_parts_1:"ph_green",sx_ph_parts_3:"ph_balsam",sx_ph_uses_1:"ph_oil",sx_ph_uses_2:"ph_wood",sx_ph_pests_1:"ph_enemy",
+ sx_bz_parts_1:"bz_bark",sx_bz_parts_2:"bz_crown",sx_bz_parts_3:"bz_wood",sx_bz_uses_1:"bz_wood",
+ sx_os_parts_2:"os_bark",sx_os_uses_1:"os_match",sx_os_uses_2:"os_osb",
+ sx_db_parts_2:"db_acorn",sx_db_parts_3:"db_bark",sx_db_uses_1:"db_wood",sx_db_uses_2:"db_barrel",
+ sx_lp_parts_1:"lp_flower",sx_lp_parts_2:"lp_lub",sx_lp_uses_1:"lp_carve",sx_lp_uses_2:"lp_flower",
+ sx_ol_parts_1:"ol_cones",sx_ol_uses_1:"ol_furn",sx_ol_uses_2:"ol_smoke",
+ sx_ys_parts_3:"ys_root",sx_ys_uses_1:"ys_handle",sx_ys_uses_2:"ys_furn",
+ sx_bk_parts_2:"bk_root",sx_bk_uses_1:"bk_furn",sx_bk_uses_2:"bk_ware",
+ sx_kl_uses_1:"kl_parket",sx_kl_uses_2:"kl_music",sx_kl_uses_3:"kl_sap",
+ sx_tp_parts_3:"tp_root",sx_tp_uses_1:"tp_plant",sx_tp_uses_2:"tp_prod",
+ sx_kd_species_1:"sp_ked",sx_kd_species_2:"sp_kor",sx_kd_species_3:"sp_stl"
+};
+for(const [id,from] of Object.entries(DETAIL_PHOTOS)){
+ if(N[id]&&N[from]){
+  if(N[from].im)N[id].im=N[from].im;
+  N[id].ln=[...new Set([...(N[id].ln||[]),from])];
+ }
+}
+/* На каждой карточке разграничены виды, технологическое применение и угрозы. */
+for(const [key] of DATA){
+ const s=N["sx_"+key+"_species"],p=N["sx_"+key+"_parts"],u=N["sx_"+key+"_uses"],e=N["sx_"+key+"_pests"];
+ if(s)s.f=["Не все перечисленные виды одинаково распространены или пригодны для промышленной заготовки.","Русские и латинские наименования даны для знакомства; у отдельных географических форм и близких таксонов возможны альтернативные трактовки."];
+ if(p)p.f=["Ботаническое строение помогает определить породу и понять происхождение недревесного сырья.","Технологические свойства древесины и её частей зависят от возраста, условий роста и качества сырья."];
+ if(u)u.f=["Перечень отражает технологические возможности, а не гарантированный ассортимент любого предприятия.","Выбор передела зависит от сырья, выхода годного продукта, затрат, спроса и действующих ограничений."];
+ if(e)e.f=["Наличие вредителя не означает обязательную гибель дерева: риск зависит от численности, погоды и состояния насаждения.","Меры лесозащиты определяются после диагностики и с учётом действующих лесохозяйственных требований."];
+}
 if(N.con_root)N.con_root.w="Основные хвойные породы рассмотрены по единому плану: виды в России, строение, продукция и угрозы. Сосна сохраняет свою расширенную исходную структуру.";
 })();
