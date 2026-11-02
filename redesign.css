@@ -251,3 +251,18 @@ body[data-sector="tek"] .landscape::before,body[data-sector="tek"] .landscape::a
 body[data-sector="tek"]{background:var(--bg)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body[data-sector="tek"] .landscape{opacity:.16}}
 :root[data-theme="dark"] body[data-sector="tek"] .landscape{opacity:.16}
+
+/* 02.11.2026 — единые круглые кнопки перехода и раскрытия в дереве.
+   Стрелки рисуются CSS, а не глифами: браузерный шрифт не сдвигает их. */
+.item .child-count{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;padding:0 5px;border-radius:999px;background:var(--nav-soft);color:var(--head);font:600 .72rem/1 var(--f-body);font-variant-numeric:tabular-nums;box-sizing:border-box;flex:none}
+.item .go{position:relative;box-sizing:border-box;display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border:1.5px solid var(--line);border-radius:50%;background:var(--bg);color:var(--head);font-size:0;line-height:0;padding:0;margin-left:4px;overflow:hidden}
+.item .go::before{content:"";display:block;box-sizing:border-box;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateX(-2px) rotate(-45deg)}
+.item:hover .go,.item:focus-visible .go{border-color:var(--nav-path);color:var(--nav-path);background:var(--nav-soft)}
+.tree-row>.tree-toggle:not(.empty){box-sizing:border-box!important;display:grid!important;place-items:center!important;appearance:none;-webkit-appearance:none;width:24px!important;height:24px!important;min-width:24px;max-width:24px;flex:0 0 24px!important;margin:0 2px!important;padding:0!important;border:1.5px solid var(--line)!important;border-radius:50%!important;background:var(--panel);color:var(--head);font-size:0!important;line-height:0!important;text-align:center;overflow:visible;position:relative}
+.tree-row>.tree-toggle:not(.empty)::before{content:"";box-sizing:border-box;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateX(-2px) rotate(-45deg);transition:transform .15s ease}
+.tree-row>.tree-toggle[aria-expanded="true"]::before{transform:translateY(-2px) rotate(45deg)}
+.tree-row>.tree-toggle.empty{box-sizing:border-box;display:block;width:8px!important;height:8px!important;min-width:8px;max-width:8px;flex:0 0 8px!important;margin:0 12px!important;padding:0!important;border:0!important;border-radius:50%;background:var(--line);pointer-events:none}
+.tree-row.in-path>.tree-toggle:not(.empty),.in-path>.tree-row>.tree-toggle:not(.empty){border-color:var(--nav-path)!important;color:var(--nav-path)}
+.tree-row.selected>.tree-toggle:not(.empty){border-color:var(--nav-text)!important;background:var(--nav-active)!important;color:var(--nav-text)!important}
+.tree-row.selected>.tree-toggle.empty{background:var(--nav-text)}
+@media(max-width:700px){.item .go{flex-basis:28px;width:28px;height:28px}.item .child-count{min-width:22px;height:22px;font-size:.68rem}}
