@@ -46,4 +46,22 @@ if(N.f_lesn){rm("f_lesn",["Оно оформляет лесные деклара
 if(N.lw_lk){rm("lw_lk",["С 2019 года арендатор обязан восстановить лес на площади"]);N.lw_lk.f=(N.lw_lk.f||[]).concat("Обязанности лесовосстановления и компенсационного восстановления различаются по основаниям использования лесов и регулируются отдельными нормами. Сроки и исключения проверяют в действующей редакции.")}
 if(N.gl_prod){rm("gl_prod",["обычно в течение 1–2 лет"]);N.gl_prod.f=(N.gl_prod.f||[]).concat("Сроки, способы и критерии лесовосстановления зависят от участка, основания рубки и действующих правил; универсального срока 1–2 года для всех случаев нет.")}
 if(N.dc_root&&N.dc_root.f)N.dc_root.f=N.dc_root.f.map(x=>x.replace("их кругляк нельзя вывозить, оборот строго учитывается в ЛесЕГАИС","их оборот и вывоз регулируются специальными требованиями, а учёт ведётся во ФГИС ЛК"));
+/* Явные сырьевые связи для корректных вопросов в тесте:
+   родительская ветвь означает классификацию, а не источник продукта. */
+const PRODUCED_FROM={
+ x_lumber:"x_saw",x_dry:"x_lumber",x_planed:"x_dry",x_glued:"x_dry",
+ x_glulam:"x_glued",x_clt:"x_dry",x_panel:"x_dry",
+ x_veneer:"x_plyk",x_plywood:"x_veneer",x_lvl:"x_veneer",
+ x_pel:"x_dust",x_brq:"x_dust",x_flour:"x_dust",
+ x_tchip:"x_bal",x_kraft:"x_tchip",x_wpaper:"x_bleach",
+ sx_el_uses_1:"el_trunk",sx_el_uses_2:"el_pulp",
+ sx_lv_uses_1:"lv_wood",sx_kd_uses_1:"kd_cones",sx_ph_uses_1:"ph_green",
+ sx_bz_uses_1:"bz_wood",sx_os_uses_1:"os_root",
+ sx_db_uses_1:"db_wood",sx_db_uses_2:"db_wood",
+ sx_lp_uses_1:"lp_root",sx_ol_uses_2:"ol_root",sx_ys_uses_2:"ys_root"
+};
+for(const [id,from] of Object.entries(PRODUCED_FROM)){
+ if(N[id]&&N[from])N[id].producedFrom=from;
+}
+
 })();
