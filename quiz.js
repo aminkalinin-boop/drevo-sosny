@@ -15,7 +15,10 @@ function mk(prompt,answer,pool,id,sid,type,extra){const d=uniqTitles(shuf(pool),
 /* варианты вопросов по одному пункту */
 function qDef(id){const n=N[id],src=n.w||(n.f||[])[0]||"",w=plain(src);if(!w||w.length<30)return null;const sid=tabOf(id);let same=ids(sid).filter(x=>x!==id&&N[x].k===n.k);if(same.length<3)same=ids(sid).filter(x=>x!==id);
  return mk(`О чём это?<br><q>${redact(firstSent(src),n.t)}</q>`,title(id),same.map(title),id,sid,"def")}
-function qFrom(id){const n=N[id],p=P[id];if(!p||!n.e||!["prod","final","waste","part","live"].includes(n.k))return null;const sid=tabOf(id);
+/* Источник продукта — отдельная технологическая связь, а не родительский раздел дерева. */
+function qFrom(id){const n=N[id],p=n&&n.producedFrom;
+ if(!p||!N[p])return null;
+ const sid=tabOf(id);
  const pool=ids(sid).filter(x=>x!==id&&x!==p&&["part","prod","live","waste"].includes(N[x].k)).map(title);
  return mk(`Из чего получают «${title(id)}»?`,title(p),pool,id,sid,"from")}
 function qTool(id){const n=N[id];if(!n.tl||!n.tl.length)return null;const ans=n.tl[Math.floor(Math.random()*n.tl.length)];
